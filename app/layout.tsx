@@ -2,6 +2,7 @@ import { Noto_Serif, Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
 import Frame from './components/Frame';
 import Navbar from './components/Navbar';
+import WhatsApp from './components/WhatsApp';
 
 const notoSerif = Noto_Serif({
   subsets: ['latin'],
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </div>
 
         {children}
+        <WhatsApp />
       </body>
     </html>
   );

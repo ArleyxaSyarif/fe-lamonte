@@ -62,17 +62,7 @@ export default function VideoSection() {
                     </div>
                 </div>
 
-                {/* Gallery Footer */}
-                <footer className="mt-32 pt-12 border-t border-zinc-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-                    <p className="text-xs text-zinc-400 max-w-sm leading-relaxed font-body">
-                        Standard Cinéaste License. All rights reserved. Content curated for editorial and professional gallery exhibition only.
-                    </p>
-                    <div className="flex gap-6">
-                        <span className="text-[10px] font-black tracking-widest text-zinc-300 font-label">4K ULTRA HD</span>
-                        <span className="text-[10px] font-black tracking-widest text-zinc-300 font-label">DOLBY ATMOS</span>
-                        <span className="text-[10px] font-black tracking-widest text-zinc-300 font-label">CC</span>
-                    </div>
-                </footer>
+
             </div>
         </section>
     );
