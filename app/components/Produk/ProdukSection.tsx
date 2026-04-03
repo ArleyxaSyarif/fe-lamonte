@@ -1,4 +1,10 @@
-export default function ProdukSection() {
+import { getPosts } from "@/lib/api";
+
+export default async function ProdukSection() {
+
+    const posts = await getPosts();
+    console.log(posts);
+
     return (
         <div className="font-body selection:bg-[#7b5730]/20 antialiased">
             {/* Main Content Canvas */}
@@ -45,24 +51,13 @@ export default function ProdukSection() {
                     <div className="absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-[#fffceb] to-transparent z-20 pointer-events-none"></div>
 
                     <div className="animate-marquee gap-6 px-3">
-                        {[
-                            "https://images.unsplash.com/photo-1519238323211-168a26ef16e5?q=80&w=500&auto=format&fit=crop",
-                            "https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?q=80&w=500&auto=format&fit=crop",
-                            "https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?q=80&w=500&auto=format&fit=crop",
-                            "https://images.unsplash.com/photo-1621452773781-0f992fd1f5cb?q=80&w=500&auto=format&fit=crop",
-                            "https://images.unsplash.com/photo-1604467794349-0b74285de7e7?q=80&w=500&auto=format&fit=crop",
-                            "https://images.unsplash.com/photo-1519238323211-168a26ef16e5?q=80&w=500&auto=format&fit=crop",
-                            "https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?q=80&w=500&auto=format&fit=crop",
-                            "https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?q=80&w=500&auto=format&fit=crop",
-                            "https://images.unsplash.com/photo-1621452773781-0f992fd1f5cb?q=80&w=500&auto=format&fit=crop",
-                            "https://images.unsplash.com/photo-1604467794349-0b74285de7e7?q=80&w=500&auto=format&fit=crop"
-                        ].map((url, idx) => (
+                        {posts.map((post: any, idx: number) => (
                             <div
                                 key={idx}
                                 className="w-[180px] md:w-[240px] flex-shrink-0 aspect-[3/4] rounded-3xl overflow-hidden border-[6px] border-[#695c51] shadow-xl hover:scale-105 transition-transform duration-300 bg-white"
                             >
                                 <img
-                                    src={url}
+                                    src={post.image}
                                     alt="Produk Fashion Anak"
                                     className="w-full h-full object-cover"
                                 />
