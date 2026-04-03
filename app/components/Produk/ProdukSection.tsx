@@ -57,7 +57,7 @@ export default async function ProdukSection() {
                                 className="w-[180px] md:w-[240px] flex-shrink-0 aspect-[3/4] rounded-3xl overflow-hidden border-[6px] border-[#695c51] shadow-xl hover:scale-105 transition-transform duration-300 bg-white"
                             >
                                 <img
-                                    src={post.image}
+                                    src={`${post.image}`}
                                     alt="Produk Fashion Anak"
                                     className="w-full h-full object-cover"
                                 />
