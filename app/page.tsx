@@ -12,6 +12,8 @@ import TestimoniSection from "./components/Testimoni/TestimoniSection";
 import FaqSection from "./components/FAQ/FaqSection";
 import KontakSection from "./components/Kontak/KontakSection";
 
+import ScrollReveal from "./components/ScrollReveal";
+
 export default async function Home() {
   const words = await getWords();
 

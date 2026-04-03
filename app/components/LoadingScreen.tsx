@@ -5,19 +5,29 @@ import { useEffect, useState } from "react";
 export default function LoadingScreen({ onComplete }: { onComplete?: () => void }) {
     const [isVisible, setIsVisible] = useState(true);
 
+    const [isFadingOut, setIsFadingOut] = useState(false);
+
     useEffect(() => {
-        // Auto hide after 3 seconds for demonstration
-        const timer = setTimeout(() => {
+        // Start fading out after 2.3s, then hide after 3s total
+        const fadeTimer = setTimeout(() => {
+            setIsFadingOut(true);
+        }, 2300);
+
+        const completeTimer = setTimeout(() => {
             setIsVisible(false);
             if (onComplete) onComplete();
         }, 3000);
-        return () => clearTimeout(timer);
+
+        return () => {
+            clearTimeout(fadeTimer);
+            clearTimeout(completeTimer);
+        };
     }, [onComplete]);
 
     if (!isVisible) return null;
 
     return (
-        <div className="fixed inset-0 z-[9999] h-screen w-full flex flex-col items-center justify-center p-8 bg-[#fdfae9] overflow-hidden font-body">
+        <div className={`fixed inset-0 z-[9999] h-screen w-full flex flex-col items-center justify-center p-8 bg-[#fdfae9] overflow-hidden font-body transition-opacity duration-700 ${isFadingOut ? 'opacity-0' : 'opacity-100'}`}>
             <style>{`
                 @keyframes soft-pulse {
                     0%, 100% { opacity: 0.8; transform: scale(1); }

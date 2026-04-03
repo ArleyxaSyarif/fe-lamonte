@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import ScrollReveal from "../ScrollReveal";
 
 export default function PartnerSection() {
     const trackRef = useRef<HTMLDivElement>(null);
@@ -115,13 +116,20 @@ export default function PartnerSection() {
 
             <div className="max-w-7xl mx-auto px-8 relative z-10">
                 <div className="text-center mb-16">
-                    <span className="font-label text-sm uppercase tracking-[0.3em] text-[#967451] font-semibold mb-3 block">Kurasi Terpadu</span>
-                    <h2 className="font-headline text-4xl text-[#967451]">Ekosistem Heritage Kami</h2>
+                    <ScrollReveal delay={0}>
+                        <span className="font-label text-sm uppercase tracking-[0.3em] text-[#967451] font-semibold mb-3 block">Kurasi Terpadu</span>
+                    </ScrollReveal>
+                    
+                    <ScrollReveal delay={200}>
+                        <h2 className="font-headline text-4xl text-[#967451]">Ekosistem Heritage Kami</h2>
+                    </ScrollReveal>
+                    
                     <div className="w-16 h-0.5 bg-[#7b5730] mx-auto mt-6"></div>
                 </div>
 
                 {/* Carousel Container */}
-                <div className="relative group">
+                <ScrollReveal delay={400}>
+                    <div className="relative group">
                     {/* Navigation Arrows */}
                     <button
                         onClick={() => { isAutoScrolling.current = false; scrollPrev(); }}
@@ -263,6 +271,7 @@ export default function PartnerSection() {
                         <div className="dot w-2 h-2 rounded-full bg-[#7b5730]/20 transition-all duration-300"></div>
                     </div>
                 </div>
+                </ScrollReveal>
             </div>
         </section>
     );

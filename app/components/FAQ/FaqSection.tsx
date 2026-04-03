@@ -2,6 +2,7 @@
 
 import { sendWhatsApp } from '@/lib/whatsapp';
 import React from 'react';
+import ScrollReveal from "../ScrollReveal";
 
 const FAQS = [
     {
@@ -29,16 +30,15 @@ const FAQS = [
 export default function FaqSection() {
     return (
         <section className="relative bg-[#fdfae9] py-24 px-6 md:px-12 lg:px-24 font-body overflow-hidden">
-
+            
             {/* Dots Pattern Background - Subtle Brown Accent */}
-            <div
+            <div 
                 className="absolute inset-0 z-0 opacity-[0.15] pointer-events-none"
                 style={{
                     backgroundImage: `radial-gradient(#7b5730 2px, transparent 2px)`, // Ukuran titik sedikit diperbesar
                     backgroundSize: '30px 30px'
                 }}
             ></div>
-
 
             <style>{`
                 details[open] summary .expand-icon {
@@ -60,15 +60,24 @@ export default function FaqSection() {
             <div className="relative z-10 max-w-4xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-20">
-                    <span className="font-label text-sm tracking-[0.3em] uppercase text-[#967451] mb-4 block font-bold">
-                        Bantuan & Informasi
-                    </span>
-                    <h2 className="font-headline text-4xl md:text-6xl text-[#7b5730] mb-8 italic font-bold">
-                        Frequently Asked Questions
-                    </h2>
-                    <p className="text-[#695c51] max-w-xl mx-auto leading-relaxed opacity-80">
-                        Menjawab segala keraguan Anda untuk melangkah bersama Lamonte membangun bisnis keluarga yang berkah.
-                    </p>
+                    <ScrollReveal delay={0}>
+                        <span className="font-label text-sm tracking-[0.3em] uppercase text-[#967451] mb-4 block font-bold">
+                            Bantuan & Informasi
+                        </span>
+                    </ScrollReveal>
+                    
+                    <ScrollReveal delay={200}>
+                        <h2 className="font-headline text-4xl md:text-6xl text-[#7b5730] mb-8 italic font-bold">
+                            Frequently Asked Questions
+                        </h2>
+                    </ScrollReveal>
+                    
+                    <ScrollReveal delay={400}>
+                        <p className="text-[#695c51] max-w-xl mx-auto leading-relaxed opacity-80">
+                            Menjawab segala keraguan Anda untuk melangkah bersama Lamonte membangun bisnis keluarga yang berkah.
+                        </p>
+                    </ScrollReveal>
+                    
                     <div className="mt-10 flex justify-center">
                         <div className="h-[1px] w-24 bg-[#7b5730]/20"></div>
                     </div>
@@ -76,54 +85,56 @@ export default function FaqSection() {
 
                 {/* FAQ List */}
                 <div className="space-y-6">
-                    {FAQS.map((faq) => (
-                        <div
-                            key={faq.id}
-                            className="relative bg-[#fffceb] rounded-2xl overflow-hidden border border-[#7b5730]/5 hover:border-[#7b5730]/20 transition-all duration-300 shadow-sm"
-                        >
-                            {/* Decorative Corners */}
-                            <div className="corner-line top-4 left-4 border-t-2 border-l-2"></div>
-                            <div className="corner-line bottom-4 right-4 border-b-2 border-r-2"></div>
+                    {FAQS.map((faq, idx) => (
+                        <ScrollReveal key={faq.id} delay={600 + idx * 100}>
+                            <div
+                                className="relative bg-[#fffceb] rounded-2xl overflow-hidden border border-[#7b5730]/5 hover:border-[#7b5730]/20 transition-all duration-300 shadow-sm"
+                            >
+                                {/* Decorative Corners */}
+                                <div className="corner-line top-4 left-4 border-t-2 border-l-2"></div>
+                                <div className="corner-line bottom-4 right-4 border-b-2 border-r-2"></div>
 
-                            <details className="group p-6 md:p-10">
-                                <summary className="flex items-center justify-between cursor-pointer list-none">
-                                    <h3 className="font-headline text-lg md:text-2xl text-[#7b5730] pr-8 group-hover:translate-x-1 transition-transform duration-300">
-                                        {faq.question}
-                                    </h3>
-                                    <div className="bg-white/50 p-2 rounded-full shadow-inner">
-                                        <span className="material-symbols-outlined expand-icon text-[#967451] transition-transform duration-500 text-3xl">
-                                            expand_more
-                                        </span>
+                                <details className="group p-6 md:p-10">
+                                    <summary className="flex items-center justify-between cursor-pointer list-none">
+                                        <h3 className="font-headline text-lg md:text-2xl text-[#7b5730] pr-8 group-hover:translate-x-1 transition-transform duration-300">
+                                            {faq.question}
+                                        </h3>
+                                        <div className="bg-white/50 p-2 rounded-full shadow-inner">
+                                            <span className="material-symbols-outlined expand-icon text-[#967451] transition-transform duration-500 text-3xl">
+                                                expand_more
+                                            </span>
+                                        </div>
+                                    </summary>
+                                    <div className="mt-8 pt-8 border-t border-[#7b5730]/10">
+                                        <p className="text-[#695c51] leading-relaxed text-base md:text-lg opacity-90">
+                                            {faq.answer}
+                                        </p>
                                     </div>
-                                </summary>
-                                <div className="mt-8 pt-8 border-t border-[#7b5730]/10">
-                                    <p className="text-[#695c51] leading-relaxed text-base md:text-lg opacity-90">
-                                        {faq.answer}
-                                    </p>
-                                </div>
-                            </details>
-                        </div>
+                                </details>
+                            </div>
+                        </ScrollReveal>
                     ))}
                 </div>
 
                 {/* Bottom CTA */}
-                <div className="mt-20 p-12 bg-white/40 backdrop-blur rounded-[3rem] text-center border border-white/60 shadow-lg">
-                    <h4 className="font-headline text-2xl text-[#7b5730] mb-4 font-bold italic">
-                        Masih Punya Pertanyaan Lain?
-                    </h4>
-                    <p className="text-[#695c51] mb-8 opacity-80">
-                        Tim kami siap membantu menjelaskan setiap detail kerjasama dengan ramah.
-                    </p>
-                    <button
-                        onClick={() => sendWhatsApp({ customMessage: "Halo Tim Lamonte, saya tertarik ingin bertanya-tanya telebih dahulu." })}
-                        className="inline-flex items-center gap-3 bg-[#7b5730] text-white px-10 py-4 rounded-full font-bold hover:scale-[1.05] hover:shadow-2xl hover:shadow-[#7b5730]/20 transition-all active:scale-95"
-                    >
-                        Hubungi Konsultan Kami
-                        <span className="material-symbols-outlined">arrow_forward</span>
-                    </button>
-                </div>
+                <ScrollReveal delay={1000}>
+                    <div className="mt-20 p-12 bg-white/40 backdrop-blur rounded-[3rem] text-center border border-white/60 shadow-lg">
+                        <h4 className="font-headline text-2xl text-[#7b5730] mb-4 font-bold italic">
+                            Masih Punya Pertanyaan Lain?
+                        </h4>
+                        <p className="text-[#695c51] mb-8 opacity-80">
+                            Tim kami siap membantu menjelaskan setiap detail kerjasama dengan ramah.
+                        </p>
+                        <button
+                            onClick={() => sendWhatsApp({ customMessage: "Halo Tim Lamonte, saya tertarik ingin bertanya-tanya telebih dahulu." })}
+                            className="inline-flex items-center gap-3 bg-[#7b5730] text-white px-10 py-4 rounded-full font-bold hover:scale-[1.05] hover:shadow-2xl hover:shadow-[#7b5730]/20 transition-all active:scale-95"
+                        >
+                            Hubungi Konsultan Kami
+                            <span className="material-symbols-outlined">arrow_forward</span>
+                        </button>
+                    </div>
+                </ScrollReveal>
             </div>
         </section>
     );
 }
-
