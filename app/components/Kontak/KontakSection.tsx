@@ -3,22 +3,34 @@
 import { useState } from "react";
 
 export default function KontakSection() {
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        message: ""
-    });
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+    const [loading, setLoading] = useState(false);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: any) => {
         e.preventDefault();
-        console.log("Form submitted:", formData);
-        alert("Pesan Anda telah dikirim. Terima kasih!");
-        setFormData({ name: "", email: "", message: "" });
-    };
+        setLoading(true);
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({ ...prev, [name]: value }));
+        try {
+            await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/contact`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    email,
+                    message,
+                }),
+            });
+
+            alert("Pesan berhasil dikirim 🚀");
+            setEmail("");
+            setMessage("");
+        } catch (err) {
+            alert("Gagal kirim ❌");
+        }
+
+        setLoading(false);
     };
 
     return (
@@ -48,21 +60,7 @@ export default function KontakSection() {
 
                         <form onSubmit={handleSubmit} className="space-y-8">
                             <div className="space-y-6">
-                                <div className="relative group">
-                                    <label htmlFor="name" className="text-xs font-label font-bold tracking-widest text-[#967451] uppercase block mb-2">
-                                        Nama Lengkap
-                                    </label>
-                                    <input
-                                        type="text"
-                                        id="name"
-                                        name="name"
-                                        value={formData.name}
-                                        onChange={handleChange}
-                                        placeholder="Masukkan nama Anda"
-                                        required
-                                        className="w-full bg-transparent border-b border-[#d3c4b7] focus:border-[#7b5730] px-0 py-3 transition-colors outline-none text-[#4a3728] placeholder:text-[#81756a]/50"
-                                    />
-                                </div>
+
                                 <div className="relative group">
                                     <label htmlFor="email" className="text-xs font-label font-bold tracking-widest text-[#967451] uppercase block mb-2">
                                         Alamat Email
@@ -71,8 +69,8 @@ export default function KontakSection() {
                                         type="email"
                                         id="email"
                                         name="email"
-                                        value={formData.email}
-                                        onChange={handleChange}
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
                                         placeholder="nama@perusahaan.com"
                                         required
                                         className="w-full bg-transparent border-b border-[#d3c4b7] focus:border-[#7b5730] px-0 py-3 transition-colors outline-none text-[#4a3728] placeholder:text-[#81756a]/50"
@@ -86,8 +84,8 @@ export default function KontakSection() {
                                         id="message"
                                         name="message"
                                         rows={4}
-                                        value={formData.message}
-                                        onChange={handleChange}
+                                        value={message}
+                                        onChange={(e) => setMessage(e.target.value)}
                                         placeholder="Ceritakan tentang rencana perjalanan Anda..."
                                         required
                                         className="w-full bg-transparent border-b border-[#d3c4b7] focus:border-[#7b5730] px-0 py-3 transition-colors outline-none text-[#4a3728] placeholder:text-[#81756a]/50 resize-none"
@@ -96,12 +94,28 @@ export default function KontakSection() {
                             </div>
                             <button
                                 type="submit"
-                                className="bg-[#7b5730] text-white px-12 py-4 rounded-full font-semibold hover:scale-105 active:scale-95 transition-all flex items-center gap-3 group"
+                                disabled={loading}
+                                className="group relative w-full bg-[#967451] text-white py-4 px-8 rounded-full font-semibold tracking-widest uppercase text-sm overflow-hidden transition-all duration-300 hover:bg-[#7b5730] hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100 shadow-lg shadow-[#967451]/20 flex items-center justify-center gap-3"
                             >
-                                Kirim Pesan
-                                <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">
-                                    arrow_forward
-                                </span>
+                                {/* Efek Kilauan (Glow) saat Hover */}
+                                <div className="absolute inset-0 w-1/4 h-full bg-white/10 skew-x-[-20deg] -translate-x-full group-hover:translate-x-[400%] transition-transform duration-700 ease-in-out" />
+
+                                {loading ? (
+                                    <>
+                                        <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                        </svg>
+                                        <span>Mengirim...</span>
+                                    </>
+                                ) : (
+                                    <>
+                                        <span>Kirim Pesan</span>
+                                        <span className="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">
+                                            send
+                                        </span>
+                                    </>
+                                )}
                             </button>
                         </form>
                     </section>

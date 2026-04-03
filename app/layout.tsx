@@ -3,6 +3,7 @@ import './globals.css';
 import Frame from './components/Frame';
 import Navbar from './components/Navbar';
 import WhatsApp from './components/WhatsApp';
+import FooterSection from './components/Footer/FooterSection';
 
 const notoSerif = Noto_Serif({
   subsets: ['latin'],
@@ -22,11 +23,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Import Material Symbols */}
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
       </head>
-      <body className={`${notoSerif.variable} ${plusJakarta.variable} font-body relative min-h-screen`}>
+      <body className={`${notoSerif.variable} ${plusJakarta.variable} font-body relative min-h-screen bg-[#fdfae9]`}>
+
+
         <Navbar />
         <Frame />
-        
+
         {children}
+        <FooterSection />
         <WhatsApp />
       </body>
     </html>
