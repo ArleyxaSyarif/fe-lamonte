@@ -12,7 +12,7 @@ export default function KolaborasiHero() {
                         <div className="h-1 w-24 bg-[#966f46] mt-6 rounded-full"></div>
                     </header>
 
-                    <div className="space-y-10">
+                    <div className="space-y-10" id="kolaborasi">
                         <div className="flex gap-6 group">
                             <span className="text-4xl font-headline font-bold text-[#7b5730] opacity-40 group-hover:opacity-100 transition-opacity">01</span>
                             <div>

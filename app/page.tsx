@@ -7,6 +7,9 @@ import KolaborasiHero from "./components/Kolaborasi/KolaborasiHero";
 import ProdukSection from "./components/Produk/ProdukSection";
 import PaketSection from "./components/Paket/PaketSection";
 import { getWords } from "@/lib/api";
+import CTA from "./components/CTA";
+import TestimoniSection from "./components/Testimoni/TestimoniSection";
+import FaqSection from "./components/FAQ/FaqSection";
 
 export default async function Home() {
   const words = await getWords();
@@ -40,6 +43,11 @@ export default async function Home() {
 
       <ProdukSection />
       <PaketSection />
+      <CTA />
+
+      <TestimoniSection />
+
+      <FaqSection />
     </div>
   );
 }

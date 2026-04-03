@@ -6,7 +6,7 @@ export default function VideoSection() {
 
 
                 {/* Single Video Section */}
-                <div className="flex flex-col gap-12">
+                <div id="video" className="flex flex-col gap-12">
 
                     {/* Video Player */}
                     <div className="relative aspect-video bg-black rounded-xl overflow-hidden shadow-2xl">

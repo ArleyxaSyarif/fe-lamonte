@@ -101,7 +101,7 @@ export default function PaketSection() {
     const visiblePackages = showAll ? PACKAGES : PACKAGES.slice(0, 4);
 
     return (
-        <section className="relative z-10 py-24 px-8 max-w-screen-2xl mx-auto bg-[#fffceb]">
+        <section id='paket' className="relative z-10 py-24 px-8 max-w-screen-2xl mx-auto bg-[#fffceb]">
             <style>{`
                 .animate-fade-in {
                     animation: fadeIn 0.8s ease-out forwards;
@@ -129,13 +129,13 @@ export default function PaketSection() {
             {/* Package Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-10 gap-y-16">
                 {visiblePackages.map((pkg, index) => (
-                    <div 
+                    <div
                         key={pkg.id}
                         className={`group flex flex-col h-full bg-white/50 backdrop-blur-sm rounded-lg overflow-hidden border border-[#d3c4b7]/20 hover:shadow-2xl hover:shadow-[#7b5730]/10 transition-all duration-500 hover:-translate-y-2 ${showAll && index >= 4 ? 'animate-fade-in' : ''}`}
                     >
                         <div className="relative h-[480px] overflow-hidden">
-                            <img 
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                            <img
+                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 alt={pkg.title}
                                 src={pkg.img}
                             />
@@ -155,7 +155,7 @@ export default function PaketSection() {
                         <div className="p-8 flex flex-col flex-grow bg-white">
                             <h3 className="text-2xl font-headline italic text-[#7b5730] mb-2">{pkg.title}</h3>
                             <p className="text-[#695c51]/70 text-sm font-medium mb-4">{pkg.count}</p>
-                            
+
                             <p className="text-[#4f453b] text-sm font-body leading-relaxed mb-6 italic">
                                 "{pkg.desc}"
                             </p>
@@ -185,7 +185,7 @@ export default function PaketSection() {
 
             {/* Toggle Button Section */}
             <div className="mt-20 flex justify-center">
-                <button 
+                <button
                     onClick={() => setShowAll(!showAll)}
                     className="group flex items-center gap-3 bg-transparent border-2 border-[#967451] text-[#7b5730] px-10 py-4 rounded-full font-label text-sm font-bold uppercase tracking-[0.2em] hover:bg-[#967451] hover:text-white transition-all duration-300"
                 >

@@ -20,10 +20,9 @@ export default function Navbar() {
     }, []);
 
     return (
-        <nav 
-            className={`fixed top-0 w-full z-[110] flex justify-center px-4 transition-all duration-700 ease-out ${
-                scrolled ? "translate-y-6 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"
-            }`}
+        <nav
+            className={`fixed top-0 w-full z-[110] flex justify-center px-4 transition-all duration-700 ease-out ${scrolled ? "translate-y-6 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"
+                }`}
         >
             <div className="flex justify-between items-center w-full max-w-4xl bg-[#fcfaef]/90 backdrop-blur-md rounded-full px-6 py-3 border border-[#d3c4b7] shadow-sm">
 
@@ -38,20 +37,25 @@ export default function Navbar() {
                 </div>
 
                 {/* Navigation Links - Tengah */}
+                {/* Navigation Links - Tengah */}
                 <div className="hidden lg:flex items-center gap-8">
-                    <a href="#" className="text-sm font-body text-[#7d7168] hover:text-[#4c4033] transition-colors">
-                        Artikel
+                    <a href="#" className="text-sm font-body text-[#7d7168] hover:text-[#7b5730] transition-colors font-medium">
+                        Beranda
                     </a>
-                    <a href="#" className="text-sm font-body text-[#7d7168] hover:text-[#4c4033] transition-colors">
-                        Destinasi
+                    <a href="#video" className="text-sm font-body text-[#7d7168] hover:text-[#7b5730] transition-colors font-medium">
+                        Video
                     </a>
-                    <a href="#" className="text-sm font-body text-[#7d7168] hover:text-[#4c4033] transition-colors">
-                        Peringkat
+                    <a href="#partner" className="text-sm font-body text-[#7d7168] hover:text-[#7b5730] transition-colors font-medium">
+                        SuperApp
                     </a>
-                    <a href="#" className="text-sm font-body text-[#7d7168] hover:text-[#4c4033] transition-colors">
-                        Game
+                    <a href="#kolaborasi" className="text-sm font-body text-[#7d7168] hover:text-[#7b5730] transition-colors font-medium">
+                        Kolaborasi
+                    </a>
+                    <a href="#paket" className="text-sm font-body text-[#7d7168] hover:text-[#7b5730] transition-colors font-medium">
+                        Paket
                     </a>
                 </div>
+
 
                 {/* Profile Button - Kanan */}
                 <div className="flex items-center">

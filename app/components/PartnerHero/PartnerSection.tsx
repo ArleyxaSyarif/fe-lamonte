@@ -96,7 +96,7 @@ export default function PartnerSection() {
     }, []);
 
     return (
-        <section className="bg-[#fffceb] py-24 relative overflow-hidden font-body">
+        <section id="partner" className="bg-[#fffceb] py-24 relative overflow-hidden font-body">
             <style>{`
                 .no-scrollbar::-webkit-scrollbar {
                     display: none;

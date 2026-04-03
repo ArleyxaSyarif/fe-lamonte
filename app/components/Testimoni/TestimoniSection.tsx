@@ -1,0 +1,66 @@
+
+import { getTestimonis } from '@/lib/api';
+import React from 'react';
+
+export default async function TestimoniSection() {
+    const testimoni = await getTestimonis();
+    return (
+        <section className="bg-[#fdfae9] py-20 overflow-hidden font-body">
+            <style>{`
+                @keyframes scroll {
+                    0% { transform: translateX(0); }
+                    100% { transform: translateX(-50%); }
+                }
+                .animate-infinite-scroll {
+                    display: flex;
+                    width: max-content;
+                    animation: scroll 40s linear infinite;
+                }
+                .animate-infinite-scroll:hover {
+                    animation-play-state: paused;
+                }
+            `}</style>
+
+            {/* Header Section */}
+            <div className="max-w-screen-xl mx-auto px-6 md:px-12 mb-16 text-center">
+                <span className="font-label text-sm tracking-[0.3em] uppercase text-[#967451] mb-4 block font-bold">
+                    Wajah Ceria Lamonte
+                </span>
+                <h2 className="font-headline text-4xl md:text-6xl text-[#7b5730] leading-tight mb-8">
+                    Testimonials
+                </h2>
+                <p className="max-w-2xl mx-auto text-[#695c51] text-lg font-light leading-relaxed opacity-80">
+                    Beberapa dokumentasi mitra yang sudah jalan. Ada yang mulai dari nol, ada yang sebelumnya mentok. Mereka naik omzet setelah pakai sistem yang sama.
+
+
+                </p>
+            </div>
+
+            {/* Infinite Photo Carousel */}
+            <div className="relative py-10">
+                {/* Gradient Masks untuk efek fade di pinggir */}
+                <div className="absolute top-0 left-0 h-full w-20 md:w-40 bg-gradient-to-r from-[#fdfae9] to-transparent z-10 pointer-events-none"></div>
+                <div className="absolute top-0 right-0 h-full w-20 md:w-40 bg-gradient-to-l from-[#fdfae9] to-transparent z-10 pointer-events-none"></div>
+
+                <div className="animate-infinite-scroll gap-8 px-4">
+                    {/* Render Set Pertama */}
+                    {testimoni.map((item: any, idx: any) => (
+                        <div key={`set-1-${idx}`} className="w-[300px] md:w-[360px] h-[400px] md:h-[480px] flex-shrink-0 rounded-[2rem] overflow-hidden transition-transform duration-500 hover:scale-[1.03] shadow-2xl border-4 border-white">
+                            <img className="w-full h-full object-cover" src={item.fotos} alt={`Testimoni Lamonte ${idx}`} />
+                        </div>
+                    ))}
+
+                    {/* Render Set Kedua (Duplikat untuk Loop) */}
+                    {testimoni.map((item: any, idx: any) => (
+                        <div key={`set-2-${idx}`} className="w-[300px] md:w-[360px] h-[400px] md:h-[480px] flex-shrink-0 rounded-[2rem] overflow-hidden transition-transform duration-500 hover:scale-[1.03] shadow-2xl border-4 border-white">
+                            <img className="w-full h-full object-cover" src={item.fotos} alt={`Testimoni Lamonte ${idx}`} />
+                        </div>
+                    ))}
+                </div>
+
+            </div>
+
+
+        </section>
+    );
+}
