@@ -5,13 +5,16 @@ import VideoSection from "./components/VideoHero/VideoSection";
 import PartnerSection from "./components/PartnerHero/PartnerSection";
 import KolaborasiHero from "./components/Kolaborasi/KolaborasiHero";
 import ProdukSection from "./components/Produk/ProdukSection";
+import { getWords } from "@/lib/api";
 
-export default function Home() {
+export default async function Home() {
+  const words = await getWords();
+
   return (
     <div className="relative">
       <LoadingScreen />
 
-      <HeroSection />
+      <HeroSection initialWords={words} />
 
       {/* Garis Pembatas Elegan (Versi Lebih Besar) - Memotong Foto */}
       <div className="relative z-30 w-full h-0 flex items-center justify-center overflow-visible">

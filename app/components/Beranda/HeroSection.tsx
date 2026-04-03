@@ -4,23 +4,24 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import FotoHero from "../FotoHero";
 
-const words = ["NEGERI", "PREMIUM", "TERBAIK", "EKSKLUSIF"];
-
-export default function HeroSection() {
+export default function HeroSection({ initialWords = [] }: { initialWords?: any[] }) {
     const [index, setIndex] = useState(0);
     const [fade, setFade] = useState(true);
+    const words = initialWords;
 
     useEffect(() => {
+        if (words.length === 0) return;
+
         const interval = setInterval(() => {
-            setFade(false); // Mulai fade out
+            setFade(false);
             setTimeout(() => {
                 setIndex((prev) => (prev + 1) % words.length);
-                setFade(true); // Fade back in
-            }, 500); // 500ms transisi fade
-        }, 3000); // Ubah kata setiap 3 detik
-        return () => clearInterval(interval);
-    }, []);
+                setFade(true);
+            }, 500);
+        }, 3000);
 
+        return () => clearInterval(interval);
+    }, [words]);
     return (
         <main className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#f5f1e8]">
 
@@ -45,7 +46,7 @@ export default function HeroSection() {
                             <span
                                 className={`transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'}`}
                             >
-                                {words[index]}
+                                {words.length > 0 && words[index]?.word}
                             </span>
                         </span>
                     </div>
