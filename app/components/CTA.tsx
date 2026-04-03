@@ -25,14 +25,14 @@ export default function CTA() {
                     <div className="mb-8 flex items-center gap-4">
                         <div className="h-px w-8 md:w-12 bg-[#7b5730]/30"></div>
                         <span className="font-body text-[10px] md:text-xs uppercase tracking-[0.3em] text-[#967451] font-bold">
-                            Langkah Menuju Sukses
+                            Mau konsultasi gratis?
                         </span>
                         <div className="h-px w-8 md:w-12 bg-[#7b5730]/30"></div>
                     </div>
 
                     {/* Main Title - Diubah biar relevan dengan Lamonte */}
                     <h2 className="font-headline text-4xl md:text-6xl lg:text-7xl text-[#7b5730] mb-8 leading-[1.1] tracking-tight">
-                        Siap Membangun <span className="italic font-normal">Bisnis Berkah</span> Bersama Lamonte?
+                        Ayok <span className="italic font-normal">klik tombol</span> di bawah ini
                     </h2>
 
                     {/* Description Text */}
@@ -42,14 +42,14 @@ export default function CTA() {
 
                     {/* CTA Button */}
                     <button
-                        onClick={() => sendWhatsApp({ customMessage: "Halo Tim Lamonte, saya tertarik untuk bekerja sama." })}
+                        onClick={() => sendWhatsApp({})}
                         className="group relative inline-flex items-center gap-4 bg-[#7b5730] text-white px-10 py-5 rounded-full transition-all duration-500 hover:scale-[1.05] hover:shadow-2xl hover:shadow-[#7b5730]/30 active:scale-95"
                     >
                         <span className="material-symbols-outlined text-2xl group-hover:animate-bounce">
                             send
                         </span>
                         <span className="font-body font-bold tracking-wider text-lg">
-                            Mulai Chat Sekarang
+                            Mulai Konsultasi Gratis
                         </span>
                     </button>
 
