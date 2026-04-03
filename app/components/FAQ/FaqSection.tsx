@@ -1,5 +1,6 @@
 'use client';
 
+import { sendWhatsApp } from '@/lib/whatsapp';
 import React from 'react';
 
 const FAQS = [
@@ -102,13 +103,13 @@ export default function FaqSection() {
                     <p className="text-[#695c51] mb-8 opacity-80">
                         Tim kami siap membantu menjelaskan setiap detail kerjasama dengan ramah.
                     </p>
-                    <a
-                        href="https://wa.me/6281234567890"
+                    <button
+                        onClick={() => sendWhatsApp({ customMessage: "Halo Tim Lamonte, saya tertarik ingin bertanya-tanya telebih dahulu." })}
                         className="inline-flex items-center gap-3 bg-[#7b5730] text-white px-10 py-4 rounded-full font-bold hover:scale-[1.05] hover:shadow-2xl hover:shadow-[#7b5730]/20 transition-all active:scale-95"
                     >
                         Hubungi Konsultan Kami
                         <span className="material-symbols-outlined">arrow_forward</span>
-                    </a>
+                    </button>
                 </div>
             </div>
         </section>

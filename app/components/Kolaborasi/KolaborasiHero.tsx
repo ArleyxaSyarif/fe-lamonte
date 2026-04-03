@@ -90,11 +90,11 @@ export default function KolaborasiHero() {
                         </div>
 
                         <div className="mt-16 relative z-10">
-                            <button className="w-full bg-[#966f46] hover:bg-[#7b5730] py-5 rounded-full text-white font-bold text-lg flex items-center justify-center gap-3 transition-all hover:scale-[1.02] shadow-lg group">
+                            <a href="#paket" className="w-full bg-[#966f46] hover:bg-[#7b5730] py-5 rounded-full text-white font-bold text-lg flex items-center justify-center gap-3 transition-all hover:scale-[1.02] shadow-lg group">
                                 Lanjut Pilih Paket Kemitraan
 
                                 <span className="material-symbols-outlined transition-transform group-hover:translate-x-2">arrow_forward</span>
-                            </button>
+                            </a>
                             <p className="text-center text-[#e6e3d2]/50 text-xs mt-6 font-body uppercase tracking-widest">Aman • Terpercaya • Eksklusif</p>
                         </div>
                     </div>

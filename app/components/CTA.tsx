@@ -1,3 +1,6 @@
+"use client"
+import { sendWhatsApp } from "@/lib/whatsapp";
+
 export default function CTA() {
     return (
         <div className="w-full bg-[#fffceb] py-10">
@@ -38,10 +41,8 @@ export default function CTA() {
                     </p>
 
                     {/* CTA Button */}
-                    <a
-                        href="https://wa.me/6281234567890"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    <button
+                        onClick={() => sendWhatsApp({ customMessage: "Halo Tim Lamonte, saya tertarik untuk bekerja sama." })}
                         className="group relative inline-flex items-center gap-4 bg-[#7b5730] text-white px-10 py-5 rounded-full transition-all duration-500 hover:scale-[1.05] hover:shadow-2xl hover:shadow-[#7b5730]/30 active:scale-95"
                     >
                         <span className="material-symbols-outlined text-2xl group-hover:animate-bounce">
@@ -50,7 +51,7 @@ export default function CTA() {
                         <span className="font-body font-bold tracking-wider text-lg">
                             Mulai Chat Sekarang
                         </span>
-                    </a>
+                    </button>
 
                     {/* Features List - Diubah biar lebih "Bisnis" banget */}
                     <div className="mt-16 flex flex-wrap justify-center gap-x-10 gap-y-6 text-[#7b5730] opacity-60">

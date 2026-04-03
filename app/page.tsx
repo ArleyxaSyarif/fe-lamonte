@@ -43,6 +43,7 @@ export default async function Home() {
 
       <ProdukSection />
       <PaketSection />
+      
       <CTA />
 
       <TestimoniSection />

@@ -57,14 +57,14 @@ export default function HeroSection({ initialWords = [] }: { initialWords?: any[
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                    <button className="group relative bg-[#967451] text-white px-10 py-5 rounded-full font-semibold flex items-center justify-center gap-3 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-[#967451]/20">
+                    <a href="#paket" className="group relative bg-[#967451] text-white px-10 py-5 rounded-full font-semibold flex items-center justify-center gap-3 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-[#967451]/20">
                         <span className="material-symbols-outlined">redeem</span>
                         <span>LIHAT PAKET & BONUS</span>
-                    </button>
-                    <button className="bg-[#4c4033] text-white px-10 py-5 rounded-full font-semibold flex items-center justify-center gap-3 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-[#4c4033]/20">
+                    </a>
+                    <a href="#video" className="bg-[#4c4033] text-white px-10 py-5 rounded-full font-semibold flex items-center justify-center gap-3 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-[#4c4033]/20">
                         <span className="material-symbols-outlined">play_circle</span>
                         <span>NONTON DULU STRATEGINYA</span>
-                    </button>
+                    </a>
                 </div>
 
 

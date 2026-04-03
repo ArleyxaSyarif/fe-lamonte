@@ -1,18 +1,16 @@
 'use client';
 
+import { sendWhatsApp } from '@/lib/whatsapp';
 import React, { useState } from 'react';
 
 export default function WhatsApp() {
     const [isOpen, setIsOpen] = useState(false);
 
-    // Konfigurasi WhatsApp
-    const phoneNumber = "6281234567890";
-    const message = "Halo Heritage Curator, saya ingin bertanya tentang paket dan strateginya...";
-    const waLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
 
     return (
         <div className="fixed bottom-10 right-28 z-[60] flex flex-col items-end gap-4 font-body">
-            
+
             {/* Box Popup */}
             {isOpen && (
                 <div className="w-[320px] bg-white rounded-2xl shadow-2xl overflow-hidden border border-stone-100 animate-in fade-in slide-in-from-bottom-4 duration-300">
@@ -31,7 +29,7 @@ export default function WhatsApp() {
                             <p className="text-sm font-bold leading-none">Admin Heritage</p>
                             <p className="text-[10px] opacity-80">Online • Siap membantu</p>
                         </div>
-                        <button 
+                        <button
                             onClick={() => setIsOpen(false)}
                             className="ml-auto hover:opacity-70 transition-opacity"
                         >
@@ -49,15 +47,13 @@ export default function WhatsApp() {
 
                     {/* Footer / Tombol Kirim */}
                     <div className="p-3 bg-white">
-                        <a
-                            href={waLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                        <button
+                            onClick={() => sendWhatsApp({ customMessage: "Halo Tim Lamonte, saya tertarik jadi mitra Lamonte. Tolong kirimkan detail paket dan cara daftarnya ya." })}
                             className="flex items-center justify-center gap-2 bg-[#25D366] text-white py-2 rounded-lg font-bold text-sm hover:bg-[#20ba59] transition-colors"
                         >
                             <span className="material-symbols-outlined text-lg">send</span>
                             Mulai Chat Sekarang
-                        </a>
+                        </button>
                     </div>
                 </div>
             )}
@@ -65,17 +61,16 @@ export default function WhatsApp() {
             {/* Tombol Utama (Floating Button) */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className={`flex items-center gap-3 px-6 py-3 rounded-full font-bold shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 ${
-                    isOpen 
-                    ? 'bg-stone-800 text-white' 
+                className={`flex items-center gap-3 px-6 py-3 rounded-full font-bold shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 ${isOpen
+                    ? 'bg-stone-800 text-white'
                     : 'bg-[#25D366] text-white'
-                }`}
+                    }`}
             >
                 <span className="material-symbols-outlined">
                     {isOpen ? 'close' : 'chat_bubble'}
                 </span>
                 <span>{isOpen ? 'Tutup' : 'Tanya Admin'}</span>
-                
+
                 {/* Notifikasi Badge (Opsional) */}
                 {!isOpen && (
                     <span className="absolute -top-1 -right-1 flex h-5 w-5">

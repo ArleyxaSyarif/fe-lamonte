@@ -1,5 +1,6 @@
 'use client';
 
+import { sendWhatsApp } from '@/lib/whatsapp';
 import React, { useState } from 'react';
 
 const PACKAGES = [
@@ -174,7 +175,7 @@ export default function PaketSection() {
                                     <span className="block text-[10px] text-[#695c51]/50 uppercase tracking-widest mb-1">Total Investasi</span>
                                     <span className="text-xl font-bold text-[#967451]">{pkg.price}</span>
                                 </div>
-                                <button className="flex items-center gap-2 text-[#7b5730] font-bold text-sm tracking-wide group-hover:translate-x-2 transition-transform">
+                                <button onClick={() => sendWhatsApp({ title: pkg.title, price: pkg.price })} className="flex items-center gap-2 text-[#7b5730] font-bold text-sm tracking-wide group-hover:translate-x-2 transition-transform">
                                     Lihat Detail <span className="material-symbols-outlined text-sm">arrow_forward</span>
                                 </button>
                             </div>
