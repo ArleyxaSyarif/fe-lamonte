@@ -11,7 +11,7 @@ export default function WhatsApp() {
     const waLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
     return (
-        <div className="fixed bottom-8 right-8 z-[60] flex flex-col items-end gap-4 font-body">
+        <div className="fixed bottom-10 right-28 z-[60] flex flex-col items-end gap-4 font-body">
             
             {/* Box Popup */}
             {isOpen && (

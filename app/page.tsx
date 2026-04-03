@@ -4,6 +4,7 @@ import LoadingScreen from "./components/LoadingScreen";
 import VideoSection from "./components/VideoHero/VideoSection";
 import PartnerSection from "./components/PartnerHero/PartnerSection";
 import KolaborasiHero from "./components/Kolaborasi/KolaborasiHero";
+import ProdukSection from "./components/Produk/ProdukSection";
 
 export default function Home() {
   return (
@@ -32,6 +33,8 @@ export default function Home() {
       <PartnerSection />
 
       <KolaborasiHero />
+
+      <ProdukSection />
     </div>
   );
 }
