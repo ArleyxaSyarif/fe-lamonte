@@ -24,12 +24,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className={`${notoSerif.variable} ${plusJakarta.variable} font-body relative min-h-screen`}>
         <Navbar />
-
-
-        <div className='relative z-10'>
-          <Frame />
-        </div>
-
+        <Frame />
+        
         {children}
         <WhatsApp />
       </body>
