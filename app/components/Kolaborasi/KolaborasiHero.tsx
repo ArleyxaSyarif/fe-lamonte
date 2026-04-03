@@ -1,6 +1,7 @@
 export default function KolaborasiHero() {
     return (
         <div className="bg-[#fdfae9] text-[#1c1c12] antialiased font-body">
+
             <main className="min-h-screen pt-32 pb-24 px-8 md:px-24 max-w-screen-2xl mx-auto flex flex-col md:flex-row gap-16 items-start">
 
                 {/* Left Section: Why Choose Us */}

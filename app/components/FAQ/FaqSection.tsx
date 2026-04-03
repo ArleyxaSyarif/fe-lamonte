@@ -28,7 +28,18 @@ const FAQS = [
 
 export default function FaqSection() {
     return (
-        <section className="bg-[#fdfae9] py-24 px-6 md:px-12 lg:px-24 font-body">
+        <section className="relative bg-[#fdfae9] py-24 px-6 md:px-12 lg:px-24 font-body overflow-hidden">
+
+            {/* Dots Pattern Background - Subtle Brown Accent */}
+            <div
+                className="absolute inset-0 z-0 opacity-[0.15] pointer-events-none"
+                style={{
+                    backgroundImage: `radial-gradient(#7b5730 2px, transparent 2px)`, // Ukuran titik sedikit diperbesar
+                    backgroundSize: '30px 30px'
+                }}
+            ></div>
+
+
             <style>{`
                 details[open] summary .expand-icon {
                     transform: rotate(180deg);
@@ -46,7 +57,7 @@ export default function FaqSection() {
                 }
             `}</style>
 
-            <div className="max-w-4xl mx-auto">
+            <div className="relative z-10 max-w-4xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-20">
                     <span className="font-label text-sm tracking-[0.3em] uppercase text-[#967451] mb-4 block font-bold">
@@ -115,3 +126,4 @@ export default function FaqSection() {
         </section>
     );
 }
+

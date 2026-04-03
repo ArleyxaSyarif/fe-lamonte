@@ -102,7 +102,17 @@ export default function PaketSection() {
     const visiblePackages = showAll ? PACKAGES : PACKAGES.slice(0, 4);
 
     return (
-        <section id='paket' className="relative z-10 py-24 px-8 max-w-screen-2xl mx-auto bg-[#fffceb]">
+        <section id='paket' className="relative py-24 px-8 max-w-screen-2xl mx-auto bg-[#fffceb] overflow-hidden">
+
+            {/* Transparent Grid Pattern - Brown Accent */}
+            <div
+                className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none"
+                style={{
+                    backgroundImage: `linear-gradient(#7b5730 1.5px, transparent 1.5px), linear-gradient(90deg, #7b5730 1.5px, transparent 1.5px)`,
+                    backgroundSize: '40px 40px'
+                }}
+            ></div>
+
             <style>{`
                 .animate-fade-in {
                     animation: fadeIn 0.8s ease-out forwards;
@@ -114,7 +124,7 @@ export default function PaketSection() {
             `}</style>
 
             {/* Header Section */}
-            <div className="text-center mb-24 max-w-3xl mx-auto">
+            <div className="relative z-10 text-center mb-24 max-w-3xl mx-auto">
                 <span className="text-[#967451] font-label font-bold tracking-[0.3em] uppercase text-xs mb-4 block">
                     Pilihan Kemitraan
                 </span>
@@ -128,7 +138,7 @@ export default function PaketSection() {
             </div>
 
             {/* Package Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-10 gap-y-16">
+            <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-10 gap-y-16">
                 {visiblePackages.map((pkg, index) => (
                     <div
                         key={pkg.id}
@@ -185,7 +195,7 @@ export default function PaketSection() {
             </div>
 
             {/* Toggle Button Section */}
-            <div className="mt-20 flex justify-center">
+            <div className="relative z-10 mt-20 flex justify-center">
                 <button
                     onClick={() => setShowAll(!showAll)}
                     className="group flex items-center gap-3 bg-transparent border-2 border-[#967451] text-[#7b5730] px-10 py-4 rounded-full font-label text-sm font-bold uppercase tracking-[0.2em] hover:bg-[#967451] hover:text-white transition-all duration-300"
@@ -199,3 +209,4 @@ export default function PaketSection() {
         </section>
     );
 }
+

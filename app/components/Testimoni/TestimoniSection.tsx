@@ -1,11 +1,21 @@
-
 import { getTestimonis } from '@/lib/api';
 import React from 'react';
 
 export default async function TestimoniSection() {
     const testimoni = await getTestimonis();
     return (
-        <section className="bg-[#fdfae9] py-20 overflow-hidden font-body">
+        <section className="relative bg-[#fdfae9] py-20 overflow-hidden font-body">
+
+            {/* Dots Pattern Background - Subtle Brown Accent */}
+            <div
+                className="absolute inset-0 z-0 opacity-[0.15] pointer-events-none"
+                style={{
+                    backgroundImage: `radial-gradient(#7b5730 2px, transparent 2px)`, // Ukuran titik sedikit diperbesar
+                    backgroundSize: '30px 30px'
+                }}
+            ></div>
+
+
             <style>{`
                 @keyframes scroll {
                     0% { transform: translateX(0); }
@@ -22,7 +32,7 @@ export default async function TestimoniSection() {
             `}</style>
 
             {/* Header Section */}
-            <div className="max-w-screen-xl mx-auto px-6 md:px-12 mb-16 text-center">
+            <div className="relative z-10 max-w-screen-xl mx-auto px-6 md:px-12 mb-16 text-center">
                 <span className="font-label text-sm tracking-[0.3em] uppercase text-[#967451] mb-4 block font-bold">
                     Wajah Ceria Lamonte
                 </span>
@@ -31,13 +41,11 @@ export default async function TestimoniSection() {
                 </h2>
                 <p className="max-w-2xl mx-auto text-[#695c51] text-lg font-light leading-relaxed opacity-80">
                     Beberapa dokumentasi mitra yang sudah jalan. Ada yang mulai dari nol, ada yang sebelumnya mentok. Mereka naik omzet setelah pakai sistem yang sama.
-
-
                 </p>
             </div>
 
             {/* Infinite Photo Carousel */}
-            <div className="relative py-10">
+            <div className="relative z-10 py-10">
                 {/* Gradient Masks untuk efek fade di pinggir */}
                 <div className="absolute top-0 left-0 h-full w-20 md:w-40 bg-gradient-to-r from-[#fdfae9] to-transparent z-10 pointer-events-none"></div>
                 <div className="absolute top-0 right-0 h-full w-20 md:w-40 bg-gradient-to-l from-[#fdfae9] to-transparent z-10 pointer-events-none"></div>
@@ -57,10 +65,7 @@ export default async function TestimoniSection() {
                         </div>
                     ))}
                 </div>
-
             </div>
-
-
         </section>
     );
 }
