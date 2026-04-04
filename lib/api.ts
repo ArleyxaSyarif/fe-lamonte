@@ -12,12 +12,11 @@ export async function getPosts() {
 
     // DUMMY DATA FOR PRODUCTS
     return [
-        { image: "https://images.unsplash.com/photo-1621335829175-95f437384d7c?w=800&q=80" },
-        { image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80" },
-        { image: "https://images.unsplash.com/photo-1539109132381-31a15b2974aa?w=800&q=80" },
-        { image: "https://images.unsplash.com/photo-1621335829175-95f437384d7c?w=800&q=80" },
-        { image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80" },
-        { image: "https://images.unsplash.com/photo-1539109132381-31a15b2974aa?w=800&q=80" }
+        { image: "/img/anak.png" },
+        { image: "/img/anak2.png" },
+        { image: "/img/anak3.png" },
+        { image: "/img/anak4.png" },
+
     ];
 }
 
@@ -36,11 +35,12 @@ export async function getWords() {
 
     // DUMMY DATA FOR HERO SECTION
     return [
-        { word: "Reseller" },
-        { word: "Agen" },
-        { word: "Distributor" },
-        { word: "Mitra Sukses" },
-        { word: "Bisnis Berkah" }
+        { word: "Anak dengan" },
+        { word: "Sistem" },
+        { word: "Siap Pakai" },
+        { word: "Rasakan" },
+        { word: "Punya" },
+        { word: "Brand Sendiri" }
     ];
 }
 

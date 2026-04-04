@@ -5,7 +5,7 @@ import ScrollReveal from "../ScrollReveal";
 export default async function TestimoniSection() {
     const testimoni = await getTestimonis();
     return (
-        <section className="relative bg-[#fdfae9] py-20 overflow-hidden font-body">
+        <section className="relative bg-[#fdfae9] py-16 md:py-20 overflow-hidden font-body">
             
             {/* Dots Pattern Background - Subtle Brown Accent */}
             <div 
@@ -40,7 +40,7 @@ export default async function TestimoniSection() {
                 </ScrollReveal>
                 
                 <ScrollReveal delay={200}>
-                    <h2 className="font-headline text-4xl md:text-6xl text-[#7b5730] leading-tight mb-8">
+                    <h2 className="font-headline text-3xl md:text-6xl text-[#7b5730] leading-tight mb-6 md:mb-8">
                         Testimonials
                     </h2>
                 </ScrollReveal>
@@ -62,7 +62,7 @@ export default async function TestimoniSection() {
                     <div className="animate-infinite-scroll gap-8 px-4">
                         {/* Render Set Pertama */}
                         {testimoni.map((item: any, idx: any) => (
-                            <div key={`set-1-${idx}`} className="w-[300px] md:w-[360px] h-[400px] md:h-[480px] flex-shrink-0 rounded-[2rem] overflow-hidden transition-transform duration-500 hover:scale-[1.03] shadow-2xl border-4 border-white">
+                            <div key={`set-1-${idx}`} className="w-[240px] md:w-[360px] h-[320px] md:h-[480px] flex-shrink-0 rounded-[2rem] overflow-hidden transition-transform duration-500 hover:scale-[1.03] shadow-2xl border-4 border-white">
                                 <img className="w-full h-full object-cover" src={item.fotos} alt={`Testimoni Lamonte ${idx}`} />
                             </div>
                         ))}

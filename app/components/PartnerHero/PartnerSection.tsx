@@ -97,7 +97,7 @@ export default function PartnerSection() {
     }, []);
 
     return (
-        <section id="partner" className="bg-[#fffceb] py-24 relative overflow-hidden font-body">
+        <section id="partner" className="bg-[#fffceb] py-16 md:py-24 relative overflow-hidden font-body">
             <style>{`
                 .no-scrollbar::-webkit-scrollbar {
                     display: none;
@@ -114,14 +114,14 @@ export default function PartnerSection() {
             {/* Decorative Background Element */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-[#7b5730]/5 rounded-full blur-3xl -mr-48 -mt-48"></div>
 
-            <div className="max-w-7xl mx-auto px-8 relative z-10">
-                <div className="text-center mb-16">
+            <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
+                <div className="text-center mb-12 md:mb-16">
                     <ScrollReveal delay={0}>
-                        <span className="font-label text-sm uppercase tracking-[0.3em] text-[#967451] font-semibold mb-3 block">Kurasi Terpadu</span>
+                        <span className="font-label text-xs md:text-sm uppercase tracking-[0.3em] text-[#967451] font-semibold mb-3 block">Ekosistem Lamonte</span>
                     </ScrollReveal>
                     
                     <ScrollReveal delay={200}>
-                        <h2 className="font-headline text-4xl text-[#967451]">Ekosistem Heritage Kami</h2>
+                        <h2 className="font-headline text-3xl md:text-4xl text-[#967451]">Kenapa Bermitra Dengan Kami?</h2>
                     </ScrollReveal>
                     
                     <div className="w-16 h-0.5 bg-[#7b5730] mx-auto mt-6"></div>
@@ -147,24 +147,24 @@ export default function PartnerSection() {
                     {/* Scrollable Track */}
                     <div
                         ref={trackRef}
-                        className="flex gap-8 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-8"
+                        className="flex gap-6 md:gap-8 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-8"
                         style={{ scrollBehavior: 'smooth' }}
                     >
                         {/* Card 1 */}
                         <div className="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.334rem)] snap-start">
                             <div className="bg-white rounded-lg overflow-hidden flex flex-col h-full editorial-shadow transition-all duration-300 hover:-translate-y-2 group/card">
-                                <div className="p-8 flex-grow">
-                                    <div className="w-14 h-14 bg-[#7b5730]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#7b5730] text-[#7b5730] group-hover/card:text-white transition-colors duration-300">
-                                        <span className="material-symbols-outlined text-3xl">auto_awesome</span>
+                                <div className="p-6 md:p-8 flex-grow">
+                                    <div className="w-12 h-12 md:w-14 md:h-14 bg-[#7b5730]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#7b5730] text-[#7b5730] group-hover/card:text-white transition-colors duration-300">
+                                        <span className="material-symbols-outlined text-2xl md:text-3xl">auto_awesome</span>
                                     </div>
-                                    <h3 className="font-headline text-2xl text-[#1c1c12] mb-4">Sistem Kurasi Cerdas</h3>
-                                    <p className="text-[#695c51] leading-relaxed">
-                                        Teknologi algoritma yang dipadukan dengan wawasan antropolog untuk merekomendasikan destinasi yang sesuai dengan nilai historis tinggi.
+                                    <h3 className="font-headline text-xl md:text-2xl text-[#1c1c12] mb-4">Model Selalu Update</h3>
+                                    <p className="text-[#695c51] text-sm md:text-base leading-relaxed">
+                                        Desain baju anak yang selalu mengikuti tren pasar terkini, memastikan jualanmu tetap relevan dan diminati pembeli.
                                     </p>
                                 </div>
-                                <div className="bg-[#ebe9d8] py-4 px-8 flex items-center space-x-3">
+                                <div className="bg-[#ebe9d8] py-4 px-6 md:px-8 flex items-center space-x-3">
                                     <span className="material-symbols-outlined text-[#7b5730] text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>
-                                    <span className="font-label text-sm font-semibold tracking-wide text-[#7b5730]">STANDAR HERITAGE CURATOR</span>
+                                    <span className="font-label text-xs md:text-sm font-semibold tracking-wide text-[#7b5730]">DESAIN TRENDY KEKINIAN</span>
                                 </div>
                             </div>
                         </div>
@@ -172,18 +172,18 @@ export default function PartnerSection() {
                         {/* Card 2 */}
                         <div className="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.334rem)] snap-start">
                             <div className="bg-white rounded-lg overflow-hidden flex flex-col h-full editorial-shadow transition-all duration-300 hover:-translate-y-2 group/card">
-                                <div className="p-8 flex-grow">
-                                    <div className="w-14 h-14 bg-[#7b5634]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#7b5634] text-[#7b5634] group-hover/card:text-white transition-colors duration-300">
-                                        <span className="material-symbols-outlined text-3xl">explore</span>
+                                <div className="p-6 md:p-8 flex-grow">
+                                    <div className="w-12 h-12 md:w-14 md:h-14 bg-[#7b5634]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#7b5634] text-[#7b5634] group-hover/card:text-white transition-colors duration-300">
+                                        <span className="material-symbols-outlined text-2xl md:text-3xl">check_box_outline_blank</span>
                                     </div>
-                                    <h3 className="font-headline text-2xl text-[#1c1c12] mb-4">Eksplorasi Budaya</h3>
-                                    <p className="text-[#695c51] leading-relaxed">
-                                        Akses eksklusif ke situs-situs bersejarah yang jarang dikunjungi, memberikan pemahaman mendalam tentang akar tradisi Nusantara.
+                                    <h3 className="font-headline text-xl md:text-2xl text-[#1c1c12] mb-4">Kualitas Bahan Premium</h3>
+                                    <p className="text-[#695c51] text-sm md:text-base leading-relaxed">
+                                        Menggunakan bahan katun combed dan bahan premium lainnya yang lembut, menyerap keringat, dan sangat nyaman untuk kulit anak.
                                     </p>
                                 </div>
-                                <div className="bg-[#ebe9d8] py-4 px-8 flex items-center space-x-3">
+                                <div className="bg-[#ebe9d8] py-4 px-6 md:px-8 flex items-center space-x-3">
                                     <span className="material-symbols-outlined text-[#7b5730] text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
-                                    <span className="font-label text-sm font-semibold tracking-wide text-[#7b5730]">TERAKREDITASI UNESCO</span>
+                                    <span className="font-label text-xs md:text-sm font-semibold tracking-wide text-[#7b5730]">BAHAN BERSTANDAR TINGGI</span>
                                 </div>
                             </div>
                         </div>
@@ -191,18 +191,18 @@ export default function PartnerSection() {
                         {/* Card 3 */}
                         <div className="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.334rem)] snap-start">
                             <div className="bg-white rounded-lg overflow-hidden flex flex-col h-full editorial-shadow transition-all duration-300 hover:-translate-y-2 group/card">
-                                <div className="p-8 flex-grow">
-                                    <div className="w-14 h-14 bg-[#695c51]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#695c51] text-[#695c51] group-hover/card:text-white transition-colors duration-300">
-                                        <span className="material-symbols-outlined text-3xl">handshake</span>
+                                <div className="p-6 md:p-8 flex-grow">
+                                    <div className="w-12 h-12 md:w-14 md:h-14 bg-[#695c51]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#695c51] text-[#695c51] group-hover/card:text-white transition-colors duration-300">
+                                        <span className="material-symbols-outlined text-2xl md:text-3xl">inventory_2</span>
                                     </div>
-                                    <h3 className="font-headline text-2xl text-[#1c1c12] mb-4">Aliansi Pengrajin</h3>
-                                    <p className="text-[#695c51] leading-relaxed">
-                                        Kemitraan langsung dengan komunitas lokal dan pengrajin tradisional untuk mendukung keberlanjutan ekonomi kreatif daerah.
+                                    <h3 className="font-headline text-xl md:text-2xl text-[#1c1c12] mb-4">Sistem Stok Real-time</h3>
+                                    <p className="text-[#695c51] text-sm md:text-base leading-relaxed">
+                                        Pantau ketersediaan stok kapan saja melalui dashboard mitra. Tanpa perlu tanya admin satu-satu, jualan jadi lebih cepat.
                                     </p>
                                 </div>
-                                <div className="bg-[#ebe9d8] py-4 px-8 flex items-center space-x-3">
+                                <div className="bg-[#ebe9d8] py-4 px-6 md:px-8 flex items-center space-x-3">
                                     <span className="material-symbols-outlined text-[#7b5730] text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>task_alt</span>
-                                    <span className="font-label text-sm font-semibold tracking-wide text-[#7b5730]">SERTIFIKASI LOKAL</span>
+                                    <span className="font-label text-xs md:text-sm font-semibold tracking-wide text-[#7b5730]">AKURASI STOK 100%</span>
                                 </div>
                             </div>
                         </div>
@@ -210,18 +210,18 @@ export default function PartnerSection() {
                         {/* Card 4 */}
                         <div className="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.334rem)] snap-start">
                             <div className="bg-white rounded-lg overflow-hidden flex flex-col h-full editorial-shadow transition-all duration-300 hover:-translate-y-2 group/card">
-                                <div className="p-8 flex-grow">
-                                    <div className="w-14 h-14 bg-[#7b5730]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#7b5730] text-[#7b5730] group-hover/card:text-white transition-colors duration-300">
-                                        <span className="material-symbols-outlined text-3xl">history_edu</span>
+                                <div className="p-6 md:p-8 flex-grow">
+                                    <div className="w-12 h-12 md:w-14 md:h-14 bg-[#7b5730]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#7b5730] text-[#7b5730] group-hover/card:text-white transition-colors duration-300">
+                                        <span className="material-symbols-outlined text-2xl md:text-3xl">photo_library</span>
                                     </div>
-                                    <h3 className="font-headline text-2xl text-[#1c1c12] mb-4">Narasi Arsip</h3>
-                                    <p className="text-[#695c51] leading-relaxed">
-                                        Setiap perjalanan dilengkapi dengan dokumentasi sejarah autentik dari perpustakaan digital warisan kami yang prestisius.
+                                    <h3 className="font-headline text-xl md:text-2xl text-[#1c1c12] mb-4">Materi Konten Siap Pakai</h3>
+                                    <p className="text-[#695c51] text-sm md:text-base leading-relaxed">
+                                        Foto dan video promosi profesional sudah kami sediakan setiap hari. Tinggal posting ke sosial mediamu, beres!
                                     </p>
                                 </div>
-                                <div className="bg-[#ebe9d8] py-4 px-8 flex items-center space-x-3">
+                                <div className="bg-[#ebe9d8] py-4 px-6 md:px-8 flex items-center space-x-3">
                                     <span className="material-symbols-outlined text-[#7b5730] text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>verified_user</span>
-                                    <span className="font-label text-sm font-semibold tracking-wide text-[#7b5730]">OTENTIKASI DATA</span>
+                                    <span className="font-label text-xs md:text-sm font-semibold tracking-wide text-[#7b5730]">KONTEN MARKETING PREMIUM</span>
                                 </div>
                             </div>
                         </div>
@@ -229,18 +229,18 @@ export default function PartnerSection() {
                         {/* Card 5 */}
                         <div className="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.334rem)] snap-start">
                             <div className="bg-white rounded-lg overflow-hidden flex flex-col h-full editorial-shadow transition-all duration-300 hover:-translate-y-2 group/card">
-                                <div className="p-8 flex-grow">
-                                    <div className="w-14 h-14 bg-[#7b5634]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#7b5634] text-[#7b5634] group-hover/card:text-white transition-colors duration-300">
-                                        <span className="material-symbols-outlined text-3xl">eco</span>
+                                <div className="p-6 md:p-8 flex-grow">
+                                    <div className="w-12 h-12 md:w-14 md:h-14 bg-[#7b5634]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#7b5634] text-[#7b5634] group-hover/card:text-white transition-colors duration-300">
+                                        <span className="material-symbols-outlined text-2xl md:text-3xl">groups_2</span>
                                     </div>
-                                    <h3 className="font-headline text-2xl text-[#1c1c12] mb-4">Hospitalitas Lestari</h3>
-                                    <p className="text-[#695c51] leading-relaxed">
-                                        Penginapan yang dipilih secara ketat berdasarkan dampak lingkungan rendah dan integrasi arsitektur vernakular.
+                                    <h3 className="font-headline text-xl md:text-2xl text-[#1c1c12] mb-4">Bimbingan Bisnis Intensif</h3>
+                                    <p className="text-[#695c51] text-sm md:text-base leading-relaxed">
+                                        Grup pendampingan khusus bersama mentor berpengalaman untuk membantu jualanmu terus bertumbuh dan omzet naik.
                                     </p>
                                 </div>
-                                <div className="bg-[#ebe9d8] py-4 px-8 flex items-center space-x-3">
+                                <div className="bg-[#ebe9d8] py-4 px-6 md:px-8 flex items-center space-x-3">
                                     <span className="material-symbols-outlined text-[#7b5730] text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>
-                                    <span className="font-label text-sm font-semibold tracking-wide text-[#7b5730]">ECO-LABELED EXCELLENCE</span>
+                                    <span className="font-label text-xs md:text-sm font-semibold tracking-wide text-[#7b5730]">SUPORT MITRA NON-STOP</span>
                                 </div>
                             </div>
                         </div>
@@ -248,18 +248,18 @@ export default function PartnerSection() {
                         {/* Card 6 */}
                         <div className="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.334rem)] snap-start">
                             <div className="bg-white rounded-lg overflow-hidden flex flex-col h-full editorial-shadow transition-all duration-300 hover:-translate-y-2 group/card">
-                                <div className="p-8 flex-grow">
-                                    <div className="w-14 h-14 bg-[#695c51]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#695c51] text-[#695c51] group-hover/card:text-white transition-colors duration-300">
-                                        <span className="material-symbols-outlined text-3xl">security</span>
+                                <div className="p-6 md:p-8 flex-grow">
+                                    <div className="w-12 h-12 md:w-14 md:h-14 bg-[#695c51]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#695c51] text-[#695c51] group-hover/card:text-white transition-colors duration-300">
+                                        <span className="material-symbols-outlined text-2xl md:text-3xl">payments</span>
                                     </div>
-                                    <h3 className="font-headline text-2xl text-[#1c1c12] mb-4">Proteksi Cagar</h3>
-                                    <p className="text-[#695c51] leading-relaxed">
-                                        Kontribusi langsung dari setiap pemesanan dialokasikan untuk restorasi fisik situs-situs yang dikunjungi.
+                                    <h3 className="font-headline text-xl md:text-2xl text-[#1c1c12] mb-4">Harga Pabrik Langsung</h3>
+                                    <p className="text-[#695c51] text-sm md:text-base leading-relaxed">
+                                        Kami tangan pertama. Kamu dapat harga modal terendah sehingga bisa dapet margin keuntungan paling tebal di pasaran.
                                     </p>
                                 </div>
-                                <div className="bg-[#ebe9d8] py-4 px-8 flex items-center space-x-3">
+                                <div className="bg-[#ebe9d8] py-4 px-6 md:px-8 flex items-center space-x-3">
                                     <span className="material-symbols-outlined text-[#7b5730] text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
-                                    <span className="font-label text-sm font-semibold tracking-wide text-[#7b5730]">HERITAGE PRESERVATION</span>
+                                    <span className="font-label text-xs md:text-sm font-semibold tracking-wide text-[#7b5730]">MODAL MINIM UNTUNG MAX</span>
                                 </div>
                             </div>
                         </div>

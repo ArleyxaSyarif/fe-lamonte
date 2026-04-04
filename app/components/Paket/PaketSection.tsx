@@ -103,7 +103,7 @@ export default function PaketSection() {
     const visiblePackages = showAll ? PACKAGES : PACKAGES.slice(0, 4);
 
     return (
-        <section id='paket' className="relative py-24 px-8 max-w-screen-2xl mx-auto bg-[#fffceb] overflow-hidden">
+        <section id='paket' className="relative py-16 md:py-24 px-6 md:px-8 max-w-screen-2xl mx-auto bg-[#fffceb] overflow-hidden">
             
             {/* Transparent Grid Pattern - Brown Accent */}
             <div 
@@ -132,7 +132,7 @@ export default function PaketSection() {
                     </span>
                 </ScrollReveal>
                 <ScrollReveal delay={200}>
-                    <h2 className="text-5xl md:text-6xl font-headline italic tracking-tight text-[#7b5730] mb-6">
+                    <h2 className="text-3xl md:text-6xl font-headline italic tracking-tight text-[#7b5730] mb-6">
                         Koleksi Paket Eksklusif
                     </h2>
                 </ScrollReveal>
@@ -151,7 +151,7 @@ export default function PaketSection() {
                         <div
                             className={`group flex flex-col h-full bg-white/50 backdrop-blur-sm rounded-lg overflow-hidden border border-[#d3c4b7]/20 hover:shadow-2xl hover:shadow-[#7b5730]/10 transition-all duration-500 hover:-translate-y-2 ${showAll && index >= 4 ? 'animate-fade-in' : ''}`}
                         >
-                            <div className="relative h-[480px] overflow-hidden">
+                            <div className="relative h-[320px] md:h-[480px] overflow-hidden">
                                 <img
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                     alt={pkg.title}
@@ -170,7 +170,7 @@ export default function PaketSection() {
                                 </div>
                             </div>
 
-                            <div className="p-8 flex flex-col flex-grow bg-white">
+                            <div className="p-6 md:p-8 flex flex-col flex-grow bg-white">
                                 <h3 className="text-2xl font-headline italic text-[#7b5730] mb-2">{pkg.title}</h3>
                                 <p className="text-[#695c51]/70 text-sm font-medium mb-4">{pkg.count}</p>
 
