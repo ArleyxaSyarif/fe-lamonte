@@ -25,7 +25,7 @@ export default function WhatsApp() {
                             <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-[#075E54] rounded-full"></div>
                         </div>
                         <div>
-                            <p className="text-sm font-bold leading-none">Admin Heritage</p>
+                            <p className="text-sm font-bold leading-none">Admin Lamonte</p>
                             <p className="text-[10px] opacity-80">Online • Siap membantu</p>
                         </div>
                         <button
