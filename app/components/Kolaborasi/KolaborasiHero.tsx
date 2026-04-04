@@ -7,6 +7,15 @@ export default function KolaborasiHero() {
             {/* Background Decorative Elements */}
             <div className="absolute top-20 -right-20 w-96 h-96 bg-[#f4e04d]/10 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-pulse pointer-events-none" />
             <div className="absolute bottom-20 -left-20 w-80 h-80 bg-[#1a3c04]/5 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-pulse pointer-events-none" />
+            
+            {/* Transparent Grid Pattern */}
+            <div 
+                className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" 
+                style={{
+                    backgroundImage: `linear-gradient(#1a3c04 1px, transparent 1px), linear-gradient(90deg, #1a3c04 1px, transparent 1px)`,
+                    backgroundSize: '40px 40px'
+                }}
+            ></div>
 
             <div className="max-w-screen-2xl mx-auto px-6 md:px-16 lg:px-24 flex flex-col lg:flex-row gap-16 lg:gap-24 items-start relative z-10">
 

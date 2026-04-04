@@ -143,6 +143,15 @@ export default function PartnerSection() {
             {/* Background Ornaments */}
             <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-white to-transparent pointer-events-none opacity-50" />
             <div className="absolute -top-24 -left-24 w-96 h-96 bg-[#f4e04d]/10 rounded-full blur-3xl pointer-events-none" />
+            
+            {/* Transparent Grid Pattern */}
+            <div 
+                className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" 
+                style={{
+                    backgroundImage: `linear-gradient(#1a3c04 1px, transparent 1px), linear-gradient(90deg, #1a3c04 1px, transparent 1px)`,
+                    backgroundSize: '40px 40px'
+                }}
+            ></div>
 
             <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
                 <div className="text-center mb-16 md:mb-24">
