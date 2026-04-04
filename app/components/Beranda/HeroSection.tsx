@@ -37,7 +37,7 @@ export default function HeroSection({ initialWords = [] }: { initialWords?: any[
             <div className="relative z-10 w-full max-w-6xl px-6 text-center pt-32 md:pt-20">
                 <ScrollReveal delay={0}>
                     <span className="block font-body text-[#967451] text-xs md:text-sm tracking-[0.3em] uppercase mb-6 opacity-90 font-semibold">
-                        Warisan Nusantara Terkurasi
+                        Lamonte Official
                     </span>
                 </ScrollReveal>
 
