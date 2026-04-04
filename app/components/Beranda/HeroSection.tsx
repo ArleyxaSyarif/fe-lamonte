@@ -35,7 +35,7 @@ export default function HeroSection() {
                         </div>
 
                         <p className="text-base md:text-lg text-[#40493d] font-poppins font-medium leading-relaxed max-w-xl mb-8 opacity-80 mx-auto lg:mx-0">
-                            Bangun bisnis fashion anak Anda dengan stok premium dan sistem otomatis. Kualitas editorial untuk kenyamanan sang buah hati.
+                            Tanpa pusing produksi, tanpa stok numpuk, tanpa perang harga. Lamonte siapkan stok premium + sistem marketing otomatis. Kamu fokus jualan, tim kami yang backup.
                         </p>
                     </ScrollReveal>
 
@@ -72,7 +72,7 @@ export default function HeroSection() {
                 <div className="lg:col-span-5 relative mt-12 lg:mt-0 max-w-lg mx-auto">
                     <ScrollReveal delay={800}>
                         <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-[0_20px_40px_-12px_rgba(35,114,39,0.15)] group">
-                            <img alt="Hero Visual" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfmAEIYmSGLOYPCJ3C19tMjY0TqVrtSiLoEFYWm0FvPFyEjamlHHwm9IRPgEby5OW8rebSZO_U0M0obCQsPtlrlDmbGUvJ87Hi3W95WN01XBqoNY4xbSskJ303_GqrkPQJ5pCEBY8Qjg4HBkUGtdspUliO_lVSwupJUizlUo6-I7S8MIAdtOFQLmnVvRafCNP019dCPxXMvn4WMRlF2vGOZhXI4wABIQiokKXNUFQsqXjPsRT7H5-3C_T5OPU0LluwYAsH7HSsnVLT" />
+                            <img alt="Hero Visual" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src="/gudang/gudang1.png" />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#237227]/30 to-transparent"></div>
 
                             {/* Floating Status Badges */}
