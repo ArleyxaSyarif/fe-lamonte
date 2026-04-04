@@ -77,18 +77,20 @@ export default function HeroSection({ initialWords = [] }: { initialWords?: any[
                 </ScrollReveal>
 
                 <ScrollReveal delay={800}>
-                    <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mt-12 md:mt-12 scale-90 md:scale-100">
-                        <div className="flex items-center gap-2">
-                            <span className="material-symbols-outlined text-[#967451]">check_circle</span>
-                            <span className="text-sm text-[#7d7168]">Modal ringan, branding mewah</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <span className="material-symbols-outlined text-[#967451]">check_circle</span>
-                            <span className="text-sm text-[#7d7168]">Pola jualan terbukti jalan</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <span className="material-symbols-outlined text-[#967451]">check_circle</span>
-                            <span className="text-sm text-[#7d7168]">Cocok untuk ibu rumah tangga & pebisnis</span>
+                    <div className="mt-16 md:mt-24 border-t border-[#967451]/10">
+                        <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 lg:gap-16">
+                            <div className="flex items-center gap-3 group">
+                                <div className="w-1.5 h-1.5 rounded-full bg-[#967451]/40 transition-all group-hover:scale-150 group-hover:bg-[#967451]" />
+                                <span className="text-[11px] md:text-xs font-label tracking-[0.2em] uppercase text-[#7d7168] font-semibold">Modal Ringan, Branding Mewah</span>
+                            </div>
+                            <div className="flex items-center gap-3 group">
+                                <div className="w-1.5 h-1.5 rounded-full bg-[#967451]/40 transition-all group-hover:scale-150 group-hover:bg-[#967451]" />
+                                <span className="text-[11px] md:text-xs font-label tracking-[0.2em] uppercase text-[#7d7168] font-semibold">Pola Jualan Terbukti Jalan</span>
+                            </div>
+                            <div className="flex items-center gap-3 group">
+                                <div className="w-1.5 h-1.5 rounded-full bg-[#967451]/40 transition-all group-hover:scale-150 group-hover:bg-[#967451]" />
+                                <span className="text-[11px] md:text-xs font-label tracking-[0.2em] uppercase text-[#7d7168] font-semibold">Untuk IRT & Pebisnis</span>
+                            </div>
                         </div>
                     </div>
                 </ScrollReveal>

@@ -7,32 +7,28 @@ import ScrollReveal from "../ScrollReveal";
 const FAQS = [
     {
         id: 1,
-        question: "Apa keunggulan utama gabung kemitraan Lamonte?",
-        answer: "Kami bukan sekadar supplier baju anak. Lamonte adalah ekosistem bisnis. Setiap mitra mendapatkan akses ke bimbingan jualan, foto produk profesional siap pakai, dan harga modal langsung dari pabrik (first hand) sehingga margin keuntungan Anda tetap tebal."
+        question: "Saya pemula banget, belum pernah jualan. Masih bisa ikut?",
+        answer: "Sangat bisa. Ekosistem ini memang dibuat agar pemula punya sistem jualan rapi sejak awal. Ada panduan step-by-step, video, dan grup WA yang bantu kamu dari nol."
     },
     {
         id: 2,
-        question: "Bagaimana jika saya baru mulai dan belum punya pengalaman jualan?",
-        answer: "Jangan khawatir! Kami menyediakan Paket Sampel Murmer untuk tes pasar. Selain itu, Anda akan dimasukkan ke grup bimbingan eksklusif di mana kami berbagi tips marketing, cara closing di WhatsApp, hingga cara rapihin feed Instagram."
+        question: "Kalau saya sudah jualan brand lain, boleh gabung Lamonte juga?",
+        answer: "Boleh. Banyak mitra yang menambah Lamonte sebagai lini premium. Kami bantu atur positioning supaya jualanmu tidak saling “tabrakan”."
     },
     {
         id: 3,
-        question: "Apakah model bajunya selalu update mengikuti tren?",
-        answer: "Tentu saja. Tim kreatif kami meriset tren fashion anak setiap minggu. Kami pastikan stok yang Anda terima adalah model-model kekinian yang paling dicari Bunda-Bunda di seluruh Indonesia."
+        question: "Apakah ada garansi kalau saya nggak bisa jualan?",
+        answer: "Kami tidak janji kaya mendadak. Kami siapkan sistem, materi, dan pendampingan. Tugasmu hadir di kelas, praktik, dan konsisten. Kalau kamu niat belajar dan mau ikut arahan, peluang berhasil jauh lebih besar."
     },
-    {
-        id: 4,
-        question: "Bolehkan saya tukar model jika ada yang kurang laku di daerah saya?",
-        answer: "Ya, khusus untuk Paket Stokis dan Paket Gudang, kami memberikan fleksibilitas untuk retur/tukar model yang kurang laku dengan model terbaru (syarat & ketentuan berlaku) agar perputaran modal Anda tetap sehat."
-    }
+   
 ];
 
 export default function FaqSection() {
     return (
         <section className="relative bg-[#fdfae9] py-24 px-6 md:px-12 lg:px-24 font-body overflow-hidden">
-            
+
             {/* Dots Pattern Background - Subtle Brown Accent */}
-            <div 
+            <div
                 className="absolute inset-0 z-0 opacity-[0.15] pointer-events-none"
                 style={{
                     backgroundImage: `radial-gradient(#7b5730 2px, transparent 2px)`, // Ukuran titik sedikit diperbesar
@@ -65,19 +61,19 @@ export default function FaqSection() {
                             Bantuan & Informasi
                         </span>
                     </ScrollReveal>
-                    
+
                     <ScrollReveal delay={200}>
                         <h2 className="font-headline text-4xl md:text-6xl text-[#7b5730] mb-8 italic font-bold">
-                            Frequently Asked Questions
+                            Pertanyaan Calon Mitra
                         </h2>
                     </ScrollReveal>
-                    
+
                     <ScrollReveal delay={400}>
                         <p className="text-[#695c51] max-w-xl mx-auto leading-relaxed opacity-80">
                             Menjawab segala keraguan Anda untuk melangkah bersama Lamonte membangun bisnis keluarga yang berkah.
                         </p>
                     </ScrollReveal>
-                    
+
                     <div className="mt-10 flex justify-center">
                         <div className="h-[1px] w-24 bg-[#7b5730]/20"></div>
                     </div>

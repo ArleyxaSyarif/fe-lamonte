@@ -22,8 +22,9 @@ export default function KolaborasiHero() {
                             <div className="flex gap-4 md:gap-6 group text-left">
                                 <span className="text-3xl md:text-4xl font-headline font-bold text-[#7b5730] opacity-40 group-hover:opacity-100 transition-opacity">01</span>
                                 <div>
-                                    <h3 className="text-lg md:text-xl font-bold text-[#1c1c12] mb-2 font-body">Kurasi <span className="text-[#7b5730]">Eksklusif</span></h3>
-                                    <p className="text-[#4f453b] leading-relaxed font-body">Setiap destinasi dipilih melalui riset mendalam untuk memastikan nilai historis dan estetika yang tak tertandingi.</p>
+                                    <h3 className="text-lg md:text-xl font-bold text-[#1c1c12] mb-2 font-body">Repeat <span className="text-[#7b5730]">Order Tinggi</span></h3>
+                                    <p className="text-[#4f453b] leading-relaxed font-body">Anak tumbuh, bunda butuh beli lagi dan lagi. Repeat order tinggi kalau pelayanan kamu enak.
+</p>
                                 </div>
                             </div>
                         </ScrollReveal>
@@ -32,8 +33,8 @@ export default function KolaborasiHero() {
                             <div className="flex gap-4 md:gap-6 group text-left">
                                 <span className="text-3xl md:text-4xl font-headline font-bold text-[#7b5730] opacity-40 group-hover:opacity-100 transition-opacity">02</span>
                                 <div>
-                                    <h3 className="text-lg md:text-xl font-bold text-[#1c1c12] mb-2 font-body">Pemandu <span className="text-[#7b5730]">Ahli Warisan</span></h3>
-                                    <p className="text-[#4f453b] leading-relaxed font-body">Didampingi oleh sejarawan dan antropolog lokal yang menghidupkan setiap cerita di balik situs bersejarah.</p>
+                                    <h3 className="text-lg md:text-xl font-bold text-[#1c1c12] mb-2 font-body">Permintaan <span className="text-[#7b5730]">Tinggi</span></h3>
+                                    <p className="text-[#4f453b] leading-relaxed font-body">Busana muslim anak permintaannya terus naik, terutama jelang Ramadan, lebaran, dan musim sekolah.</p>
                                 </div>
                             </div>
                         </ScrollReveal>
@@ -42,8 +43,9 @@ export default function KolaborasiHero() {
                             <div className="flex gap-4 md:gap-6 group text-left">
                                 <span className="text-3xl md:text-4xl font-headline font-bold text-[#7b5730] opacity-40 group-hover:opacity-100 transition-opacity">03</span>
                                 <div>
-                                    <h3 className="text-lg md:text-xl font-bold text-[#1c1c12] mb-2 font-body">Dampak <span className="text-[#7b5730]">Lokal</span></h3>
-                                    <p className="text-[#4f453b] leading-relaxed font-body">Kontribusi langsung pada pelestarian budaya dan pemberdayaan ekonomi komunitas tradisional di seluruh kepulauan.</p>
+                                    <h3 className="text-lg md:text-xl font-bold text-[#1c1c12] mb-2 font-body">Kompetisi <span className="text-[#7b5730]">Rendah</span></h3>
+                                    <p className="text-[#4f453b] leading-relaxed font-body">
+Belum banyak brand yang serius jaga kualitas + kenyamanan + nilai syari’ sekaligus. Di sini Lamonte mengisi celah.</p>
                                 </div>
                             </div>
                         </ScrollReveal>

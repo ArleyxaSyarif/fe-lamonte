@@ -128,12 +128,12 @@ export default function PaketSection() {
             <div className="relative z-10 text-center mb-24 max-w-3xl mx-auto">
                 <ScrollReveal delay={0}>
                     <span className="text-[#967451] font-label font-bold tracking-[0.3em] uppercase text-xs mb-4 block">
-                        Pilihan Kemitraan
+                        Lamonte Kemitraan
                     </span>
                 </ScrollReveal>
                 <ScrollReveal delay={200}>
                     <h2 className="text-3xl md:text-6xl font-headline italic tracking-tight text-[#7b5730] mb-6">
-                        Koleksi Paket Eksklusif
+                        Pilih Jalur Kemitraan
                     </h2>
                 </ScrollReveal>
                 <ScrollReveal delay={400}>

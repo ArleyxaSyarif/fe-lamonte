@@ -23,17 +23,15 @@ export default async function Home() {
 
       <HeroSection initialWords={words} />
 
-      {/* Garis Pembatas Elegan (Versi Lebih Besar) - Memotong Foto */}
-      <div className="relative z-30 w-full h-0 flex items-center justify-center overflow-visible">
-        {/* Garis ujung ke ujung (lebih tegas) */}
-        <div className="absolute w-full h-[2px] bg-[#967451] opacity-30"></div>
+      {/* Garis Pembatas Elegan - Transisi ke Video */}
+      <div className="relative z-30 w-full py-12 md:py-20 flex items-center justify-center overflow-visible bg-[#f5f1e8]">
+        {/* Garis ujung ke ujung */}
+        <div className="absolute w-full h-[1px] bg-[#967451] opacity-20"></div>
 
-        {/* Ornamen di tengah yang menimpa garis */}
-        <div className="relative flex items-center justify-center bg-[#f5f1e8] px-12 py-2">
-          {/* Diamond luar membesar */}
-          <div className="w-8 h-8 rotate-45 border-[2px] border-[#967451]/70 flex items-center justify-center bg-[#f5f1e8]">
-            {/* Diamond dalam membesar */}
-            <div className="w-3 h-3 bg-[#967451]/90"></div>
+        {/* Ornamen di tengah */}
+        <div className="relative flex items-center justify-center bg-[#f5f1e8] px-8">
+          <div className="w-6 h-6 rotate-45 border border-[#967451]/50 flex items-center justify-center bg-[#f5f1e8]">
+            <div className="w-2 h-2 bg-[#967451]/70"></div>
           </div>
         </div>
       </div>

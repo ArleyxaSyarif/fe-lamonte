@@ -10,9 +10,9 @@ export default async function ProdukSection() {
         <div className="font-body selection:bg-[#7b5730]/20 antialiased">
             {/* Main Content Canvas */}
             <main className="relative min-h-screen pt-20 md:pt-32 pb-20 px-6 md:px-12 bg-[#fffceb] overflow-hidden">
-                
+
                 {/* Transparent Grid Pattern - Brown Accent */}
-                <div 
+                <div
                     className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none"
                     style={{
                         backgroundImage: `linear-gradient(#7b5730 1.5px, transparent 1.5px), linear-gradient(90deg, #7b5730 1.5px, transparent 1.5px)`,
@@ -34,13 +34,13 @@ export default async function ProdukSection() {
                 {/* Section Header */}
                 <header className="relative z-10 max-w-4xl mx-auto text-center mb-12 md:mb-16">
                     <ScrollReveal delay={0}>
-                        <span className="inline-block text-[#7b5730] font-sans text-xs md:text-sm tracking-[0.3em] uppercase mb-4 font-bold">Mahakarya Lamonte</span>
+                        <span className="inline-block text-[#7b5730] font-sans text-xs md:text-sm tracking-[0.3em] uppercase mb-4 font-bold">Laris Lamonte</span>
                     </ScrollReveal>
-                    
+
                     <ScrollReveal delay={200}>
                         <h1 className="font-headline text-3xl md:text-7xl text-[#967451] leading-tight mb-6">Katalog Produk</h1>
                     </ScrollReveal>
-                    
+
                     <ScrollReveal delay={400}>
                         <p className="font-body text-[#695c51] text-md md:text-lg max-w-2xl mx-auto leading-relaxed opacity-80">
                             Model kekinian, bahan nyaman, desain syari’. Disukai anak, disetujui bunda.

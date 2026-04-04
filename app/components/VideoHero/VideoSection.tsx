@@ -46,12 +46,15 @@ export default function VideoSection() {
                         </div>
 
                         <div className="lg:col-span-5 flex flex-col gap-8">
-                            <div className="p-8 bg-white/50 backdrop-blur-md rounded-2xl border border-[#d3c4b7]/30 shadow-xl shadow-[#7b5730]/5">
+                            <div className="p-6 md:p-8 bg-white/50 backdrop-blur-md rounded-2xl border border-[#d3c4b7]/30 shadow-xl shadow-[#7b5730]/5">
                                 <h3 className="text-lg font-headline italic text-[#7b5730] mb-4">Siap untuk mulai perjalanan Anda?</h3>
                                 <p className="text-[#695c51] text-sm leading-relaxed mb-6 font-body">
                                     Bergabunglah dengan ekosistem Lamonte dan nikmati sistem bisnis siap pakai yang telah teruji keberhasilannya.
                                 </p>
-                                <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20bertanya%20tentang%20Lamonte" className="w-full bg-[#7b5730] text-[#fdfae9] py-4 px-6 rounded-full font-label font-bold text-xs uppercase tracking-widest shadow-lg shadow-[#7b5730]/20 hover:bg-[#967451] transition-all transform hover:-translate-y-1 active:translate-y-0">
+                                <a 
+                                    href="https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20bertanya%20tentang%20Lamonte" 
+                                    className="flex w-full bg-[#7b5730] text-[#fdfae9] py-4 px-6 rounded-xl md:rounded-full font-label font-bold text-[10px] md:text-xs uppercase tracking-[0.1em] md:tracking-widest shadow-lg shadow-[#7b5730]/20 hover:bg-[#967451] transition-all transform hover:-translate-y-1 active:translate-y-0 text-center items-center justify-center min-h-[56px]"
+                                >
                                     Daftar Kerjasama Sekarang
                                 </a>
                             </div>

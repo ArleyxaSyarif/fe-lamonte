@@ -35,13 +35,13 @@ export default async function TestimoniSection() {
             <div className="relative z-10 max-w-screen-xl mx-auto px-6 md:px-12 mb-16 text-center">
                 <ScrollReveal delay={0}>
                     <span className="font-label text-sm tracking-[0.3em] uppercase text-[#967451] mb-4 block font-bold">
-                        Wajah Ceria Lamonte
+                        Bukti Nyata Bukan Sekadar Janji
                     </span>
                 </ScrollReveal>
                 
                 <ScrollReveal delay={200}>
                     <h2 className="font-headline text-3xl md:text-6xl text-[#7b5730] leading-tight mb-6 md:mb-8">
-                        Testimonials
+                        Testimoni
                     </h2>
                 </ScrollReveal>
                 
