@@ -6,9 +6,10 @@ import ScrollReveal from "../ScrollReveal";
 export default function KontakSection() {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+    const [name, setName] = useState("");
     const [loading, setLoading] = useState(false);
 
-    const handleSubmit = async (e: any) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setLoading(true);
 
@@ -19,6 +20,7 @@ export default function KontakSection() {
             alert("Pesan berhasil dikirim 🚀. Tim Lamonte akan segera menghubungi Anda.");
             setEmail("");
             setMessage("");
+            setName("");
         } catch (err) {
             alert("Gagal kirim ❌");
         }
@@ -27,161 +29,175 @@ export default function KontakSection() {
     };
 
     return (
-        <div className="bg-[#fefae6] w-full">
-            <section id="kontak" className="relative pt-24 md:pt-40 pb-20 px-6 md:px-8 max-w-7xl mx-auto overflow-hidden font-body">
-
-                {/* Header Content */}
-                <div className="text-center mb-16 md:mb-24 relative z-10">
-                    <ScrollReveal delay={0}>
-                        <span className="text-xs md:text-sm font-label font-bold tracking-[0.3em] text-[#1a3c04] uppercase mb-4 block opacity-70">
-                            Hubungi Kami
-                        </span>
-                    </ScrollReveal>
-
-                    <ScrollReveal delay={200}>
-                        <h1 className="text-2xl md:text-5xl font-headline text-[#1a3c04] leading-tight mb-8">
-                            Mulai Bisnis Baju <br />
-                            Anak Anda Sekarang
-                        </h1>
-                    </ScrollReveal>
-                    <div className="h-[2px] w-24 bg-[#f4e04d] mx-auto"></div>
-                </div>
-
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24 items-start relative z-10">
-                    {/* Left Column: Contact Form */}
-                    <ScrollReveal delay={400}>
-                        <div className="space-y-10 md:space-y-12 bg-white/50 p-8 md:p-12 rounded-[2.5rem] border border-[#1a3c04]/10 shadow-xl backdrop-blur-sm">
-                            <div className="space-y-4">
-                                <h2 className="text-2xl md:text-3xl font-headline text-[#1a3c04]">Kirim Pesan</h2>
-                                <p className="text-[#1a3c04]/70 text-sm md:text-base font-body max-w-md">
-                                    Punya pertanyaan tentang paket kemitraan? Tim kami siap menjawab dan membimbing Anda memilih paket terbaik.
+        <section id="kontak" className="bg-[#fefae6] w-full">
+            <main className="max-w-7xl mx-auto px-8 py-16 md:py-32">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                    
+                    {/* Left Column: Content */}
+                    <div className="lg:col-span-5 space-y-12">
+                        <header className="space-y-6">
+                            <ScrollReveal delay={0}>
+                                <span className="text-[#675c00] font-bold tracking-widest uppercase text-xs mb-4 block">Editorial Inquiry</span>
+                            </ScrollReveal>
+                            <ScrollReveal delay={200}>
+                                <h1 className="font-headline text-5xl md:text-7xl font-black tracking-tighter text-[#1a3c04] leading-[0.95] italic">
+                                    Mulai Bisnis <br/> Baju Anak
+                                </h1>
+                            </ScrollReveal>
+                            <ScrollReveal delay={400}>
+                                <p className="text-lg text-[#1a3c04]/70 leading-relaxed max-w-md font-medium">
+                                    Kami membantu para ibu rumah tangga dan pengusaha muda membangun brand fashion anak yang berkelas dengan sistem siap pakai.
                                 </p>
-                            </div>
+                            </ScrollReveal>
+                        </header>
 
-                            <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
-                                <div className="space-y-6">
-                                    <div className="relative group">
-                                        <label htmlFor="email" className="text-xs font-label font-bold tracking-widest text-[#1a3c04] uppercase block mb-2 opacity-60">
-                                            Alamat Email
-                                        </label>
-                                        <input
-                                            type="email"
-                                            id="email"
-                                            name="email"
-                                            value={email}
-                                            onChange={(e) => setEmail(e.target.value)}
-                                            placeholder="nama@email.com"
-                                            required
-                                            className="w-full bg-transparent border-b border-[#1a3c04]/20 focus:border-[#1a3c04] px-0 py-3 transition-colors outline-none text-[#1a3c04] placeholder:text-[#1a3c04]/30"
-                                        />
+                        <div className="space-y-10">
+                            {/* Contact Info Blocks */}
+                            <ScrollReveal delay={500}>
+                                <div className="group">
+                                    <div className="flex items-center gap-4 mb-2">
+                                        <span className="material-symbols-outlined text-[#1a3c04]" style={{ fontVariationSettings: "'FILL' 1" }}>mail</span>
+                                        <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#1a3c04]/50">Email Support</span>
                                     </div>
-                                    <div className="relative group">
-                                        <label htmlFor="message" className="text-xs font-label font-bold tracking-widest text-[#1a3c04] uppercase block mb-2 opacity-60">
-                                            Pesan Singkat
-                                        </label>
-                                        <textarea
-                                            id="message"
-                                            name="message"
-                                            rows={3}
-                                            value={message}
-                                            onChange={(e) => setMessage(e.target.value)}
-                                            placeholder="Tuliskan pertanyaan atau rencana bisnis Anda..."
-                                            required
-                                            className="w-full bg-transparent border-b border-[#1a3c04]/20 focus:border-[#1a3c04] px-0 py-3 transition-colors outline-none text-[#1a3c04] placeholder:text-[#1a3c04]/30 resize-none"
-                                        />
-                                    </div>
+                                    <a className="text-2xl font-headline font-black italic text-[#1a3c04] hover:text-[#675c00] transition-colors" href="mailto:hello@lamonte.id">
+                                        hello@lamonte.id
+                                    </a>
                                 </div>
-                                <button
-                                    type="submit"
-                                    disabled={loading}
-                                    className="group relative w-full bg-[#1a3c04] text-white py-4 md:py-5 px-6 md:px-10 rounded-full font-semibold tracking-widest uppercase text-xs md:text-sm overflow-hidden transition-all duration-300 hover:bg-[#1a3c04]/90 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed shadow-xl shadow-[#1a3c04]/20 flex items-center justify-center gap-3"
-                                >
-                                    {loading ? (
-                                        <>
-                                            <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                                                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                                            </svg>
-                                            <span>MENGIRIM...</span>
-                                        </>
-                                    ) : (
-                                        <div className="flex items-center justify-center gap-3">
-                                            <span>HUBUNGI KAMI</span>
-                                            <span className="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">
-                                                send
-                                            </span>
-                                        </div>
-                                    )}
-                                </button>
-                            </form>
-                        </div>
-                    </ScrollReveal>
+                            </ScrollReveal>
 
-                    {/* Right Column: Contact Info & Map */}
-                    <ScrollReveal delay={600}>
-                        <div className="space-y-12 md:space-y-16">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
-                                <div className="space-y-4">
-                                    <h3 className="text-xs font-label font-bold tracking-widest text-[#1a3c04] uppercase opacity-60">Kantor Pusat</h3>
-                                    <p className="text-md md:text-lg font-headline text-[#1a3c04] leading-relaxed">
-                                        Lamonte Distribution Center<br />
-                                        Kawasan Industri Jababeka, Blok C1<br />
-                                        Bekasi, Jawa Barat
+                            <ScrollReveal delay={600}>
+                                <div className="group">
+                                    <div className="flex items-center gap-4 mb-2">
+                                        <span className="material-symbols-outlined text-[#1a3c04]" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
+                                        <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#1a3c04]/50">Call Center</span>
+                                    </div>
+                                    <p className="text-2xl font-headline font-black italic text-[#1a3c04]">
+                                        +62 812-3456-7890
                                     </p>
                                 </div>
-                                <div className="space-y-4">
-                                    <h3 className="text-xs font-label font-bold tracking-widest text-[#1a3c04] uppercase opacity-60">Hubungi</h3>
-                                    <div className="space-y-2">
-                                        <p className="text-md md:text-lg font-headline text-[#1a3c04]">+62 812 3456 7890</p>
-                                        <p className="text-md md:text-lg font-headline text-[#1a3c04]">cs@lamontestore.com</p>
-                                    </div>
-                                </div>
-                            </div>
+                            </ScrollReveal>
 
-                            <div className="space-y-6">
-                                <h3 className="text-xs font-label font-bold tracking-widest text-[#1a3c04] uppercase opacity-60">Ikuti Lamonte</h3>
-                                <div className="flex gap-4 md:gap-6">
-                                    {["public", "camera", "play_circle"].map((icon) => (
-                                        <a
-                                            key={icon}
-                                            href="#"
-                                            className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full border border-[#1a3c04]/20 text-[#1a3c04] hover:bg-[#1a3c04] hover:text-white transition-all shadow-sm"
-                                        >
-                                            <span className="material-symbols-outlined text-xl md:text-2xl">{icon}</span>
-                                        </a>
-                                    ))}
-                                </div>
-                            </div>
-
-                            {/* Map Placeholder */}
-                            <div className="relative w-full h-64 md:h-80 rounded-3xl overflow-hidden bg-[#1a3c04]/5 group border border-[#1a3c04]/10 shadow-lg">
-                                <div className="absolute inset-0">
-                                    <img
-                                        src="https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?q=80&w=800&auto=format&fit=crop"
-                                        alt="Map view"
-                                        className="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"
-                                    />
-                                </div>
-                                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                    <div className="bg-white/90 backdrop-blur-sm px-5 py-3 md:px-6 md:py-4 rounded-full shadow-xl flex items-center gap-3">
-                                        <span className="material-symbols-outlined text-[#1a3c04]">location_on</span>
-                                        <span className="text-xs md:text-sm font-label font-semibold text-[#1a3c04] uppercase tracking-widest">
-                                            Lihat di Peta
-                                        </span>
+                            <ScrollReveal delay={700}>
+                                <div className="group">
+                                    <div className="flex items-center gap-4 mb-2">
+                                        <span className="material-symbols-outlined text-[#1a3c04]" style={{ fontVariationSettings: "'FILL' 1" }}>location_on</span>
+                                        <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#1a3c04]/50">Distribution Center</span>
                                     </div>
+                                    <p className="text-lg font-bold text-[#1a3c04]/70 leading-relaxed italic">
+                                        Kawasan Industri Jababeka<br/>Bekasi, Indonesia
+                                    </p>
                                 </div>
-                                <a
-                                    href="https://maps.google.com/?q=Bekasi,Indonesia"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="absolute inset-0 z-10"
-                                    aria-label="View on Google Maps"
-                                ></a>
-                            </div>
+                            </ScrollReveal>
                         </div>
-                    </ScrollReveal>
+
+                        {/* Abstract Decorative Element */}
+                        <div className="hidden lg:block pt-8">
+                            <ScrollReveal delay={800}>
+                                <div className="w-24 h-1 bg-[#1a3c04] rounded-full"></div>
+                                <div className="w-12 h-1 bg-[#f4e04d] rounded-full mt-2"></div>
+                            </ScrollReveal>
+                        </div>
+                    </div>
+
+                    {/* Right Column: Form Card */}
+                    <div className="lg:col-span-7">
+                        <ScrollReveal delay={500}>
+                            <div className="bg-white rounded-3xl p-8 md:p-14 shadow-premium-lg relative overflow-hidden border border-[#1a3c04]/5">
+                                {/* Subtle tonal accent in corner */}
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-[#f4e04d]/10 rounded-bl-full -mr-16 -mt-16 opacity-50"></div>
+                                
+                                <form onSubmit={handleSubmit} className="relative z-10 space-y-10">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                                        <div className="space-y-3">
+                                            <label className="block text-[10px] font-black text-[#1a3c04]/50 font-label ml-1 tracking-[0.2em]" htmlFor="name">NAMA LENGKAP</label>
+                                            <input 
+                                                className="w-full bg-white border border-[#1a3c04]/5 rounded-2xl px-5 py-4 font-body text-[#1a3c04] placeholder:text-[#1a3c04]/30 focus:ring-4 focus:ring-[#1a3c04]/5 focus:border-[#1a3c04]/20 transition-all outline-none" 
+                                                id="name" 
+                                                type="text" 
+                                                placeholder="Contoh: Sarah Wijaya"
+                                                value={name}
+                                                onChange={(e) => setName(e.target.value)}
+                                                required
+                                            />
+                                        </div>
+                                        <div className="space-y-3">
+                                            <label className="block text-[10px] font-black text-[#1a3c04]/50 font-label ml-1 tracking-[0.2em]" htmlFor="email">WHATSAPP / EMAIL</label>
+                                            <input 
+                                                className="w-full bg-white border border-[#1a3c04]/5 rounded-2xl px-5 py-4 font-body text-[#1a3c04] placeholder:text-[#1a3c04]/30 focus:ring-4 focus:ring-[#1a3c04]/5 focus:border-[#1a3c04]/20 transition-all outline-none" 
+                                                id="email" 
+                                                type="text"
+                                                placeholder="WhatsApp atau Email Anda"
+                                                value={email}
+                                                onChange={(e) => setEmail(e.target.value)}
+                                                required
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div className="space-y-4">
+                                        <label className="block text-[10px] font-black text-[#1a3c04]/50 font-label ml-1 tracking-[0.2em]">PILIH KETERTARIKAN</label>
+                                        <div className="flex flex-wrap gap-3 mt-3">
+                                            {["Paket Grosir", "Paket Distributor", "Sistem Reseller"].map((tag) => (
+                                                <button key={tag} className="px-5 py-2.5 bg-[#1a3c04]/5 text-[#1a3c04] rounded-full text-xs font-black uppercase tracking-widest hover:bg-[#1a3c04] hover:text-[#f4e04d] transition-all" type="button">
+                                                    {tag}
+                                                </button>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    <div className="space-y-3">
+                                        <label className="block text-[10px] font-black text-[#1a3c04]/50 font-label ml-1 tracking-[0.2em]" htmlFor="message">PESAN ANDA</label>
+                                        <textarea 
+                                            className="w-full bg-white border border-[#1a3c04]/5 rounded-2xl px-5 py-4 font-body text-[#1a3c04] placeholder:text-[#1a3c04]/30 focus:ring-4 focus:ring-[#1a3c04]/5 focus:border-[#1a3c04]/20 transition-all outline-none resize-none" 
+                                            id="message" 
+                                            rows={4}
+                                            placeholder="Tuliskan visi bisnis Anda atau pertanyaan..."
+                                            value={message}
+                                            onChange={(e) => setMessage(e.target.value)}
+                                            required
+                                        ></textarea>
+                                    </div>
+
+                                    <div className="pt-4">
+                                        <button 
+                                            type="submit" 
+                                            disabled={loading}
+                                            className="w-full md:w-auto px-12 py-5 bg-[#1a3c04] text-[#f4e04d] rounded-2xl font-headline font-black text-lg tracking-tight shadow-xl shadow-[#1a3c04]/20 hover:shadow-2xl hover:translate-y-[-2px] active:scale-95 transition-all flex items-center justify-center gap-4 disabled:opacity-70 disabled:pointer-events-none"
+                                        >
+                                            {loading ? (
+                                                <div className="flex items-center gap-3">
+                                                    <div className="w-5 h-5 border-t-2 border-[#f4e04d] border-solid rounded-full animate-spin"></div>
+                                                    <span>MENGIRIM...</span>
+                                                </div>
+                                            ) : (
+                                                <>
+                                                    Kirim Inquiry Bisnis
+                                                    <span className="material-symbols-outlined text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>arrow_forward</span>
+                                                </>
+                                            )}
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </ScrollReveal>
+
+                        {/* Social & Trust Row */}
+                        <ScrollReveal delay={800}>
+                            <div className="mt-12 flex flex-col md:flex-row justify-between items-center gap-8 px-4 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700">
+                                <div className="flex items-center gap-10">
+                                    <span className="font-headline font-black text-xl italic text-[#1a3c04]">Editorial.</span>
+                                    <span className="font-headline font-black text-xl italic text-[#1a3c04]">Professional.</span>
+                                    <span className="font-headline font-black text-xl italic text-[#1a3c04]">Trust.</span>
+                                </div>
+                                <div className="text-[10px] font-black text-[#1a3c04]/60 flex items-center gap-3 uppercase tracking-[0.2em]">
+                                    <span className="w-2 h-2 rounded-full bg-[#f4e04d] animate-pulse"></span>
+                                    Available for New Partners Q2 2024
+                                </div>
+                            </div>
+                        </ScrollReveal>
+                    </div>
                 </div>
-            </section>
-        </div>
+            </main>
+        </section>
     );
 }

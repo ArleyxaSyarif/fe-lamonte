@@ -134,25 +134,25 @@ export default function PartnerSection() {
     ];
 
     return (
-        <section id="partner" className="bg-white py-16 md:py-24 relative overflow-hidden font-body">
+        <section id="partner" className="bg-[#fdf8e8] py-16 md:py-24 relative overflow-hidden font-body">
             <style>{`
                 .no-scrollbar::-webkit-scrollbar { display: none; }
                 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
             `}</style>
 
             {/* Background Ornaments */}
-            <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#1a3c04]/5 to-transparent pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-1/4 h-full bg-gradient-to-r from-[#f4e04d]/5 to-transparent pointer-events-none" />
+            <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-white to-transparent pointer-events-none opacity-50" />
+            <div className="absolute -top-24 -left-24 w-96 h-96 bg-[#f4e04d]/10 rounded-full blur-3xl pointer-events-none" />
 
             <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
-                <div className="text-center mb-12 md:mb-16">
+                <div className="text-center mb-16 md:mb-24">
                     <ScrollReveal delay={0}>
-                        <span className="font-label text-xs md:text-sm uppercase tracking-[0.3em] text-[#1a3c04] font-semibold mb-3 block">Ekosistem Lamonte</span>
+                        <span className="font-sans text-[11px] font-black uppercase tracking-[0.4em] text-[#1a3c04] mb-4 block px-4 py-1.5 rounded-full bg-[#f4e04d]/10 inline-block">Ekosistem Lamonte</span>
                     </ScrollReveal>
                     <ScrollReveal delay={200}>
-                        <h2 className="font-headline text-2xl md:text-4xl text-[#1a3c04]">Kenapa Bermitra Dengan Kami?</h2>
+                        <h2 className="font-headline text-3xl md:text-5xl text-[#1a3c04] italic font-black leading-tight">Kenapa Bermitra <br className="md:hidden" /> <span className="text-gradient">Dengan Kami?</span></h2>
                     </ScrollReveal>
-                    <div className="w-16 h-0.5 bg-[#f4e04d] mx-auto mt-6"></div>
+                    <div className="w-20 h-1 bg-[#f4e04d] mx-auto mt-8 rounded-full"></div>
                 </div>
 
                 <ScrollReveal delay={400}>
@@ -164,20 +164,20 @@ export default function PartnerSection() {
                             <span className="material-symbols-outlined">chevron_right</span>
                         </button>
 
-                        <div ref={trackRef} className="flex gap-6 md:gap-8 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-8">
+                        <div ref={trackRef} className="flex gap-8 md:gap-10 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-12">
                             {features.map((feat, i) => (
-                                <div key={i} className="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.334rem)] snap-start">
-                                    <div className="bg-white rounded-2xl overflow-hidden flex flex-col h-full shadow-lg border border-[#1a3c04]/5 transition-all hover:-translate-y-2 group/card">
-                                        <div className="p-8 flex-grow">
-                                            <div className="w-14 h-14 bg-[#1a3c04]/5 rounded-2xl flex items-center justify-center mb-6 group-hover/card:bg-[#1a3c04] text-[#1a3c04] group-hover/card:text-white transition-all">
-                                                <span className="material-symbols-outlined text-3xl">{feat.icon}</span>
+                                <div key={i} className="min-w-[85%] md:min-w-[calc(50%-1.25rem)] lg:min-w-[calc(33.333%-1.667rem)] snap-start">
+                                    <div className="bg-white rounded-[2.5rem] overflow-hidden flex flex-col h-full shadow-premium hover:shadow-premium-lg transition-all duration-500 hover:-translate-y-3 group/card border border-white/50">
+                                        <div className="p-10 flex-grow">
+                                            <div className="w-16 h-16 bg-[#1a3c04]/5 rounded-2xl flex items-center justify-center mb-8 group-hover/card:bg-[#1a3c04] text-[#1a3c04] group-hover/card:text-white transition-all duration-500 shadow-sm">
+                                                <span className="material-symbols-outlined text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>{feat.icon}</span>
                                             </div>
-                                            <h3 className="font-headline text-xl md:text-2xl text-[#1a3c04] mb-4">{feat.title}</h3>
-                                            <p className="text-[#1a3c04]/70 text-sm md:text-base leading-relaxed">{feat.desc}</p>
+                                            <h3 className="font-headline text-2xl text-[#1a3c04] mb-5 font-black italic tracking-tight">{feat.title}</h3>
+                                            <p className="text-[#1a3c04]/60 text-base md:text-lg leading-relaxed font-medium">{feat.desc}</p>
                                         </div>
-                                        <div className="bg-[#1a3c04]/5 py-4 px-8 flex items-center space-x-3">
-                                            <span className="material-symbols-outlined text-[#1a3c04] text-xl">verified</span>
-                                            <span className="font-label text-xs md:text-sm font-semibold tracking-wide text-[#1a3c04]">{feat.footer}</span>
+                                        <div className="bg-[#fdf8e8]/50 py-5 px-10 flex items-center space-x-3 border-t border-[#1a3c04]/5">
+                                            <span className="material-symbols-outlined text-[#1a3c04] text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
+                                            <span className="font-sans text-[11px] font-black uppercase tracking-widest text-[#1a3c04]/70">{feat.footer}</span>
                                         </div>
                                     </div>
                                 </div>

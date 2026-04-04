@@ -23,22 +23,25 @@ export default async function Home() {
 
       <HeroSection />
 
-
-
-      <VideoSection />
-
       <PartnerSection />
 
+
+
+
       <KolaborasiHero />
+
 
       <ProdukSection />
       <PaketSection />
 
       <CTA />
 
+
       <TestimoniSection />
+      <VideoSection />
 
       <FaqSection />
+
 
       <KontakSection />
     </div>

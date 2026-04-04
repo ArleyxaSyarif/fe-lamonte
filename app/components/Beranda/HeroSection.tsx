@@ -10,17 +10,25 @@ export default function HeroSection() {
             <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-[#f4e04d] rounded-full mix-blend-multiply filter blur-3xl opacity-20 pointer-events-none"></div>
             <div className="absolute -top-10 -left-10 w-64 h-64 bg-[#1a3c04] rounded-full mix-blend-multiply filter blur-3xl opacity-10 pointer-events-none"></div>
 
-            <div className="max-w-screen-2xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center relative z-10">
+            <ScrollReveal delay={0}>
+                <div className="flex flex-wrap items-center justify-between gap-6 border-b border-[#1a3c04]/10 pb-8">
+                    <div className="flex flex-wrap items-center gap-4">
+                        <div className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#1a3c04] rounded-full border border-[#1a3c04]/10 shadow-xl">
+                            <span className="material-symbols-outlined text-[#f4e04d] text-base" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
+                            <span className="text-xs font-black text-[#f4e04d] uppercase tracking-[0.2em] leading-none">Brand Baju Anak Syari & Premium</span>
+                        </div>
+                        <div className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#f4e04d] rounded-full border border-[#1a3c04]/10 shadow-lg">
+                            <span className="material-symbols-outlined text-[#1a3c04] text-base" style={{ fontVariationSettings: "'FILL' 1" }}>error</span>
+                            <span className="text-[11px] font-black text-[#1a3c04] uppercase tracking-tighter italic leading-none whitespace-nowrap">SLOT DISTRIBUTOR 2026 DIBATASI PER PROVINSI</span>
+                        </div>
+                    </div>
 
+                </div>
+            </ScrollReveal>
+
+            <div className="max-w-screen-2xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center relative z-10">
                 {/* Hero Content (Left) */}
                 <div className="lg:col-span-6 space-y-8 md:space-y-10">
-                    <ScrollReveal delay={0}>
-                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#f4e04d]/20 rounded-full border border-[#f4e04d]/30">
-                            <span className="material-symbols-outlined text-[#1a3c04] text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>stars</span>
-                            <span className="text-[10px] font-bold text-[#1a3c04] uppercase tracking-widest">Premium Kids Fashion Hub</span>
-                        </div>
-                    </ScrollReveal>
-
                     <ScrollReveal delay={200}>
                         <div className="space-y-6">
                             <h1 className="text-5xl md:text-7xl font-black text-[#1a3c04] leading-[0.95] tracking-tighter italic font-headline mb-4">
