@@ -40,7 +40,7 @@ export default async function TestimoniSection() {
                 </ScrollReveal>
                 
                 <ScrollReveal delay={200}>
-                    <h2 className="font-headline text-3xl md:text-6xl text-[#7b5730] leading-tight mb-6 md:mb-8">
+                    <h2 className="font-headline text-2xl md:text-5xl text-[#7b5730] leading-tight mb-6 md:mb-8">
                         Testimoni
                     </h2>
                 </ScrollReveal>

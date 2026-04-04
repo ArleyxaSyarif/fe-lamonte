@@ -31,26 +31,28 @@ export default function CTA() {
                     </div>
 
                     {/* Main Title - Diubah biar relevan dengan Lamonte */}
-                    <h2 className="font-headline text-4xl md:text-6xl lg:text-7xl text-[#7b5730] mb-8 leading-[1.1] tracking-tight">
+                    <h2 className="font-headline text-2xl md:text-5xl lg:text-7xl text-[#7b5730] mb-8 leading-[1.1] tracking-tight">
                         Ayok <span className="italic font-normal">klik tombol</span> di bawah ini
                     </h2>
 
                     {/* Description Text */}
-                    <p className="font-body text-base md:text-xl text-[#695c51] mb-12 leading-relaxed max-w-2xl opacity-90">
+                    <p className="font-body text-sm md:text-xl text-[#695c51] mb-12 leading-relaxed max-w-2xl opacity-90">
                         Jangan lewatkan kesempatan menjadi mitra eksklusif di kota Anda. Konsultasikan paket yang tepat untuk Anda secara gratis sekarang juga.
                     </p>
 
                     {/* CTA Button */}
                     <button
                         onClick={() => sendWhatsApp({})}
-                        className="group relative inline-flex items-center gap-4 bg-[#7b5730] text-white px-10 py-5 rounded-full transition-all duration-500 hover:scale-[1.05] hover:shadow-2xl hover:shadow-[#7b5730]/30 active:scale-95"
+                        className="group relative inline-flex items-center justify-center gap-3 md:gap-4 bg-[#7b5730] text-white px-8 md:px-10 py-4 md:py-5 rounded-full transition-all duration-500 hover:scale-[1.05] hover:shadow-2xl hover:shadow-[#7b5730]/30 active:scale-95 w-full sm:w-auto"
                     >
-                        <span className="material-symbols-outlined text-2xl group-hover:animate-bounce">
-                            send
-                        </span>
-                        <span className="font-body font-bold tracking-wider text-lg">
-                            Mulai Konsultasi Gratis
-                        </span>
+                        <div className="flex items-center justify-center gap-3 md:gap-4">
+                            <span className="material-symbols-outlined text-xl md:text-2xl group-hover:animate-bounce">
+                                send
+                            </span>
+                            <span className="font-body font-bold tracking-wider text-sm md:text-lg uppercase">
+                                Mulai Konsultasi Gratis
+                            </span>
+                        </div>
                     </button>
 
                     {/* Features List - Diubah biar lebih "Bisnis" banget */}

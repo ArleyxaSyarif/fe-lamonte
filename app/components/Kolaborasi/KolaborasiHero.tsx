@@ -10,7 +10,7 @@ export default function KolaborasiHero() {
                 <div className="w-full lg:w-1/2 space-y-10 md:space-y-12">
                     <header>
                         <ScrollReveal delay={0}>
-                            <h1 className="text-3xl md:text-5xl font-headline font-bold text-[#7b5730] leading-tight">
+                            <h1 className="text-2xl md:text-5xl font-headline font-bold text-[#7b5730] leading-tight">
                                 Kenapa Bisnis Baju Anak Wajib Kamu Seriusin Tahun Ini??
                             </h1>
                         </ScrollReveal>

@@ -121,7 +121,7 @@ export default function PartnerSection() {
                     </ScrollReveal>
 
                     <ScrollReveal delay={200}>
-                        <h2 className="font-headline text-3xl md:text-4xl text-[#967451]">Kenapa Bermitra Dengan Kami?</h2>
+                        <h2 className="font-headline text-2xl md:text-4xl text-[#967451]">Kenapa Bermitra Dengan Kami?</h2>
                     </ScrollReveal>
 
                     <div className="w-16 h-0.5 bg-[#7b5730] mx-auto mt-6"></div>

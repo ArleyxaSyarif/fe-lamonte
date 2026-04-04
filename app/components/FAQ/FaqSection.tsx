@@ -63,7 +63,7 @@ export default function FaqSection() {
                     </ScrollReveal>
 
                     <ScrollReveal delay={200}>
-                        <h2 className="font-headline text-4xl md:text-6xl text-[#7b5730] mb-8 italic font-bold">
+                        <h2 className="font-headline text-2xl md:text-5xl text-[#7b5730] mb-8 italic font-bold">
                             Pertanyaan Calon Mitra
                         </h2>
                     </ScrollReveal>
@@ -123,10 +123,12 @@ export default function FaqSection() {
                         </p>
                         <button
                             onClick={() => sendWhatsApp({ customMessage: "Halo Tim Lamonte, saya tertarik ingin bertanya-tanya telebih dahulu." })}
-                            className="inline-flex items-center gap-3 bg-[#7b5730] text-white px-10 py-4 rounded-full font-bold hover:scale-[1.05] hover:shadow-2xl hover:shadow-[#7b5730]/20 transition-all active:scale-95"
+                            className="inline-flex items-center justify-center gap-3 bg-[#7b5730] text-white px-6 md:px-10 py-4 rounded-full font-bold text-xs md:text-base hover:scale-[1.05] hover:shadow-2xl hover:shadow-[#7b5730]/20 transition-all active:scale-95 w-full sm:w-auto"
                         >
-                            Hubungi Konsultan Kami
-                            <span className="material-symbols-outlined">arrow_forward</span>
+                            <div className="flex items-center justify-center gap-3">
+                                <span>HUBUNGI KONSULTAN KAMI</span>
+                                <span className="material-symbols-outlined text-lg md:text-xl">arrow_forward</span>
+                            </div>
                         </button>
                     </div>
                 </ScrollReveal>

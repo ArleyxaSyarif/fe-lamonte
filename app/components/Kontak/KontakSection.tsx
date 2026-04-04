@@ -39,7 +39,7 @@ export default function KontakSection() {
                     </ScrollReveal>
                     
                     <ScrollReveal delay={200}>
-                        <h1 className="text-3xl md:text-6xl font-headline text-[#7b5730] leading-tight">
+                        <h1 className="text-2xl md:text-5xl font-headline text-[#7b5730] leading-tight">
                             Mulai Bisnis Baju <br />
                             Anak Anda Sekarang
                         </h1>
@@ -94,25 +94,23 @@ export default function KontakSection() {
                                 <button
                                     type="submit"
                                     disabled={loading}
-                                    className="group relative w-full bg-[#967451] text-white py-4 px-8 rounded-full font-semibold tracking-widest uppercase text-sm overflow-hidden transition-all duration-300 hover:bg-[#7b5730] hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100 shadow-lg shadow-[#967451]/20 flex items-center justify-center gap-3"
+                                    className="group relative w-full bg-[#7b5730] text-white py-4 md:py-5 px-6 md:px-10 rounded-full font-semibold tracking-widest uppercase text-xs md:text-sm overflow-hidden transition-all duration-300 hover:bg-[#967451] hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed shadow-lg shadow-[#7b5730]/20 flex items-center justify-center gap-3"
                                 >
-                                    <div className="absolute inset-0 w-1/4 h-full bg-white/10 skew-x-[-20deg] -translate-x-full group-hover:translate-x-[400%] transition-transform duration-700 ease-in-out" />
-
                                     {loading ? (
                                         <>
                                             <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                                                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                                             </svg>
-                                            <span>Mengirim...</span>
+                                            <span>MENGIRIM...</span>
                                         </>
                                     ) : (
-                                        <>
-                                            <span>Hubungi Kami</span>
+                                        <div className="flex items-center justify-center gap-3">
+                                            <span>HUBUNGI KAMI</span>
                                             <span className="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">
                                                 send
                                             </span>
-                                        </>
+                                        </div>
                                     )}
                                 </button>
                             </form>

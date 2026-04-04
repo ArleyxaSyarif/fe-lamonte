@@ -132,7 +132,7 @@ export default function PaketSection() {
                     </span>
                 </ScrollReveal>
                 <ScrollReveal delay={200}>
-                    <h2 className="text-3xl md:text-6xl font-headline italic tracking-tight text-[#7b5730] mb-6">
+                    <h2 className="text-2xl md:text-5xl font-headline italic tracking-tight text-[#7b5730] mb-6">
                         Pilih Jalur Kemitraan
                     </h2>
                 </ScrollReveal>

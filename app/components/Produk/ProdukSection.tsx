@@ -38,7 +38,7 @@ export default async function ProdukSection() {
                     </ScrollReveal>
 
                     <ScrollReveal delay={200}>
-                        <h1 className="font-headline text-3xl md:text-7xl text-[#967451] leading-tight mb-6">Katalog Produk</h1>
+                        <h1 className="font-headline text-2xl md:text-5xl lg:text-6xl text-[#967451] leading-tight mb-6">Katalog Produk</h1>
                     </ScrollReveal>
 
                     <ScrollReveal delay={400}>
@@ -48,7 +48,6 @@ export default async function ProdukSection() {
                     </ScrollReveal>
                 </header>
 
-                {/* Infinite Marquee Auto-Slider Section */}
                 <ScrollReveal delay={600}>
                     <section className="relative z-10 w-full mt-12 overflow-hidden py-8">
                         <style>{`
@@ -104,11 +103,11 @@ export default async function ProdukSection() {
                 {/* CTA Section */}
                 <ScrollReveal delay={800}>
                     <section className="mt-16 md:mt-24 text-center relative z-10">
-                        <button className="group relative px-12 py-5 bg-[#967451] text-white rounded-full font-medium tracking-widest uppercase text-sm overflow-hidden transition-all hover:shadow-2xl hover:-translate-y-1 active:translate-y-0 active:scale-95">
-                            <span className="relative z-10 flex items-center gap-3">
-                                Lihat Seluruh Koleksi
-                                <span className="material-symbols-outlined text-lg">arrow_forward</span>
-                            </span>
+                        <button className="group relative px-10 md:px-12 py-4 md:py-5 bg-[#7b5730] text-white rounded-full font-medium tracking-widest uppercase text-xs md:text-sm overflow-hidden transition-all hover:shadow-2xl hover:-translate-y-1 active:translate-y-0 active:scale-95 w-full sm:w-auto">
+                            <div className="relative z-10 flex items-center justify-center gap-3">
+                                <span>LIHAT SELURUH KOLEKSI</span>
+                                <span className="material-symbols-outlined text-lg md:text-xl">arrow_forward</span>
+                            </div>
                             <div className="absolute inset-0 bg-[#1c1c12]/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
                         </button>
                     </section>

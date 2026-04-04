@@ -38,7 +38,7 @@ export default function VideoSection() {
                                 </span>
                             </div>
 
-                            <h1 className="text-3xl md:text-5xl font-headline italic tracking-tight text-[#7b5730] leading-[1.1] mb-12">
+                            <h1 className="text-2xl md:text-5xl font-headline italic tracking-tight text-[#7b5730] leading-[1.1] mb-12">
                                 "Dipakai ratusan mitra untuk tembus omzet belasan hingga puluhan juta"
                             </h1>
 
