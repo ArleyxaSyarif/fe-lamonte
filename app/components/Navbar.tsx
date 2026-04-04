@@ -4,20 +4,7 @@ import { sendWhatsApp } from "@/lib/whatsapp";
 import { useState, useEffect } from "react";
 
 export default function Navbar() {
-    const [scrolled, setScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 100) {
-                setScrolled(true);
-            } else {
-                setScrolled(false);
-            }
-        };
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
 
     const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => {
         e.preventDefault();
@@ -47,10 +34,8 @@ export default function Navbar() {
     return (
         <>
             {/* Desktop Navbar (Top) */}
-            <nav
-                className={`fixed top-0 w-full z-[110] hidden md:flex justify-center px-4 transition-all duration-700 ease-out ${scrolled ? "translate-y-6 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"}`}
-            >
-                <div className="flex items-center w-full max-w-5xl bg-white/80 backdrop-blur-md px-6 py-2 border border-[#1a3c04]/10 shadow-lg rounded-full">
+             <nav className="fixed top-0 left-0 w-full z-[110] hidden md:flex justify-center bg-white/90 backdrop-blur-md border-b border-[#1a3c04]/10 shadow-sm transition-all duration-300 py-3 px-8 md:px-16 lg:px-24">
+                 <div className="flex items-center w-full max-w-screen-2xl mx-auto">
                     {/* Logo */}
                     <div onClick={handleHomeClick} className="flex items-center gap-2 cursor-pointer shrink-0">
                         <span className="material-symbols-outlined text-[#1a3c04] text-2xl rotate-45">spa</span>
@@ -86,7 +71,7 @@ export default function Navbar() {
             </nav>
 
             {/* Mobile Navbar (Bottom) */}
-            <nav className={`fixed bottom-0 left-0 w-full z-[110] md:hidden transition-all duration-500 transform ${scrolled ? "translate-y-0" : "translate-y-full"}`}>
+            <nav className="fixed bottom-0 left-0 w-full z-[110] md:hidden">
                 <div className="bg-white/95 backdrop-blur-md border-t border-[#1a3c04]/10 px-2 py-3 flex items-center justify-around shadow-[0_-4px_20px_rgba(0,0,0,0.1)]">
                     {navLinks.map((link) => (
                         <a
