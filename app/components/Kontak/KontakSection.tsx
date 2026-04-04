@@ -13,18 +13,21 @@ export default function KontakSection() {
         setLoading(true);
 
         try {
-            await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/contact`, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    email,
-                    message,
-                }),
-            });
+            // await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/contact`, {
+            //     method: "POST",
+            //     headers: {
+            //         "Content-Type": "application/json",
+            //     },
+            //     body: JSON.stringify({
+            //         email,
+            //         message,
+            //     }),
+            // });
 
-            alert("Pesan berhasil dikirim 🚀");
+            // Simulate API delay
+            await new Promise(resolve => setTimeout(resolve, 1500));
+
+            alert("Pesan berhasil dikirim 🚀 (Simulated)");
             setEmail("");
             setMessage("");
         } catch (err) {
