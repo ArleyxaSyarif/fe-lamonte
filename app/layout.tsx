@@ -23,12 +23,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Import Material Symbols */}
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
       </head>
-      <body className={`${notoSerif.variable} ${plusJakarta.variable} font-body relative min-h-screen bg-[#fdfae9]`}>
-
-
+      <body className={`${notoSerif.variable} ${plusJakarta.variable} font-body relative min-h-screen bg-[#fefae6]`}>
         <Navbar />
         <Frame />
-
         {children}
         <FooterSection />
         <WhatsApp />

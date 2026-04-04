@@ -2,22 +2,22 @@ export default function Frame() {
     return (
         <div className="fixed inset-0 pointer-events-none z-[100] overflow-hidden opacity-100">
             {/* Top Right */}
-            <div className="absolute top-4 right-4 text-[#967451] w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24">
+            <div className="absolute top-4 right-4 text-[#1a3c04]/20 w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24">
                 <CornerOrnament className="w-full h-full transform scale-x-[-1]" />
             </div>
             
             {/* Top Left */}
-            <div className="absolute top-4 left-4 text-[#967451] w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24">
+            <div className="absolute top-4 left-4 text-[#1a3c04]/20 w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24">
                 <CornerOrnament className="w-full h-full" />
             </div>
             
             {/* Bottom Left - Hidden on mobile to avoid overlap with bottom navbar */}
-            <div className="absolute bottom-4 left-4 text-[#967451] w-24 h-24 hidden md:block">
+            <div className="absolute bottom-4 left-4 text-[#1a3c04]/20 w-24 h-24 hidden md:block">
                 <CornerOrnament className="w-full h-full transform scale-y-[-1]" />
             </div>
             
             {/* Bottom Right - Hidden on mobile to avoid overlap with bottom navbar */}
-            <div className="absolute bottom-4 right-4 text-[#967451] w-24 h-24 hidden md:block">
+            <div className="absolute bottom-4 right-4 text-[#1a3c04]/20 w-24 h-24 hidden md:block">
                 <CornerOrnament className="w-full h-full transform scale-[-1]" />
             </div>
         </div>

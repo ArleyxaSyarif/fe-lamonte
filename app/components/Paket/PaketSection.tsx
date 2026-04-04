@@ -103,13 +103,14 @@ export default function PaketSection() {
     const visiblePackages = showAll ? PACKAGES : PACKAGES.slice(0, 4);
 
     return (
-        <section id='paket' className="relative py-16 md:py-24 px-6 md:px-8 max-w-screen-2xl mx-auto bg-[#fffceb] overflow-hidden">
-            
-            {/* Transparent Grid Pattern - Brown Accent */}
-            <div 
-                className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none"
+        <section id='paket' className="relative py-16 md:py-24 px-6 md:px-8 max-w-screen-2xl mx-auto bg-[#fefae6] overflow-hidden">
+
+            {/* Transparent Grid Pattern - Green Accent */}
+            <div
+                className="absolute inset-0 z-0 opacity-[0.02] pointer-events-none"
+
                 style={{
-                    backgroundImage: `linear-gradient(#7b5730 1.5px, transparent 1.5px), linear-gradient(90deg, #7b5730 1.5px, transparent 1.5px)`,
+                    backgroundImage: `linear-gradient(#1a3c04 1.5px, transparent 1.5px), linear-gradient(90deg, #1a3c04 1.5px, transparent 1.5px)`,
                     backgroundSize: '40px 40px'
                 }}
             ></div>
@@ -127,21 +128,21 @@ export default function PaketSection() {
             {/* Header Section */}
             <div className="relative z-10 text-center mb-24 max-w-3xl mx-auto">
                 <ScrollReveal delay={0}>
-                    <span className="text-[#967451] font-label font-bold tracking-[0.3em] uppercase text-xs mb-4 block">
+                    <span className="text-[#1a3c04] font-label font-bold tracking-[0.3em] uppercase text-xs mb-4 block opacity-70">
                         Lamonte Kemitraan
                     </span>
                 </ScrollReveal>
                 <ScrollReveal delay={200}>
-                    <h2 className="text-2xl md:text-5xl font-headline italic tracking-tight text-[#7b5730] mb-6">
+                    <h2 className="text-2xl md:text-5xl font-headline italic tracking-tight text-[#1a3c04] mb-6">
                         Pilih Jalur Kemitraan
                     </h2>
                 </ScrollReveal>
                 <ScrollReveal delay={400}>
-                    <p className="text-lg text-[#695c51] font-body leading-relaxed opacity-80">
+                    <p className="text-lg text-[#1a3c04]/70 font-body leading-relaxed">
                         Kurasi paket jualan yang dirancang untuk mempercepat profit Anda. Pilih modal yang sesuai dengan target bisnis keluarga Anda.
                     </p>
                 </ScrollReveal>
-                <div className="w-24 h-px bg-[#967451] mx-auto mt-12 opacity-30"></div>
+                <div className="w-24 h-px bg-[#f4e04d] mx-auto mt-12"></div>
             </div>
 
             {/* Package Grid */}
@@ -149,7 +150,7 @@ export default function PaketSection() {
                 {visiblePackages.map((pkg, index) => (
                     <ScrollReveal key={pkg.id} delay={600 + (index % 4) * 200}>
                         <div
-                            className={`group flex flex-col h-full bg-white/50 backdrop-blur-sm rounded-lg overflow-hidden border border-[#d3c4b7]/20 hover:shadow-2xl hover:shadow-[#7b5730]/10 transition-all duration-500 hover:-translate-y-2 ${showAll && index >= 4 ? 'animate-fade-in' : ''}`}
+                            className={`group flex flex-col h-full bg-white/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-[#1a3c04]/10 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 ${showAll && index >= 4 ? 'animate-fade-in' : ''}`}
                         >
                             <div className="relative h-[320px] md:h-[480px] overflow-hidden">
                                 <img
@@ -157,42 +158,42 @@ export default function PaketSection() {
                                     alt={pkg.title}
                                     src={pkg.img}
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#1a3c04]/80 via-transparent to-transparent opacity-60"></div>
                                 <div className="absolute top-6 left-6">
-                                    <span className="px-4 py-1.5 bg-white/90 backdrop-blur text-[#7b5730] text-[10px] font-bold tracking-[0.2em] uppercase rounded-full">
+                                    <span className="px-4 py-1.5 bg-[#f4e04d] text-[#1a3c04] text-[10px] font-bold tracking-[0.2em] uppercase rounded-full">
                                         {pkg.category}
                                     </span>
                                 </div>
                                 <div className="absolute top-6 right-6">
-                                    <div className="bg-[#7b5730] text-white px-3 py-1 rounded-lg font-bold text-xs shadow-lg">
+                                    <div className="bg-[#1a3c04] text-white px-3 py-1 rounded-lg font-bold text-xs shadow-lg">
                                         {pkg.price}
                                     </div>
                                 </div>
                             </div>
 
                             <div className="p-6 md:p-8 flex flex-col flex-grow bg-white">
-                                <h3 className="text-2xl font-headline italic text-[#7b5730] mb-2">{pkg.title}</h3>
-                                <p className="text-[#695c51]/70 text-sm font-medium mb-4">{pkg.count}</p>
+                                <h3 className="text-2xl font-headline italic text-[#1a3c04] mb-2">{pkg.title}</h3>
+                                <p className="text-[#1a3c04]/70 text-sm font-medium mb-4">{pkg.count}</p>
 
-                                <p className="text-[#4f453b] text-sm font-body leading-relaxed mb-6 italic">
+                                <p className="text-[#1a3c04]/90 text-sm font-body leading-relaxed mb-6 italic">
                                     "{pkg.desc}"
                                 </p>
 
                                 <div className="space-y-3 mb-8">
                                     {pkg.features.map((feat, i) => (
-                                        <div key={i} className="flex items-start gap-2 text-sm text-[#4f453b]">
-                                            <span className="material-symbols-outlined text-[#967451] text-lg">check_circle</span>
+                                        <div key={i} className="flex items-start gap-2 text-sm text-[#1a3c04]/80">
+                                            <span className="material-symbols-outlined text-[#1a3c04] text-lg">check_circle</span>
                                             <span>{feat}</span>
                                         </div>
                                     ))}
                                 </div>
 
-                                <div className="mt-auto pt-6 border-t border-[#d3c4b7]/20 flex justify-between items-center">
+                                <div className="mt-auto pt-6 border-t border-[#1a3c04]/10 flex justify-between items-center">
                                     <div>
-                                        <span className="block text-[10px] text-[#695c51]/50 uppercase tracking-widest mb-1">Total Investasi</span>
-                                        <span className="text-xl font-bold text-[#967451]">{pkg.price}</span>
+                                        <span className="block text-[10px] text-[#1a3c04]/50 uppercase tracking-widest mb-1">Total Investasi</span>
+                                        <span className="text-xl font-bold text-[#1a3c04]">{pkg.price}</span>
                                     </div>
-                                    <button onClick={() => sendWhatsApp({ title: pkg.title, price: pkg.price })} className="flex items-center gap-2 text-[#7b5730] font-bold text-sm tracking-wide group-hover:translate-x-2 transition-transform">
+                                    <button onClick={() => sendWhatsApp({ title: pkg.title, price: pkg.price })} className="flex items-center gap-2 text-[#1a3c04] font-bold text-sm tracking-wide group-hover:translate-x-2 transition-transform">
                                         Lihat Detail <span className="material-symbols-outlined text-sm">arrow_forward</span>
                                     </button>
                                 </div>
@@ -206,7 +207,7 @@ export default function PaketSection() {
             <div className="relative z-10 mt-20 flex justify-center">
                 <button
                     onClick={() => setShowAll(!showAll)}
-                    className="group flex items-center gap-3 bg-transparent border-2 border-[#967451] text-[#7b5730] px-10 py-4 rounded-full font-label text-sm font-bold uppercase tracking-[0.2em] hover:bg-[#967451] hover:text-white transition-all duration-300"
+                    className="group flex items-center gap-3 bg-transparent border-2 border-[#1a3c04] text-[#1a3c04] px-10 py-4 rounded-full font-label text-sm font-bold uppercase tracking-[0.2em] hover:bg-[#1a3c04] hover:text-white transition-all duration-300 shadow-lg shadow-[#1a3c04]/5"
                 >
                     <span>{showAll ? 'Tutup Paket' : 'Lihat Semua Paket'}</span>
                     <span className={`material-symbols-outlined transition-transform ${showAll ? 'rotate-180' : 'group-hover:translate-y-1'}`}>
