@@ -58,11 +58,12 @@ export async function getTestimonis() {
 
     // DUMMY DATA FOR TESTIMONIALS
     return [
-        { fotos: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80" },
-        { fotos: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=80" },
-        { fotos: "https://images.unsplash.com/photo-1531123897727-8f129e16fd3c?w=800&q=80" },
-        { fotos: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&q=80" },
-        { fotos: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80" }
+        { fotos: "/testimonials/chat1.png" },
+        { fotos: "/testimonials/chat2.png" },
+        { fotos: "/testimonials/chat3.png" },
+        { fotos: "/testimonials/package1.png" },
+        { fotos: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80" },
+        { fotos: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&q=80" }
     ];
 }
 
