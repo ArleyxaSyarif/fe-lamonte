@@ -62,8 +62,6 @@ export async function getTestimonis() {
         { fotos: "/testimonials/chat2.png" },
         { fotos: "/testimonials/chat3.png" },
         { fotos: "/testimonials/package1.png" },
-        { fotos: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80" },
-        { fotos: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&q=80" }
     ];
 }
 
