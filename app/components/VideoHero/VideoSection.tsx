@@ -22,41 +22,38 @@ export default function VideoSection() {
                     </div>
 
                     {/* Content Details */}
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-                        <div className="lg:col-span-8">
-                            <div className="flex items-center gap-4 mb-6">
-                                <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#967451] bg-[#f2f4f4] px-3 py-1 rounded font-label">Documentary</span>
-                                <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#967451] font-label">4.2M Views</span>
-                                <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#967451] font-label">Oct 2023</span>
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
+                        <div className="lg:col-span-7 whitespace-pre-wrap">
+                            <div className="flex flex-wrap items-center gap-3 mb-8">
+                                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#fdfae9] text-[#7b5730] border border-[#d3c4b7]/50 text-[10px] font-bold uppercase tracking-widest font-label shadow-sm">
+                                    <span className="material-symbols-outlined text-xs leading-none">videocam</span>
+                                    Documentary
+                                </span>
+                                <span className="text-[11px] font-bold uppercase tracking-[0.15em] text-[#967451] font-label opacity-70">
+                                    4.2M Views
+                                </span>
+                                <span className="w-1 h-1 rounded-full bg-[#d3c4b7]"></span>
+                                <span className="text-[11px] font-bold uppercase tracking-[0.15em] text-[#967451] font-label opacity-70">
+                                    Maret 2024
+                                </span>
                             </div>
-                            <h1 className="text-5xl font-extrabold tracking-tight text-[#967451] mb-8 font-headline">
-                                The Silent Architecture of Silence
+
+                            <h1 className="text-3xl md:text-5xl font-headline italic tracking-tight text-[#7b5730] leading-[1.1] mb-12">
+                                "Dipakai ratusan mitra untuk tembus omzet belasan hingga puluhan juta"
                             </h1>
-                            <p className="text-xl leading-relaxed text-[#967451] font-body max-w-3xl">
-                                An intimate exploration of minimalist design and its psychological impact on urban dwellers. This visual essay tracks the evolution of quiet spaces in the world's most chaotic metropolises, questioning the future of solitude in a hyper-connected age.
-                            </p>
+
+                            <div className="h-px w-full bg-gradient-to-r from-[#d3c4b7]/50 to-transparent"></div>
                         </div>
 
-                        <div className="lg:col-span-4 flex flex-col gap-10 lg:pt-2">
-
-                            {/* Metadata List */}
-                            <div className="grid grid-cols-2 gap-y-8 border-t border-zinc-100 pt-10">
-                                <div>
-                                    <h4 className="text-[10px] uppercase tracking-[0.2em] font-black text-black mb-2 font-label">Director</h4>
-                                    <p className="text-base font-bold text-[#967451] font-body">Marcus Aurel</p>
-                                </div>
-                                <div>
-                                    <h4 className="text-[10px] uppercase tracking-[0.2em] font-black text-black  mb-2 font-label">Cinematography</h4>
-                                    <p className="text-base font-bold text-[#967451] font-body">Sarah Jenkins</p>
-                                </div>
-                                <div>
-                                    <h4 className="text-[10px] uppercase tracking-[0.2em] font-black text-black  mb-2 font-label">Studio</h4>
-                                    <p className="text-base font-bold text-[#967451] font-body">Vanguard Media</p>
-                                </div>
-                                <div>
-                                    <h4 className="text-[10px] uppercase tracking-[0.2em] font-black text-black mb-2 font-label">Location</h4>
-                                    <p className="text-base font-bold text-[#967451] font-body">Copenhagen, DK</p>
-                                </div>
+                        <div className="lg:col-span-5 flex flex-col gap-8">
+                            <div className="p-8 bg-white/50 backdrop-blur-md rounded-2xl border border-[#d3c4b7]/30 shadow-xl shadow-[#7b5730]/5">
+                                <h3 className="text-lg font-headline italic text-[#7b5730] mb-4">Siap untuk mulai perjalanan Anda?</h3>
+                                <p className="text-[#695c51] text-sm leading-relaxed mb-6 font-body">
+                                    Bergabunglah dengan ekosistem Lamonte dan nikmati sistem bisnis siap pakai yang telah teruji keberhasilannya.
+                                </p>
+                                <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20bertanya%20tentang%20Lamonte" className="w-full bg-[#7b5730] text-[#fdfae9] py-4 px-6 rounded-full font-label font-bold text-xs uppercase tracking-widest shadow-lg shadow-[#7b5730]/20 hover:bg-[#967451] transition-all transform hover:-translate-y-1 active:translate-y-0">
+                                    Daftar Kerjasama Sekarang
+                                </a>
                             </div>
                         </div>
                     </div>

@@ -119,158 +119,172 @@ export default function PartnerSection() {
                     <ScrollReveal delay={0}>
                         <span className="font-label text-xs md:text-sm uppercase tracking-[0.3em] text-[#967451] font-semibold mb-3 block">Ekosistem Lamonte</span>
                     </ScrollReveal>
-                    
+
                     <ScrollReveal delay={200}>
                         <h2 className="font-headline text-3xl md:text-4xl text-[#967451]">Kenapa Bermitra Dengan Kami?</h2>
                     </ScrollReveal>
-                    
+
                     <div className="w-16 h-0.5 bg-[#7b5730] mx-auto mt-6"></div>
                 </div>
 
                 {/* Carousel Container */}
                 <ScrollReveal delay={400}>
                     <div className="relative group">
-                    {/* Navigation Arrows */}
-                    <button
-                        onClick={() => { isAutoScrolling.current = false; scrollPrev(); }}
-                        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 z-20 w-12 h-12 rounded-full border border-[#7b5730]/20 bg-[#fffceb] text-[#7b5730] hidden lg:flex items-center justify-center hover:bg-[#7b5730] hover:text-white transition-all duration-300"
-                    >
-                        <span className="material-symbols-outlined">chevron_left</span>
-                    </button>
-                    <button
-                        onClick={() => { isAutoScrolling.current = false; scrollNext(); }}
-                        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 z-20 w-12 h-12 rounded-full border border-[#7b5730]/20 bg-[#fffceb] text-[#7b5730] hidden lg:flex items-center justify-center hover:bg-[#7b5730] hover:text-white transition-all duration-300"
-                    >
-                        <span className="material-symbols-outlined">chevron_right</span>
-                    </button>
+                        {/* Navigation Arrows */}
+                        <button
+                            onClick={() => { isAutoScrolling.current = false; scrollPrev(); }}
+                            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 z-20 w-12 h-12 rounded-full border border-[#7b5730]/20 bg-[#fffceb] text-[#7b5730] hidden lg:flex items-center justify-center hover:bg-[#7b5730] hover:text-white transition-all duration-300"
+                        >
+                            <span className="material-symbols-outlined">chevron_left</span>
+                        </button>
+                        <button
+                            onClick={() => { isAutoScrolling.current = false; scrollNext(); }}
+                            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 z-20 w-12 h-12 rounded-full border border-[#7b5730]/20 bg-[#fffceb] text-[#7b5730] hidden lg:flex items-center justify-center hover:bg-[#7b5730] hover:text-white transition-all duration-300"
+                        >
+                            <span className="material-symbols-outlined">chevron_right</span>
+                        </button>
 
-                    {/* Scrollable Track */}
-                    <div
-                        ref={trackRef}
-                        className="flex gap-6 md:gap-8 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-8"
-                        style={{ scrollBehavior: 'smooth' }}
-                    >
-                        {/* Card 1 */}
-                        <div className="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.334rem)] snap-start">
-                            <div className="bg-white rounded-lg overflow-hidden flex flex-col h-full editorial-shadow transition-all duration-300 hover:-translate-y-2 group/card">
-                                <div className="p-6 md:p-8 flex-grow">
-                                    <div className="w-12 h-12 md:w-14 md:h-14 bg-[#7b5730]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#7b5730] text-[#7b5730] group-hover/card:text-white transition-colors duration-300">
-                                        <span className="material-symbols-outlined text-2xl md:text-3xl">auto_awesome</span>
+                        {/* Scrollable Track */}
+                        <div
+                            ref={trackRef}
+                            className="flex gap-6 md:gap-8 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-8"
+                            style={{ scrollBehavior: 'smooth' }}
+                        >
+                            {/* Card 1 */}
+                            <div className="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.334rem)] snap-start">
+                                <div className="bg-white rounded-lg overflow-hidden flex flex-col h-full editorial-shadow transition-all duration-300 hover:-translate-y-2 group/card">
+                                    <div className="p-6 md:p-8 flex-grow">
+                                        <div className="w-12 h-12 md:w-14 md:h-14 bg-[#7b5730]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#7b5730] text-[#7b5730] group-hover/card:text-white transition-colors duration-300">
+                                            <span className="material-symbols-outlined text-2xl md:text-3xl">auto_awesome</span>
+                                        </div>
+                                        <h3 className="font-headline text-xl md:text-2xl text-[#1c1c12] mb-4">Branding Toko Naik Kelas</h3>
+                                        <p className="text-[#695c51] text-sm md:text-base leading-relaxed">
+                                            Toko kecil rasa official store. Dapat desain sertifikat, ID card, banner dan template feed seragam. Bikin calon pembeli langsung percaya.
+                                        </p>
                                     </div>
-                                    <h3 className="font-headline text-xl md:text-2xl text-[#1c1c12] mb-4">Model Selalu Update</h3>
-                                    <p className="text-[#695c51] text-sm md:text-base leading-relaxed">
-                                        Desain baju anak yang selalu mengikuti tren pasar terkini, memastikan jualanmu tetap relevan dan diminati pembeli.
-                                    </p>
+                                    <div className="bg-[#ebe9d8] py-4 px-6 md:px-8 flex items-center space-x-3">
+                                        <span className="material-symbols-outlined text-[#7b5730] text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>
+                                        <span className="font-label text-xs md:text-sm font-semibold tracking-wide text-[#7b5730]">Toko terlihat rapi & niat</span>
+                                    </div>
                                 </div>
-                                <div className="bg-[#ebe9d8] py-4 px-6 md:px-8 flex items-center space-x-3">
-                                    <span className="material-symbols-outlined text-[#7b5730] text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>
-                                    <span className="font-label text-xs md:text-sm font-semibold tracking-wide text-[#7b5730]">DESAIN TRENDY KEKINIAN</span>
+                            </div>
+
+                            {/* Card 2 */}
+                            <div className="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.334rem)] snap-start">
+                                <div className="bg-white rounded-lg overflow-hidden flex flex-col h-full editorial-shadow transition-all duration-300 hover:-translate-y-2 group/card">
+                                    <div className="p-6 md:p-8 flex-grow">
+                                        <div className="w-12 h-12 md:w-14 md:h-14 bg-[#7b5634]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#7b5634] text-[#7b5634] group-hover/card:text-white transition-colors duration-300">
+                                            <span className="material-symbols-outlined text-2xl md:text-3xl">check_box_outline_blank</span>
+                                        </div>
+                                        <h3 className="font-headline text-xl md:text-2xl text-[#1c1c12] mb-4">Angka Jelas, Target Nyata</h3>
+                                        <p className="text-[#695c51] text-sm md:text-base leading-relaxed">
+                                            Masukkan modal dan target penghasilan. Sistem hitung otomatis target harian, harga ideal, dan skenario promo. Jualan pakai data, bukan feeling.
+                                        </p>
+                                    </div>
+                                    <div className="bg-[#ebe9d8] py-4 px-6 md:px-8 flex items-center space-x-3">
+                                        <span className="material-symbols-outlined text-[#7b5730] text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
+                                        <span className="font-label text-xs md:text-sm font-semibold tracking-wide text-[#7b5730]">Tau angka, berani gas</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Card 3 */}
+                            <div className="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.334rem)] snap-start">
+                                <div className="bg-white rounded-lg overflow-hidden flex flex-col h-full editorial-shadow transition-all duration-300 hover:-translate-y-2 group/card">
+                                    <div className="p-6 md:p-8 flex-grow">
+                                        <div className="w-12 h-12 md:w-14 md:h-14 bg-[#695c51]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#695c51] text-[#695c51] group-hover/card:text-white transition-colors duration-300">
+                                            <span className="material-symbols-outlined text-2xl md:text-3xl">inventory_2</span>
+                                        </div>
+                                        <h3 className="font-headline text-xl md:text-2xl text-[#1c1c12] mb-4">Konten Katalog Auto Cakep</h3>
+                                        <p className="text-[#695c51] text-sm md:text-base leading-relaxed">
+                                            Diajarin cara foto anak pakai HP, angle yang laku, dan filter praktis. Plus stok foto katalog profesional yang siap pakai.
+                                        </p>
+                                    </div>
+                                    <div className="bg-[#ebe9d8] py-4 px-6 md:px-8 flex items-center space-x-3">
+                                        <span className="material-symbols-outlined text-[#7b5730] text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>task_alt</span>
+                                        <span className="font-label text-xs md:text-sm font-semibold tracking-wide text-[#7b5730]">Feed keliatan brand besar</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Card 4 */}
+                            <div className="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.334rem)] snap-start">
+                                <div className="bg-white rounded-lg overflow-hidden flex flex-col h-full editorial-shadow transition-all duration-300 hover:-translate-y-2 group/card">
+                                    <div className="p-6 md:p-8 flex-grow">
+                                        <div className="w-12 h-12 md:w-14 md:h-14 bg-[#7b5730]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#7b5730] text-[#7b5730] group-hover/card:text-white transition-colors duration-300">
+                                            <span className="material-symbols-outlined text-2xl md:text-3xl">photo_library</span>
+                                        </div>
+                                        <h3 className="font-headline text-xl md:text-2xl text-[#1c1c12] mb-4">Toko Online Siap Panen</h3>
+                                        <p className="text-[#695c51] text-sm md:text-base leading-relaxed">
+                                            Step-by-step buka toko di marketplace. Dapat contoh judul, deskripsi, foto, dan pola diskon yang bikin produk sering muncul di pencarian.                                        </p>
+                                    </div>
+                                    <div className="bg-[#ebe9d8] py-4 px-6 md:px-8 flex items-center space-x-3">
+                                        <span className="material-symbols-outlined text-[#7b5730] text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>verified_user</span>
+                                        <span className="font-label text-xs md:text-sm font-semibold tracking-wide text-[#7b5730]">Enggak bingung mulai darimana</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Card 5 */}
+                            <div className="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.334rem)] snap-start">
+                                <div className="bg-white rounded-lg overflow-hidden flex flex-col h-full editorial-shadow transition-all duration-300 hover:-translate-y-2 group/card">
+                                    <div className="p-6 md:p-8 flex-grow">
+                                        <div className="w-12 h-12 md:w-14 md:h-14 bg-[#7b5634]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#7b5634] text-[#7b5634] group-hover/card:text-white transition-colors duration-300">
+                                            <span className="material-symbols-outlined text-2xl md:text-3xl">groups_2</span>
+                                        </div>
+                                        <h3 className="font-headline text-xl md:text-2xl text-[#1c1c12] mb-4">CS Robot Jago Nego</h3>
+                                        <p className="text-[#695c51] text-sm md:text-base leading-relaxed">
+                                            Tinggal copy-paste template chat yang sudah teruji. Dari chat nanya harga sampai minta diskon. Bisa diset otomatis, jadi tetap closing walau kamu lagi sibuk.                                        </p>
+                                    </div>
+                                    <div className="bg-[#ebe9d8] py-4 px-6 md:px-8 flex items-center space-x-3">
+                                        <span className="material-symbols-outlined text-[#7b5730] text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>
+                                        <span className="font-label text-xs md:text-sm font-semibold tracking-wide text-[#7b5730]">Chat rapi, closing naik</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Card 6 */}
+                            <div className="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.334rem)] snap-start">
+                                <div className="bg-white rounded-lg overflow-hidden flex flex-col h-full editorial-shadow transition-all duration-300 hover:-translate-y-2 group/card">
+                                    <div className="p-6 md:p-8 flex-grow">
+                                        <div className="w-12 h-12 md:w-14 md:h-14 bg-[#695c51]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#695c51] text-[#695c51] group-hover/card:text-white transition-colors duration-300">
+                                            <span className="material-symbols-outlined text-2xl md:text-3xl">payments</span>
+                                        </div>
+                                        <h3 className="font-headline text-xl md:text-2xl text-[#1c1c12] mb-4">Konten Harian Anti Buntu</h3>
+                                        <p className="text-[#695c51] text-sm md:text-base leading-relaxed">
+                                            Ide konten harian sudah disiapkan. Ada contoh caption, hook, dan CTA. Tinggal pilih, eksekusi, dan ulangi.                                        </p>
+                                    </div>
+                                    <div className="bg-[#ebe9d8] py-4 px-6 md:px-8 flex items-center space-x-3">
+                                        <span className="material-symbols-outlined text-[#7b5730] text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
+                                        <span className="font-label text-xs md:text-sm font-semibold tracking-wide text-[#7b5730]">MODAL MINIM UNTUNG MAX</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Card 7     */}
+                            <div className="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.334rem)] snap-start">
+                                <div className="bg-white rounded-lg overflow-hidden flex flex-col h-full editorial-shadow transition-all duration-300 hover:-translate-y-2 group/card">
+                                    <div className="p-6 md:p-8 flex-grow">
+                                        <div className="w-12 h-12 md:w-14 md:h-14 bg-[#7b5634]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#7b5634] text-[#7b5634] group-hover/card:text-white transition-colors duration-300">
+                                            <span className="material-symbols-outlined text-2xl md:text-3xl">groups_2</span>
+                                        </div>
+                                        <h3 className="font-headline text-xl md:text-2xl text-[#1c1c12] mb-4">Modul G: Sekolah Pebisnis Lapangan</h3>
+                                        <p className="text-[#695c51] text-sm md:text-base leading-relaxed">
+                                            Kelas Zoom rutin: update tren jualan, studi kasus mitra, dan sesi tanya jawab. Kamu nggak cuma ikut-ikutan, tapi paham cara mainnya.</p>                               </div>
+                                    <div className="bg-[#ebe9d8] py-4 px-6 md:px-8 flex items-center space-x-3">
+                                        <span className="material-symbols-outlined text-[#7b5730] text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>
+                                        <span className="font-label text-xs md:text-sm font-semibold tracking-wide text-[#7b5730]">Cek jadwal kelas</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Card 2 */}
-                        <div className="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.334rem)] snap-start">
-                            <div className="bg-white rounded-lg overflow-hidden flex flex-col h-full editorial-shadow transition-all duration-300 hover:-translate-y-2 group/card">
-                                <div className="p-6 md:p-8 flex-grow">
-                                    <div className="w-12 h-12 md:w-14 md:h-14 bg-[#7b5634]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#7b5634] text-[#7b5634] group-hover/card:text-white transition-colors duration-300">
-                                        <span className="material-symbols-outlined text-2xl md:text-3xl">check_box_outline_blank</span>
-                                    </div>
-                                    <h3 className="font-headline text-xl md:text-2xl text-[#1c1c12] mb-4">Kualitas Bahan Premium</h3>
-                                    <p className="text-[#695c51] text-sm md:text-base leading-relaxed">
-                                        Menggunakan bahan katun combed dan bahan premium lainnya yang lembut, menyerap keringat, dan sangat nyaman untuk kulit anak.
-                                    </p>
-                                </div>
-                                <div className="bg-[#ebe9d8] py-4 px-6 md:px-8 flex items-center space-x-3">
-                                    <span className="material-symbols-outlined text-[#7b5730] text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
-                                    <span className="font-label text-xs md:text-sm font-semibold tracking-wide text-[#7b5730]">BAHAN BERSTANDAR TINGGI</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Card 3 */}
-                        <div className="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.334rem)] snap-start">
-                            <div className="bg-white rounded-lg overflow-hidden flex flex-col h-full editorial-shadow transition-all duration-300 hover:-translate-y-2 group/card">
-                                <div className="p-6 md:p-8 flex-grow">
-                                    <div className="w-12 h-12 md:w-14 md:h-14 bg-[#695c51]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#695c51] text-[#695c51] group-hover/card:text-white transition-colors duration-300">
-                                        <span className="material-symbols-outlined text-2xl md:text-3xl">inventory_2</span>
-                                    </div>
-                                    <h3 className="font-headline text-xl md:text-2xl text-[#1c1c12] mb-4">Sistem Stok Real-time</h3>
-                                    <p className="text-[#695c51] text-sm md:text-base leading-relaxed">
-                                        Pantau ketersediaan stok kapan saja melalui dashboard mitra. Tanpa perlu tanya admin satu-satu, jualan jadi lebih cepat.
-                                    </p>
-                                </div>
-                                <div className="bg-[#ebe9d8] py-4 px-6 md:px-8 flex items-center space-x-3">
-                                    <span className="material-symbols-outlined text-[#7b5730] text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>task_alt</span>
-                                    <span className="font-label text-xs md:text-sm font-semibold tracking-wide text-[#7b5730]">AKURASI STOK 100%</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Card 4 */}
-                        <div className="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.334rem)] snap-start">
-                            <div className="bg-white rounded-lg overflow-hidden flex flex-col h-full editorial-shadow transition-all duration-300 hover:-translate-y-2 group/card">
-                                <div className="p-6 md:p-8 flex-grow">
-                                    <div className="w-12 h-12 md:w-14 md:h-14 bg-[#7b5730]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#7b5730] text-[#7b5730] group-hover/card:text-white transition-colors duration-300">
-                                        <span className="material-symbols-outlined text-2xl md:text-3xl">photo_library</span>
-                                    </div>
-                                    <h3 className="font-headline text-xl md:text-2xl text-[#1c1c12] mb-4">Materi Konten Siap Pakai</h3>
-                                    <p className="text-[#695c51] text-sm md:text-base leading-relaxed">
-                                        Foto dan video promosi profesional sudah kami sediakan setiap hari. Tinggal posting ke sosial mediamu, beres!
-                                    </p>
-                                </div>
-                                <div className="bg-[#ebe9d8] py-4 px-6 md:px-8 flex items-center space-x-3">
-                                    <span className="material-symbols-outlined text-[#7b5730] text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>verified_user</span>
-                                    <span className="font-label text-xs md:text-sm font-semibold tracking-wide text-[#7b5730]">KONTEN MARKETING PREMIUM</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Card 5 */}
-                        <div className="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.334rem)] snap-start">
-                            <div className="bg-white rounded-lg overflow-hidden flex flex-col h-full editorial-shadow transition-all duration-300 hover:-translate-y-2 group/card">
-                                <div className="p-6 md:p-8 flex-grow">
-                                    <div className="w-12 h-12 md:w-14 md:h-14 bg-[#7b5634]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#7b5634] text-[#7b5634] group-hover/card:text-white transition-colors duration-300">
-                                        <span className="material-symbols-outlined text-2xl md:text-3xl">groups_2</span>
-                                    </div>
-                                    <h3 className="font-headline text-xl md:text-2xl text-[#1c1c12] mb-4">Bimbingan Bisnis Intensif</h3>
-                                    <p className="text-[#695c51] text-sm md:text-base leading-relaxed">
-                                        Grup pendampingan khusus bersama mentor berpengalaman untuk membantu jualanmu terus bertumbuh dan omzet naik.
-                                    </p>
-                                </div>
-                                <div className="bg-[#ebe9d8] py-4 px-6 md:px-8 flex items-center space-x-3">
-                                    <span className="material-symbols-outlined text-[#7b5730] text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>
-                                    <span className="font-label text-xs md:text-sm font-semibold tracking-wide text-[#7b5730]">SUPORT MITRA NON-STOP</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Card 6 */}
-                        <div className="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.334rem)] snap-start">
-                            <div className="bg-white rounded-lg overflow-hidden flex flex-col h-full editorial-shadow transition-all duration-300 hover:-translate-y-2 group/card">
-                                <div className="p-6 md:p-8 flex-grow">
-                                    <div className="w-12 h-12 md:w-14 md:h-14 bg-[#695c51]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#695c51] text-[#695c51] group-hover/card:text-white transition-colors duration-300">
-                                        <span className="material-symbols-outlined text-2xl md:text-3xl">payments</span>
-                                    </div>
-                                    <h3 className="font-headline text-xl md:text-2xl text-[#1c1c12] mb-4">Harga Pabrik Langsung</h3>
-                                    <p className="text-[#695c51] text-sm md:text-base leading-relaxed">
-                                        Kami tangan pertama. Kamu dapat harga modal terendah sehingga bisa dapet margin keuntungan paling tebal di pasaran.
-                                    </p>
-                                </div>
-                                <div className="bg-[#ebe9d8] py-4 px-6 md:px-8 flex items-center space-x-3">
-                                    <span className="material-symbols-outlined text-[#7b5730] text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
-                                    <span className="font-label text-xs md:text-sm font-semibold tracking-wide text-[#7b5730]">MODAL MINIM UNTUNG MAX</span>
-                                </div>
-                            </div>
+                        {/* Navigation Dots */}
+                        <div ref={dotsRef} className="flex justify-center space-x-3 mt-8">
+                            <div className="dot w-6 h-2 rounded-full bg-[#7b5730] transition-all duration-300"></div>
+                            <div className="dot w-2 h-2 rounded-full bg-[#7b5730]/20 transition-all duration-300"></div>
                         </div>
                     </div>
-
-                    {/* Navigation Dots */}
-                    <div ref={dotsRef} className="flex justify-center space-x-3 mt-8">
-                        <div className="dot w-6 h-2 rounded-full bg-[#7b5730] transition-all duration-300"></div>
-                        <div className="dot w-2 h-2 rounded-full bg-[#7b5730]/20 transition-all duration-300"></div>
-                    </div>
-                </div>
                 </ScrollReveal>
             </div>
         </section>
