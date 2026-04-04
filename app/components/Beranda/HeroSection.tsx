@@ -9,24 +9,7 @@ export default function HeroSection() {
             {/* Background Decorative Elements */}
             <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-[#f4e04d] rounded-full mix-blend-multiply filter blur-3xl opacity-20 pointer-events-none"></div>
             <div className="absolute -top-10 -left-10 w-64 h-64 bg-[#1a3c04] rounded-full mix-blend-multiply filter blur-3xl opacity-10 pointer-events-none"></div>
-
-            <ScrollReveal delay={0}>
-                <div className="flex flex-wrap items-center justify-between gap-6 border-b border-[#1a3c04]/10 pb-8">
-                    <div className="flex flex-wrap items-center gap-4">
-                        <div className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#1a3c04] rounded-full border border-[#1a3c04]/10 shadow-xl">
-                            <span className="material-symbols-outlined text-[#f4e04d] text-base" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
-                            <span className="text-xs font-black text-[#f4e04d] uppercase tracking-[0.2em] leading-none">Brand Baju Anak Syari & Premium</span>
-                        </div>
-                        <div className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#f4e04d] rounded-full border border-[#1a3c04]/10 shadow-lg">
-                            <span className="material-symbols-outlined text-[#1a3c04] text-base" style={{ fontVariationSettings: "'FILL' 1" }}>error</span>
-                            <span className="text-[11px] font-black text-[#1a3c04] uppercase tracking-tighter italic leading-none whitespace-nowrap">SLOT DISTRIBUTOR 2026 DIBATASI PER PROVINSI</span>
-                        </div>
-                    </div>
-
-                </div>
-            </ScrollReveal>
-
-            <div className="max-w-screen-2xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center relative z-10">
+            <div className="max-w-screen-2xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start relative z-10">
                 {/* Hero Content (Left) */}
                 <div className="lg:col-span-6 space-y-8 md:space-y-10">
                     <ScrollReveal delay={200}>
@@ -60,6 +43,18 @@ export default function HeroSection() {
                             <a href="#video" className="border-2 border-[#1a3c04] text-[#1a3c04] px-10 py-5 rounded-full font-bold text-lg hover:bg-[#1a3c04]/5 transition-all duration-300 flex items-center justify-center gap-3 active:scale-95 backdrop-blur-sm shadow-md">
                                 <span>Nonton Dulu Strateginya</span>
                             </a>
+                        </div>
+
+                        {/* Brand Badges - Moved here from top */}
+                        <div className="mt-8 flex flex-wrap gap-3">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#1a3c04] rounded-full border border-[#1a3c04]/10 shadow-lg">
+                                <span className="material-symbols-outlined text-[#f4e04d] text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
+                                <span className="text-[10px] font-black text-[#f4e04d] uppercase tracking-widest leading-none">Brand Baju Anak Syari & Premium</span>
+                            </div>
+                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#f4e04d] rounded-full border border-[#1a3c04]/10 shadow-md animate-pulse">
+                                <span className="material-symbols-outlined text-[#1a3c04] text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>error</span>
+                                <span className="text-[9px] font-black text-[#1a3c04] uppercase tracking-tighter italic leading-none whitespace-nowrap">SLOT DISTRIBUTOR 2026 DIBATASI PER PROVINSI</span>
+                            </div>
                         </div>
                     </ScrollReveal>
 
@@ -106,7 +101,7 @@ export default function HeroSection() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="space-y-4 md:space-y-6 pt-12">
+                            <div className="space-y-4 md:space-y-6 pt-8">
                                 <div className="h-60 md:h-80 rounded-2xl overflow-hidden shadow-2xl relative group">
                                     <img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1vhS4S1h9CXpat3hhcmj_UDTPdYtUAgPijgjq6ZLrjTG9NhdQZrt_iaWPucuz0MghrAJpODnEmmb8ZPD9t6uTOxJgiG3Vok5OdrcEROcTuaXvyd1lvncDMCehPD3G93T_AcDVj3huwCOZGAiNUZ34SKMhHvl1Vbe3_MQJAo6DhHRR9Q0jNmoVVYcJxCK0eew1IqCcjiAUiK-IzF5L6p25F1h30WQnsUX6tSMGWg0cd1yw34MBSNAzH-tt3qE-uFHVYQ7sugdC-MSM" alt="Editorial Kids 3" />
                                     <div className="absolute bottom-4 left-2 right-2 md:left-4 md:right-4 bg-white/95 backdrop-blur-md p-4 rounded-xl shadow-lg border border-[#1a3c04]/10">
