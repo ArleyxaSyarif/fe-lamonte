@@ -33,10 +33,27 @@ export default function FooterSection() {
                 <div>
                     <h4 className="font-headline text-[#7b5730] font-bold mb-6 text-lg">Menu</h4>
                     <ul className="flex flex-col space-y-4">
-                        {["Jelajahi", "Destinasi", "Kisah", "Kontak"].map((item) => (
-                            <li key={item}>
-                                <a href="#" className="text-[#695c51] text-sm hover:text-[#7b5730] transition-colors underline-offset-4 hover:underline">
-                                    {item}
+                        {[
+                            { name: "Beranda", id: "top" },
+                            { name: "SuperApp", id: "partner" },
+                            { name: "Koleksi", id: "video" },
+                            { name: "Kontak", id: "kontak" }
+                        ].map((item) => (
+                            <li key={item.name}>
+                                <a 
+                                    href={`#${item.id}`} 
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        if (item.id === "top") {
+                                            window.scrollTo({ top: 0, behavior: "smooth" });
+                                        } else {
+                                            const el = document.getElementById(item.id);
+                                            if (el) window.scrollTo({ top: el.offsetTop - 80, behavior: "smooth" });
+                                        }
+                                    }}
+                                    className="text-[#695c51] text-sm hover:text-[#7b5730] transition-colors underline-offset-4 hover:underline"
+                                >
+                                    {item.name}
                                 </a>
                             </li>
                         ))}

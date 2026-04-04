@@ -12,7 +12,7 @@ const PACKAGES = [
         count: "25 pcs campur ukuran",
         price: "Rp 650.000",
         desc: "Untuk tes minat pasar tanpa takut stok numpuk.",
-        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCkKzWSt3XQYZkObtzmM786dM33j-eO-mPSnj9VvkcB7s1cZfAcWplOUfjN8KlxjGmrKZRjoRiFzNF38dZSVVBdox6_w3uAxwCKhBukV1Ej3891CudChwpzyIlRafpTmJfPyAdqCAnXYSuQkqt_a0GnBgqzdjlxw4WyWhRIWbtUCDFIK_c-71eILRM3cnAxxxKuh5whV_uJEUxnzt9HmCCh781fAflcCdvGsf_yQNXVvq2TT_EcSiEG7gjnA1_ZD-01lZHJnFt5P44",
+        img: "https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?q=80&w=800&auto=format&fit=crop",
         features: ["Stok ringan, aman", "Mix model laris", "Enak dijual tetangga"]
     },
     {
@@ -22,7 +22,7 @@ const PACKAGES = [
         count: "60 pcs campur model",
         price: "Rp 1.850.000",
         desc: "Langkah serius jadi pengusaha baju anak dari rumah.",
-        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDevBlWGX4K9CLPSzjiO5y4BJTwJ4E0dn7Qt5Ko1aqOIan33bMWEsXzk3yX1AJ4mcLdxE9viivC9epRcf_fXkMSaK_z2wmfFzdD2-QYZjKcHm6kccwdsfZ6BV9DJJ3PREKsQ8b6TNQUisfRK__UWHEa71dDxY70E7cph8rwGhnpaYPZzbZu4tAj8M_Wtz7xw6HLzF1272YjaBJoHEcAKlrVdAwiQRE9kVcZblC4hW_hlh23IU9SS4HKzvBzghC4mM0XPjz_wABv8ao",
+        img: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop",
         features: ["Bimbingan jualan", "Katalog foto eksklusif", "Margin keuntungan tebal"]
     },
     {
@@ -32,7 +32,7 @@ const PACKAGES = [
         count: "150 pcs varian lengkap",
         price: "Rp 4.500.000",
         desc: "Kuasai pasar di lingkup kecamatan atau kota Anda.",
-        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAjCWmh-eu-rn80TSXFcy30g_OaKV5eSbfaQqtKskh0TvfppOhHPyzPiwwz0Bax0USp3m9mdlvyAJGuPBfz8CKyQ9CxSi6ZETt2JPJ7TCGuvmn9eXqp2rjIkV3FxEjEY0l0s-i_PQ-MvoC821vvpCtjIjmK5LetFq0ud_AIIDyjg_7qp8I2r_WeT6aiEvzClSg56oxHYsA5o2btIlXxkuiJZ1i2zPSCC34SXiv1SXUxKxE6c1bIt4JklHq-iTHLQ5t5VwqMDencIiE",
+        img: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?q=80&w=800&auto=format&fit=crop",
         features: ["Hak retur model laku", "Support iklan sosial", "Prioritas stok terbaru"]
     },
     {
@@ -42,7 +42,7 @@ const PACKAGES = [
         count: "400+ pcs (Grosir Besar)",
         price: "Rp 12.000.000",
         desc: "Investasi paling maksimal dengan harga modal terendah.",
-        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAZFZkELJf5vGrDTx3VLvQSupT78sJ594djuQcF7cFmcKMqdRejIwLbSxxHMTywwceSuPOAfr4YoZmC-A4fI8Jo8YmbxriBieWj2ctqmnBaNDnWeAMsAKTsIuImmpNXu-iNGpmvsGrLC6TMxM6xeQz3G1A0KLNBBDf-eqDOvsksS7eejW3KiK7i7hDuQdUQdtLOU2SAcAwFiIduUzQzMh5jFLyJWbCi8WBAZ4RPTKCB_GR7lpPMFSjmZjWzZWTr42UI3TI3j1S4oBg",
+        img: "https://images.unsplash.com/photo-1544441893-675973e31985?q=80&w=800&auto=format&fit=crop",
         features: ["Harga pabrik langsung", "Sistem rekrut reseller", "Akses data buyer"]
     },
     {
@@ -52,7 +52,7 @@ const PACKAGES = [
         count: "40 pcs best seller",
         price: "Rp 1.200.000",
         desc: "Cocok untuk ibu rumah tangga yang ingin tambahan penghasilan.",
-        img: "https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?q=80&w=600&auto=format&fit=crop",
+        img: "https://images.unsplash.com/photo-1524234107056-1c1f48f64ab8?q=80&w=800&auto=format&fit=crop",
         features: ["Grup bimbingan telegram", "Tanpa biaya pendaftaran", "Update stok real-time"]
     },
     {
@@ -62,7 +62,7 @@ const PACKAGES = [
         count: "80 set Gamis & Koko",
         price: "Rp 3.500.000",
         desc: "Persiapkan stok terbaik untuk puncak penjualan tahunan.",
-        img: "https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?q=80&w=600&auto=format&fit=crop",
+        img: "https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?q=80&w=800&auto=format&fit=crop",
         features: ["Bahan premium katun", "Warna-warna pastel", "Packaging box eksklusif"]
     },
     {
@@ -72,7 +72,7 @@ const PACKAGES = [
         count: "200 pcs lengkap hijab",
         price: "Rp 6.000.000",
         desc: "Sangat direkomendasikan untuk Anda yang punya ruang pajang.",
-        img: "https://images.unsplash.com/photo-1621452773781-0f992fd1f5cb?q=80&w=600&auto=format&fit=crop",
+        img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=800&auto=format&fit=crop",
         features: ["Display hanger gratis", "Banner promosi toko", "Manual book marketing"]
     },
     {
@@ -82,7 +82,7 @@ const PACKAGES = [
         count: "800 pcs (Koli Besar)",
         price: "Rp 25.000.000",
         desc: "Untuk pemain besar yang menyuplai ke pasar-pasar tradisional.",
-        img: "https://images.unsplash.com/photo-1604467794349-0b74285de7e7?q=80&w=600&auto=format&fit=crop",
+        img: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=800&auto=format&fit=crop",
         features: ["Biaya antar ke ekspedisi", "Fokus quantity besar", "Tanpa sorting model"]
     },
     {
@@ -92,7 +92,7 @@ const PACKAGES = [
         count: "Member Selamanya",
         price: "Rp 350.000",
         desc: "Cukup share foto, pengiriman kami yang kerjakan atas nama toko Anda.",
-        img: "https://images.unsplash.com/photo-1519238323211-168a26ef16e5?q=80&w=600&auto=format&fit=crop",
+        img: "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=800&auto=format&fit=crop",
         features: ["Disediakan web khusus", "Tanpa biaya packing", "Komisi harian cair"]
     }
 ];

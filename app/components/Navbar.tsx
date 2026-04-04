@@ -20,6 +20,17 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => {
+        e.preventDefault();
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 80, // Offset for navbar height
+                behavior: "smooth",
+            });
+        }
+    };
+
     return (
         <nav
             className={`fixed top-0 w-full z-[110] flex justify-center px-4 transition-all duration-700 ease-out ${scrolled ? "translate-y-6 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"
@@ -28,7 +39,10 @@ export default function Navbar() {
             <div className="flex justify-between items-center w-full max-w-4xl bg-[#fcfaef]/90 backdrop-blur-md rounded-full px-6 py-3 border border-[#d3c4b7] shadow-sm">
 
                 {/* Brand Logo - Kiri */}
-                <div className="flex items-center gap-2 cursor-pointer">
+                <div 
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                    className="flex items-center gap-2 cursor-pointer"
+                >
                     <span className="material-symbols-outlined text-[#967451] text-2xl rotate-45">
                         spa
                     </span>
@@ -38,21 +52,40 @@ export default function Navbar() {
                 </div>
 
                 {/* Navigation Links - Tengah */}
-                {/* Navigation Links - Tengah */}
                 <div className="hidden lg:flex items-center gap-8">
-                    <a href="#" className="text-sm font-body text-[#7d7168] hover:text-[#7b5730] transition-colors font-medium">
+                    <a 
+                        href="#" 
+                        onClick={(e) => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                        className="text-sm font-body text-[#7d7168] hover:text-[#7b5730] transition-colors font-medium"
+                    >
                         Beranda
                     </a>
-                    <a href="#video" className="text-sm font-body text-[#7d7168] hover:text-[#7b5730] transition-colors font-medium">
+                    <a 
+                        href="#video" 
+                        onClick={(e) => handleSmoothScroll(e, "video")}
+                        className="text-sm font-body text-[#7d7168] hover:text-[#7b5730] transition-colors font-medium"
+                    >
                         Video
                     </a>
-                    <a href="#partner" className="text-sm font-body text-[#7d7168] hover:text-[#7b5730] transition-colors font-medium">
+                    <a 
+                        href="#partner" 
+                        onClick={(e) => handleSmoothScroll(e, "partner")}
+                        className="text-sm font-body text-[#7d7168] hover:text-[#7b5730] transition-colors font-medium"
+                    >
                         SuperApp
                     </a>
-                    <a href="#kolaborasi" className="text-sm font-body text-[#7d7168] hover:text-[#7b5730] transition-colors font-medium">
+                    <a 
+                        href="#kolaborasi" 
+                        onClick={(e) => handleSmoothScroll(e, "kolaborasi")}
+                        className="text-sm font-body text-[#7d7168] hover:text-[#7b5730] transition-colors font-medium"
+                    >
                         Kolaborasi
                     </a>
-                    <a href="#paket" className="text-sm font-body text-[#7d7168] hover:text-[#7b5730] transition-colors font-medium">
+                    <a 
+                        href="#paket" 
+                        onClick={(e) => handleSmoothScroll(e, "paket")}
+                        className="text-sm font-body text-[#7d7168] hover:text-[#7b5730] transition-colors font-medium"
+                    >
                         Paket
                     </a>
                 </div>

@@ -154,7 +154,7 @@ export default function PartnerSection() {
                         <div className="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.334rem)] snap-start">
                             <div className="bg-white rounded-lg overflow-hidden flex flex-col h-full editorial-shadow transition-all duration-300 hover:-translate-y-2 group/card">
                                 <div className="p-8 flex-grow">
-                                    <div className="w-14 h-14 bg-[#7b5730]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#7b5730] group-hover/card:text-white transition-colors duration-300">
+                                    <div className="w-14 h-14 bg-[#7b5730]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#7b5730] text-[#7b5730] group-hover/card:text-white transition-colors duration-300">
                                         <span className="material-symbols-outlined text-3xl">auto_awesome</span>
                                     </div>
                                     <h3 className="font-headline text-2xl text-[#1c1c12] mb-4">Sistem Kurasi Cerdas</h3>
@@ -173,7 +173,7 @@ export default function PartnerSection() {
                         <div className="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.334rem)] snap-start">
                             <div className="bg-white rounded-lg overflow-hidden flex flex-col h-full editorial-shadow transition-all duration-300 hover:-translate-y-2 group/card">
                                 <div className="p-8 flex-grow">
-                                    <div className="w-14 h-14 bg-[#7b5634]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#7b5634] group-hover/card:text-white transition-colors duration-300">
+                                    <div className="w-14 h-14 bg-[#7b5634]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#7b5634] text-[#7b5634] group-hover/card:text-white transition-colors duration-300">
                                         <span className="material-symbols-outlined text-3xl">explore</span>
                                     </div>
                                     <h3 className="font-headline text-2xl text-[#1c1c12] mb-4">Eksplorasi Budaya</h3>
@@ -192,7 +192,7 @@ export default function PartnerSection() {
                         <div className="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.334rem)] snap-start">
                             <div className="bg-white rounded-lg overflow-hidden flex flex-col h-full editorial-shadow transition-all duration-300 hover:-translate-y-2 group/card">
                                 <div className="p-8 flex-grow">
-                                    <div className="w-14 h-14 bg-[#695c51]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#695c51] group-hover/card:text-white transition-colors duration-300">
+                                    <div className="w-14 h-14 bg-[#695c51]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#695c51] text-[#695c51] group-hover/card:text-white transition-colors duration-300">
                                         <span className="material-symbols-outlined text-3xl">handshake</span>
                                     </div>
                                     <h3 className="font-headline text-2xl text-[#1c1c12] mb-4">Aliansi Pengrajin</h3>
@@ -211,7 +211,7 @@ export default function PartnerSection() {
                         <div className="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.334rem)] snap-start">
                             <div className="bg-white rounded-lg overflow-hidden flex flex-col h-full editorial-shadow transition-all duration-300 hover:-translate-y-2 group/card">
                                 <div className="p-8 flex-grow">
-                                    <div className="w-14 h-14 bg-[#7b5730]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#7b5730] group-hover/card:text-white transition-colors duration-300">
+                                    <div className="w-14 h-14 bg-[#7b5730]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#7b5730] text-[#7b5730] group-hover/card:text-white transition-colors duration-300">
                                         <span className="material-symbols-outlined text-3xl">history_edu</span>
                                     </div>
                                     <h3 className="font-headline text-2xl text-[#1c1c12] mb-4">Narasi Arsip</h3>
@@ -230,7 +230,7 @@ export default function PartnerSection() {
                         <div className="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.334rem)] snap-start">
                             <div className="bg-white rounded-lg overflow-hidden flex flex-col h-full editorial-shadow transition-all duration-300 hover:-translate-y-2 group/card">
                                 <div className="p-8 flex-grow">
-                                    <div className="w-14 h-14 bg-[#7b5634]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#7b5634] group-hover/card:text-white transition-colors duration-300">
+                                    <div className="w-14 h-14 bg-[#7b5634]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#7b5634] text-[#7b5634] group-hover/card:text-white transition-colors duration-300">
                                         <span className="material-symbols-outlined text-3xl">eco</span>
                                     </div>
                                     <h3 className="font-headline text-2xl text-[#1c1c12] mb-4">Hospitalitas Lestari</h3>
@@ -249,8 +249,8 @@ export default function PartnerSection() {
                         <div className="min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(33.333%-1.334rem)] snap-start">
                             <div className="bg-white rounded-lg overflow-hidden flex flex-col h-full editorial-shadow transition-all duration-300 hover:-translate-y-2 group/card">
                                 <div className="p-8 flex-grow">
-                                    <div className="w-14 h-14 bg-[#695c51]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#695c51] group-hover/card:text-white transition-colors duration-300">
-                                        <span className="material-symbols-outlined text-3xl">shield_with_heart</span>
+                                    <div className="w-14 h-14 bg-[#695c51]/10 rounded-full flex items-center justify-center mb-6 group-hover/card:bg-[#695c51] text-[#695c51] group-hover/card:text-white transition-colors duration-300">
+                                        <span className="material-symbols-outlined text-3xl">security</span>
                                     </div>
                                     <h3 className="font-headline text-2xl text-[#1c1c12] mb-4">Proteksi Cagar</h3>
                                     <p className="text-[#695c51] leading-relaxed">

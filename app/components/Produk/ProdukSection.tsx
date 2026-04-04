@@ -71,9 +71,23 @@ export default async function ProdukSection() {
                         <div className="absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-[#fffceb] to-transparent z-20 pointer-events-none"></div>
 
                         <div className="animate-marquee gap-6 px-3">
+                            {/* First set of products */}
                             {posts.map((post: any, idx: number) => (
                                 <div
-                                    key={idx}
+                                    key={`post-1-${idx}`}
+                                    className="w-[180px] md:w-[240px] flex-shrink-0 aspect-[3/4] rounded-3xl overflow-hidden border-[6px] border-[#695c51] shadow-xl hover:scale-105 transition-transform duration-300 bg-white"
+                                >
+                                    <img
+                                        src={`${post.image}`}
+                                        alt="Produk Fashion Anak"
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                            ))}
+                            {/* Duplicate set for infinite loop */}
+                            {posts.map((post: any, idx: number) => (
+                                <div
+                                    key={`post-2-${idx}`}
                                     className="w-[180px] md:w-[240px] flex-shrink-0 aspect-[3/4] rounded-3xl overflow-hidden border-[6px] border-[#695c51] shadow-xl hover:scale-105 transition-transform duration-300 bg-white"
                                 >
                                     <img
