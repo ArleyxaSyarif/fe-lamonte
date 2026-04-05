@@ -31,7 +31,7 @@ export default function WhatsApp() {
                         </button>
                     </div>
 
-                    <div className="p-4 bg-[#fefae6] min-h-[100px] relative">
+                    <div className="p-4 bg-[#fffbeb] min-h-[100px] relative">
                         <div className="bg-white p-3 rounded-lg rounded-tl-none shadow-sm max-w-[90%] text-sm text-[#1a3c04]">
                             Halo! Ada yang bisa kami bantu mengenai paket atau strategi kami hari ini? 😊
                         </div>
@@ -52,7 +52,7 @@ export default function WhatsApp() {
 
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className={`flex items-center justify-center w-14 h-14 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95 ${isOpen ? 'bg-[#1a3c04] text-white' : 'bg-[#f4e04d] text-[#1a3c04]'}`}
+                className={`flex items-center justify-center w-14 h-14 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95 ${isOpen ? 'bg-[#1a3c04] text-white' : 'bg-[#25D366] text-white'}`}
                 aria-label="WhatsApp"
             >
                 {isOpen ? (

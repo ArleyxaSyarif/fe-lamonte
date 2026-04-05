@@ -1,120 +1,133 @@
+"use client";
 import ScrollReveal from "../ScrollReveal";
 
 export default function KolaborasiHero() {
     return (
-        <section className="relative bg-white text-[#1a3c04] overflow-hidden py-24 md:py-32 antialiased">
-
-            {/* Background Decorative Elements */}
-            <div className="absolute top-20 -right-20 w-96 h-96 bg-[#f4e04d]/10 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-pulse pointer-events-none" />
-            <div className="absolute bottom-20 -left-20 w-80 h-80 bg-[#1a3c04]/5 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-pulse pointer-events-none" />
-            
+        <section id="kolaborasi" className="relative font-poppins pt-24 pb-20 min-h-screen bg-[#fffbeb] text-[#1a1c1a] overflow-hidden">
             {/* Transparent Grid Pattern */}
-            <div 
-                className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" 
+            <div
+                className="absolute inset-0 z-0 opacity-40 pointer-events-none"
                 style={{
-                    backgroundImage: `linear-gradient(#1a3c04 1px, transparent 1px), linear-gradient(90deg, #1a3c04 1px, transparent 1px)`,
-                    backgroundSize: '40px 40px'
+                    backgroundImage: `radial-gradient(circle, #005911 1px, transparent 1px)`,
+                    backgroundSize: '32px 32px'
                 }}
             ></div>
 
-            <div className="max-w-screen-2xl mx-auto px-6 md:px-16 lg:px-24 flex flex-col lg:flex-row gap-16 lg:gap-24 items-start relative z-10">
+            <div className="max-w-screen-2xl mx-auto px-6 md:px-8 relative z-10">
+                {/* Hero Header Section */}
+                <div className="mb-16 md:mb-20 text-center md:text-left max-w-4xl">
+                    <ScrollReveal delay={0}>
+                        <div className="inline-flex items-center gap-3 px-4 py-2 bg-[#005911]/5 rounded-xl border border-[#005911]/10 shadow-sm backdrop-blur-md mb-6">
+                            <span className="material-symbols-outlined text-[#005911] text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>insights</span>
+                            <span className="text-[10px] font-poppins font-bold text-[#1a1c1a] uppercase tracking-[0.25em]">Market Analysis 2024</span>
+                        </div>
+                    </ScrollReveal>
 
-                {/* Left Section: Why Choose Us */}
-                <div className="w-full lg:w-7/12 space-y-12">
-                    <header className="space-y-6">
-                        <ScrollReveal delay={0}>
-                            <div className="inline-flex items-center gap-3 px-4 py-2 bg-[#1a3c04]/5 rounded-xl border border-[#1a3c04]/10 shadow-sm backdrop-blur-md">
-                                <span className="material-symbols-outlined text-[#1a3c04] text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>insights</span>
-                                <span className="text-[10px] font-bold text-[#1a3c04] uppercase tracking-[0.25em]">Market Analysis 2024</span>
-                            </div>
-                        </ScrollReveal>
-                        <ScrollReveal delay={200}>
-                            <h1 className="text-2xl md:text-6xl font-headline font-black text-[#1a3c04] leading-[1.1] tracking-tighter">
-                                Kenapa Bisnis Baju Anak Wajib <span className="italic">Kamu Seriusin</span> Tahun Ini??
-                            </h1>
-                        </ScrollReveal>
-                        <div className="h-[3px] w-24 bg-[#f4e04d] rounded-full"></div>
-                    </header>
+                    <ScrollReveal delay={200}>
+                        <h1 className="font-poppins text-4xl md:text-5xl lg:text-6xl font-black text-[#1a1c1a] leading-tight tracking-tighter">
+                            Kenapa Bisnis Baju Anak Wajib <span className="italic text-[#005911]">Kamu Seriusin</span> Tahun Ini??
+                        </h1>
+                    </ScrollReveal>
 
-                    <div className="grid gap-10 md:gap-12" id="kolaborasi">
+                    <ScrollReveal delay={400}>
+                        <div className="mt-8 h-1 w-24 bg-[#005911] mx-auto md:mx-0 opacity-30 shadow-sm"></div>
+                    </ScrollReveal>
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+                    {/* Left Side: Features */}
+                    <div className="lg:col-span-7 space-y-12 md:space-y-16">
                         {[
                             { step: "01", title: "Repeat Order Tinggi", desc: "Anak tumbuh dengan cepat, Bunda butuh beli lagi dan lagi. Repeat order sangat tinggi terutama dengan pelayanan yang personal." },
                             { step: "02", title: "Permintaan Stabil", desc: "Busana anak bukan sekadar tren. Permintaan akan terus naik, apalagi jelang musim libur, sekolah, dan hari besar." },
                             { step: "03", title: "Kompetisi Terukur", desc: "Belum banyak brand yang fokus pada kualitas premium + syar'i sekaligus. Lamonte mengisi celah pasar yang sangat besar ini." }
                         ].map((item, idx) => (
                             <ScrollReveal key={idx} delay={300 + idx * 150}>
-                                <div className="flex gap-6 md:gap-10 group items-start group">
-                                    <span className="text-5xl md:text-7xl font-headline font-black text-[#1a3c04]/10 group-hover:text-[#f4e04d] transition-all duration-500 transform group-hover:scale-110 leading-none select-none">
-                                        {item.step}
-                                    </span>
-                                    <div className="pt-2 md:pt-4">
-                                        <h3 className="text-xl md:text-2xl font-black text-[#1a3c04] mb-3 font-body tracking-tight">
-                                            {item.title}
-                                        </h3>
-                                        <p className="text-[#1a3c04]/70 leading-relaxed font-body text-base md:text-lg max-w-xl">
-                                            {item.desc}
-                                        </p>
+                                <div className="group">
+                                    <div className="flex items-start gap-4 md:gap-6">
+                                        <span className="font-poppins text-5xl md:text-6xl font-black text-[#005911]/20 transition-colors group-hover:text-[#005911] leading-none shrink-0">
+                                            {item.step}
+                                        </span>
+                                        <div>
+                                            <h3 className="font-poppins text-xl md:text-2xl font-black text-[#1a1c1a] mb-2 md:mb-3">{item.title}</h3>
+                                            <p className="font-poppins text-[#1a1c1a]/70 text-base md:text-lg leading-relaxed max-w-xl">
+                                                {item.desc}
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </ScrollReveal>
                         ))}
+
+                        {/* Exclusivity Banner */}
+                        <ScrollReveal delay={800}>
+                            <div className="mt-16 md:mt-20 p-6 md:p-8 bg-white rounded-xl border-l-4 border-[#005911] shadow-sm relative overflow-hidden group">
+                                <div className="relative z-10">
+                                    <h4 className="font-poppins text-lg md:text-xl font-bold text-[#1a1c1a] mb-2 font-black">Eksklusivitas <span className="text-[#005911]">Wilayah Terbatas</span></h4>
+                                    <p className="font-poppins text-[#1a1c1a]/80 leading-relaxed text-sm md:text-base">
+                                        Jumlah distributor aktif per wilayah dibatasi untuk menghindari perang harga. Semakin cepat ambil slot, semakin mudah kamu kuasai pasar di kotamu.
+                                    </p>
+                                </div>
+                                <span className="material-symbols-outlined absolute -right-4 -bottom-4 text-8xl md:text-9xl text-[#005911]/10 rotate-12 group-hover:rotate-6 transition-transform duration-500" style={{ fontVariationSettings: "'FILL' 1" }}>verified_user</span>
+                            </div>
+                        </ScrollReveal>
+
+                        {/* Visual Accents */}
+                        <ScrollReveal delay={900}>
+                            <div className="mt-12 grid grid-cols-2 gap-4">
+                                <div className="rounded-xl overflow-hidden aspect-square relative grayscale hover:grayscale-0 transition-all duration-700">
+                                    <img className="w-full h-full object-cover" alt="Premium organic cotton children clothes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG8Z2k8bubo046LC8zhvspCEDEfNxJHN69rFMQtxfRa89CEpPPRK-bVTDUmEy-kD0N9DnW3iRLfAzG7n_7Jr4TXuspMnYXq4L0EEDVJ-Bp8n0WNIj54wq3xLL5DqZIEtDqrCyzVFnDs511vsAZ9d3l9Qj9PcKOiiBcXwiGDutpB63YQ5zdk67jmoRCcVhSRKNWsCKi4OwAWn1KGVyUzb-y_DQ9vfq6Gf41Gs2TJ7kN3BB1Wa7pWWIWzCs2WOGN7veFv197iS-sxg0" />
+                                </div>
+                                <div className="rounded-xl overflow-hidden aspect-square relative grayscale hover:grayscale-0 transition-all duration-700">
+                                    <img className="w-full h-full object-cover" alt="Soft aesthetic shot of child's room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaIvSe31c8-XUxgG59gIxKvoV8LZrvNZmlPES6sE2tRpX66-kJdnZ0ybhjEix3xzxM8weZZJkUP7XGmSSn2H5N875f8pXo0-cL-aS-4FCsJRnKuU7oDz1SlURzz4CRX9UaEOsK0DDmLmBJWJRRh66HBIN2L3WjiNYgOEiJ6tAECXEyhCtc47ARxtkyNcZXuZYFonPdx7w3MOCSQ0r_L9CCutN1gJhAq_b0i-UwTsokn2WqHx6sMCqWkOyJHpwaVB-z3DCI7rPl5Fg" />
+                                </div>
+                            </div>
+                        </ScrollReveal>
                     </div>
 
-                    {/* Urgent Highlight Box */}
-                    <ScrollReveal delay={800}>
-                        <div className="bg-white border-4 border-[#1a3c04]/10 p-8 md:p-10 rounded-[2.5rem] flex flex-col md:flex-row items-start gap-6 md:gap-8 shadow-2xl shadow-[#1a3c04]/5 relative overflow-hidden group hover:border-[#1a3c04]/20 transition-all duration-500">
-                            <div className="bg-[#1a3c04] text-white p-4 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-xl shadow-[#1a3c04]/20 transform group-hover:rotate-12 transition-transform duration-500">
-                                <span className="material-symbols-outlined text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>bolt</span>
-                            </div>
-                            <div className="relative z-10 flex-1">
-                                <h4 className="text-xl md:text-2xl font-black text-[#1a3c04] font-body mb-2 tracking-tight">Eksklusivitas Wilayah Terbatas</h4>
-                                <p className="text-[#1a3c04]/70 text-base md:text-lg font-body leading-relaxed">
-                                    Jumlah distributoraktif per wilayah dibatasi untuk menghindari perang harga. Semakin cepat ambil slot, semakin mudah kamu kuasai pasar di kotamu.
+                    {/* Right Side: Reservation Guide Card */}
+                    <div className="lg:col-span-5 lg:sticky lg:top-32">
+                        <ScrollReveal delay={500}>
+                            <div className="bg-[#005911] p-8 md:p-10 rounded-[2rem] shadow-2xl relative overflow-hidden backdrop-blur-md">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-[#fffbeb] opacity-10 rounded-bl-full"></div>
+
+                                <div className="flex items-center gap-4 mb-10 relative z-10">
+                                    <span className="material-symbols-outlined text-[#fffbeb] text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>menu_book</span>
+                                    <h2 className="font-poppins text-2xl md:text-3xl font-black text-[#fffbeb]">Panduan Reservasi</h2>
+                                </div>
+
+                                <div className="space-y-8 md:space-y-10 relative z-10">
+                                    {[
+                                        { step: 1, title: "Pilih Paket Kemitraan", desc: "Dari paket pemula hingga distributor provinsi. Semua termasuk bimbingan & akses ekosistem digital." },
+                                        { step: 2, title: "Onboarding & Sistem", desc: "Akses WA Group & Video Onboarding. Mulai setting aplikasi, stok, hingga katalog siap jualan." },
+                                        { step: 3, title: "Jualan & Backup Tim", desc: "Fokus bikin konten & layanin pembeli. Tim Lamonte backup stok, marketing, & support harian." }
+                                    ].map((step, idx) => (
+                                        <div key={idx} className="flex gap-4 md:gap-5 group">
+                                            <div className="font-poppins flex-shrink-0 w-8 h-8 rounded-full bg-[#fffbeb] flex items-center justify-center text-[#005911] font-black text-sm shadow-md transition-transform duration-300 group-hover:scale-110">
+                                                {step.step}
+                                            </div>
+                                            <div>
+                                                <h4 className="font-poppins text-base md:text-lg font-black text-[#fffbeb] mb-1">{step.title}</h4>
+                                                <p className="font-poppins text-[#fffbeb]/80 text-sm md:text-base leading-relaxed">{step.desc}</p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                <a href="#paket" className="font-poppins mt-12 w-full bg-[#fffbeb] text-[#1a1c1a] py-4 md:py-5 rounded-xl font-bold text-base md:text-lg hover:bg-[#fffbeb] transition-all flex items-center justify-center gap-3 active:scale-95 group shadow-xl relative z-10 text-center">
+                                    <span>Lanjut Pilih Paket Kemitraan</span>
+                                    <span className="material-symbols-outlined text-[#005911] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                </a>
+
+                                <p className="font-poppins mt-8 text-center text-[10px] md:text-xs font-bold tracking-[0.3em] text-[#fffbeb]/60 uppercase relative z-10">
+                                    AMAN • TERPERCAYA • EKSKLUSIF
                                 </p>
                             </div>
-                        </div>
-                    </ScrollReveal>
-                </div>
-
-                {/* Right Section: Reservation Guide Card */}
-                <div className="w-full lg:w-5/12 lg:sticky lg:top-32">
-                    <ScrollReveal delay={900}>
-                        <div className="bg-[#1a3c04] text-[#fefae6] p-10 md:p-14 rounded-[3rem] shadow-2xl relative overflow-hidden group border-4 border-white/5">
-                            <div className="absolute top-0 right-0 w-80 h-80 bg-[#f4e04d]/5 rounded-full -mr-40 -mt-40 blur-3xl" />
-
-                            <h2 className="text-3xl md:text-4xl font-headline font-black mb-12 md:mb-16 relative z-10 text-[#f4e04d] leading-tight tracking-tight">
-                                Panduan <span className="underline decoration-[#f4e04d]/30 underline-offset-8">Reservasi</span>
-                            </h2>
-
-                            <div className="space-y-12 md:space-y-16 relative z-10">
-                                {[
-                                    { step: 1, title: "Pilih Paket Kemitraan", desc: "Dari paket pemula hingga distributor provinsi. Semua termasuk bimbingan & akses ekosistem digital." },
-                                    { step: 2, title: "Onboarding & Sistem", desc: "Akses WA Group & Video Onboarding. Mulai setting aplikasi, stok, hingga katalog siap jualan." },
-                                    { step: 3, title: "Jualan & Backup Tim", desc: "Fokus bikin konten & layanin pembeli. Tim Lamonte backup stok, marketing, & support harian." }
-                                ].map((step, idx) => (
-                                    <div key={idx} className="flex gap-6 md:gap-8 items-start group">
-                                        <div className="flex-shrink-0 w-14 h-14 rounded-2xl border-2 border-[#f4e04d]/30 text-[#f4e04d] group-hover:bg-[#f4e04d] group-hover:text-[#1a3c04] flex items-center justify-center font-black text-xl md:text-2xl font-headline transition-all duration-500 shadow-lg shadow-black/10">
-                                            {step.step}
-                                        </div>
-                                        <div className="pt-1">
-                                            <h4 className="text-xl md:text-2xl font-black mb-2 md:mb-3 font-body text-[#fefae6] tracking-tight group-hover:text-[#f4e04d] transition-colors">{step.title}</h4>
-                                            <p className="text-[#fefae6]/60 font-body leading-relaxed text-sm md:text-lg transition-colors group-hover:text-[#fefae6]/90">{step.desc}</p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-
-                            <div className="mt-16 md:mt-20 relative z-10">
-                                <a href="#paket" className="w-full bg-[#f4e04d] py-5 md:py-6 px-6 rounded-2xl text-[#1a3c04] font-black text-base md:text-xl flex items-center justify-center gap-4 transition-all hover:scale-[1.02] active:scale-95 shadow-2xl shadow-black/40 group text-center">
-                                    <span>Lanjut Pilih Paket Kemitraan</span>
-                                    <span className="material-symbols-outlined transition-transform group-hover:translate-x-3 text-2xl shrink-0">arrow_forward</span>
-                                </a>
-                                <p className="text-center text-[#fefae6]/20 text-[10px] mt-8 font-body uppercase tracking-[0.4em] font-black">Aman • Terpercaya • Eksklusif</p>
-                            </div>
-                        </div>
-                    </ScrollReveal>
+                        </ScrollReveal>
+                    </div>
                 </div>
             </div>
         </section>
     );
 }
+

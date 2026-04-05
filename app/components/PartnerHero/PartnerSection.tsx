@@ -91,7 +91,7 @@ export default function PartnerSection() {
     return (
         <section
             id="partner"
-            className="relative py-16 md:py-24 overflow-hidden bg-[#faf9f6] font-poppins"
+            className="relative py-16 md:py-24 overflow-hidden bg-[#fffbeb] font-poppins"
             onMouseEnter={() => { isAutoScrolling.current = false; }}
             onMouseLeave={() => { isAutoScrolling.current = true; }}
             onTouchStart={() => { isAutoScrolling.current = false; }}
@@ -106,7 +106,7 @@ export default function PartnerSection() {
                 }}
             ></div>
 
-            <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-16 relative z-10">
+            <div className="w-full max-w-screen-2xl mx-auto px-6 md:px-8 lg:px-16 relative z-10">
                 {/* Header Row */}
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 md:mb-16 gap-6 md:gap-8">
                     <div className="max-w-2xl">
@@ -127,7 +127,7 @@ export default function PartnerSection() {
                         <div className="flex gap-3 md:gap-4 mb-2">
                             <button
                                 onClick={() => { isAutoScrolling.current = false; scroll('left'); }}
-                                className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-[#237227]/10 flex items-center justify-center bg-white shadow-sm hover:bg-[#faf9f6]/80 transition-colors group"
+                                className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-[#237227]/10 flex items-center justify-center bg-white shadow-sm hover:bg-[#fffbeb]/80 transition-colors group"
                             >
                                 <span className="material-symbols-outlined text-[#1a1c1a] text-xl md:text-2xl group-hover:-translate-x-1 transition-transform">chevron_left</span>
                             </button>

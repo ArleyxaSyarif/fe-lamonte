@@ -4,7 +4,7 @@ import ScrollReveal from "../ScrollReveal";
 
 export default function HeroSection() {
     return (
-        <section className="relative flex-grow flex items-center px-8 pt-20 md:pt-28 pb-8 lg:py-20 lg:pt-24 overflow-hidden bg-[#faf9f6]">
+        <section className="relative flex-grow flex items-center px-8 pt-20 md:pt-28 pb-8 lg:py-20 lg:pt-24 overflow-hidden bg-[#fffbeb]">
             {/* Decorative background shapes */}
             <div className="absolute top-0 right-0 w-1/3 h-full bg-[#ffd786]/5 -skew-x-12 transform origin-top-right -z-10"></div>
             <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-16 items-center z-10">
@@ -88,7 +88,7 @@ export default function HeroSection() {
                             </div>
 
                             {/* Floating Detail Card */}
-                            <div className="absolute bottom-4 left-4 right-4 bg-[#faf9f6]/95 backdrop-blur-[15px] p-4 md:p-6 rounded-2xl border-l-[4px] md:border-l-[6px] border-[#ffaa00] shadow-xl">
+                            <div className="absolute bottom-4 left-4 right-4 bg-[#fffbeb]/95 backdrop-blur-[15px] p-4 md:p-6 rounded-2xl border-l-[4px] md:border-l-[6px] border-[#ffaa00] shadow-xl">
                                 <div className="flex flex-col gap-3">
                                     <div className="flex items-center gap-3">
                                         <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#237227] flex items-center justify-center text-[#ffd786]">

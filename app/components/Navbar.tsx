@@ -34,12 +34,15 @@ export default function Navbar() {
     return (
         <>
             {/* Desktop Navbar (Top) */}
-             <nav className="fixed top-0 left-0 w-full z-[110] hidden md:flex justify-center bg-white/90 backdrop-blur-md border-b border-[#1a3c04]/10 shadow-sm transition-all duration-300 py-3 px-8 md:px-16 lg:px-24">
+             <nav className="fixed top-0 left-0 w-full z-[110] hidden md:flex justify-center bg-white/90 backdrop-blur-md border-b border-[#1a3c04]/10 shadow-sm transition-all duration-300 py-3 px-8">
                  <div className="flex items-center w-full max-w-screen-2xl mx-auto">
                     {/* Logo */}
-                    <div onClick={handleHomeClick} className="flex items-center gap-2 cursor-pointer shrink-0">
-                        <span className="material-symbols-outlined text-[#1a3c04] text-2xl rotate-45">spa</span>
-                        <span className="text-xl font-poppins font-bold text-[#1a3c04]">Lamonte.</span>
+                    <div onClick={handleHomeClick} className="flex items-center gap-3 md:gap-4 cursor-pointer shrink-0">
+                        <img src="/logo/lamonte.png" alt="Lamonte" className="h-8 md:h-10 object-contain" />
+                        <div className="flex flex-col items-start gap-1">
+                            <span className="font-poppins font-black text-[#47682c] text-[12px] md:text-[14px] uppercase tracking-widest leading-none">Distributor</span>
+                            <span className="bg-[#47682c] text-white text-[9px] md:text-[11px] font-bold px-2 py-0.5 rounded-md leading-none">Official Access</span>
+                        </div>
                     </div>
 
                     {/* Links - Tengah */}

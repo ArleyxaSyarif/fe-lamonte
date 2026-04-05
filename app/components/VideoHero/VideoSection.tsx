@@ -2,81 +2,97 @@ import ScrollReveal from "../ScrollReveal";
 
 export default function VideoSection() {
     return (
-        <section id="video" className="bg-[#fefae6] text-[#1a3c04] antialiased overflow-x-hidden font-body relative">
-            
-            {/* Premium Cinematic Video Section */}
-            <div className="max-w-[1440px] mx-auto px-8 md:px-12 pt-20 mb-12 relative z-10">
-                <ScrollReveal delay={0}>
-                    <div className="relative group w-full aspect-video md:aspect-[21/9] rounded-xl overflow-hidden bg-[#bbf295] shadow-2xl">
-                        {/* YouTube Player */}
-                        <iframe
-                            width="100%"
-                            height="100%"
-                            src="https://www.youtube.com/embed/i8ol6RhnD60?rel=0"
-                            title="YouTube video player"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowFullScreen
-                            className="absolute inset-0 w-full h-full border-0"
-                        ></iframe>
-                        
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#1a3c04]/20 via-transparent to-transparent pointer-events-none"></div>
-                        
-                        <div className="absolute bottom-10 left-10 text-white z-10 hidden md:block pointer-events-none">
-                            <div className="flex items-center gap-4">
-                                <div className="h-px w-12 bg-white/50"></div>
-                                <span className="font-label text-sm tracking-[0.2em] uppercase font-bold text-[#f4e04d]">Directed by Lamonte Studio</span>
-                            </div>
-                        </div>
-                    </div>
-                </ScrollReveal>
-            </div>
-
-            {/* Bento Grid Insights - Made to stretch horizontally ('manjang ke kanan') */}
-            <div className="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6 pb-32">
-                
-                {/* Large Horizontal Card */}
-                <div className="lg:col-span-9">
-                    <ScrollReveal delay={200}>
-                        <div className="bg-[#e4ffcd] rounded-[2rem] p-6 md:p-8 flex flex-col md:flex-row justify-between items-center min-h-[140px] md:min-h-[160px] relative overflow-hidden group border border-[#1a3c04]/5 shadow-premium w-full">
-                            <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 md:gap-12 w-full">
-                                <div className="flex-shrink-0">
-                                    <span className="text-[#675c00] font-bold tracking-widest uppercase text-[9px] mb-1 block">Documentary Archive</span>
-                                    <h2 className="text-xl md:text-2xl font-black text-[#1a3c04] font-headline leading-tight tracking-tight whitespace-nowrap">
-                                        Dipakai ratusan mitra untuk tembus <br className="hidden xl:block" /> omzet <span className="text-[#675c00] italic">puluhan juta</span>
-                                    </h2>
-                                </div>
+        <section id="video" className="bg-[#fffbeb] text-[#1a1c1a] antialiased overflow-x-hidden font-poppins relative">
+            <div className="max-w-screen-2xl mx-auto px-6 md:px-12 pt-16 pb-24">
+                {/* Modern Editorial Grid */}
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                    
+                    {/* Cinematic Video Player Section (Left) */}
+                    <div className="col-span-1 lg:col-span-8 group relative">
+                        <ScrollReveal delay={0}>
+                            <div className="relative rounded-xl overflow-hidden bg-[#eeeeea] shadow-[40px_40px_80px_-40px_rgba(26,28,26,0.08)] aspect-video group-hover:shadow-[40px_40px_80px_-40px_rgba(0,89,17,0.15)] transition-shadow duration-700">
+                                {/* YouTube Player */}
+                                <iframe
+                                    width="100%"
+                                    height="100%"
+                                    src="https://www.youtube.com/embed/i8ol6RhnD60?rel=0"
+                                    title="YouTube video player"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowFullScreen
+                                    className="absolute inset-0 w-full h-full border-0 z-0"
+                                ></iframe>
                                 
-                                <div className="hidden md:block h-12 w-px bg-[#1a3c04]/10"></div>
-
-                                <p className="text-[#1a3c04]/70 text-sm leading-relaxed font-medium max-w-sm">
-                                    Ribuan mitra telah membuktikan keberhasilan sistem ekosistem Lamonte di seluruh Indonesia.
+                                {/* Gradient Overlays over the video to match template */}
+                                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#005911]/80 to-transparent pointer-events-none z-10 transition-opacity duration-300 opacity-80 group-hover:opacity-100"></div>
+                                
+                                <div className="absolute bottom-6 md:bottom-8 left-6 md:left-8 right-6 md:right-8 flex justify-between items-end pointer-events-none z-20">
+                                    <div className="text-[#fffbeb]">
+                                        <p className="font-poppins text-[10px] md:text-xs uppercase tracking-[0.2em] opacity-80 mb-1 font-bold">Directed by Lamonte Studio</p>
+                                        <h3 className="font-poppins text-xl md:text-2xl font-black italic">Dokumenter Ekosistem Mitra</h3>
+                                    </div>
+                                    <div className="flex gap-2">
+                                        <div className="w-1 h-8 bg-[#fffbeb] rounded-full"></div>
+                                        <div className="w-1 h-6 bg-[#fffbeb]/40 rounded-full"></div>
+                                        <div className="w-1 h-4 bg-[#fffbeb]/40 rounded-full"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            {/* Caption bleed effect */}
+                            <div className="mt-8 ml-4 md:ml-8 max-w-xl">
+                                <p className="font-poppins text-lg md:text-xl text-[#005911]/80 leading-relaxed italic">
+                                    "Ribuan mitra telah membuktikan keberhasilan sistem ekosistem Lamonte di seluruh Indonesia. Dipakai ratusan mitra untuk tembus omzet puluhan juta."
                                 </p>
-
-                                <div className="md:ml-auto">
-                                    <a href="#paket" className="inline-block bg-[#1a3c04] text-[#f4e04d] px-6 py-3 rounded-full font-bold hover:translate-y-[-2px] hover:shadow-2xl transition-all active:scale-95 shadow-xl shadow-[#1a3c04]/20 text-[10px] uppercase tracking-widest whitespace-nowrap">Daftar Sekarang</a>
+                                <div className="mt-4 flex items-center gap-4">
+                                    <div className="h-[1px] w-12 bg-[#005911]/30"></div>
+                                    <span className="font-poppins text-[10px] md:text-sm font-bold text-[#005911] uppercase tracking-[0.1em]">Documentary Archive</span>
                                 </div>
                             </div>
-                            <div className="absolute -right-20 -bottom-20 w-60 h-60 bg-white/20 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-1000"></div>
-                        </div>
-                    </ScrollReveal>
-                </div>
-
-                {/* Small Horizontal Stat Card */}
-                <div className="lg:col-span-3">
-                    <ScrollReveal delay={400}>
-                        <div className="bg-[#f4e04d] rounded-[2rem] p-6 md:p-8 flex items-center justify-center gap-6 group cursor-default border border-[#1a3c04]/5 shadow-xl shadow-[#1a3c04]/5 min-h-[140px] md:min-h-[160px] w-full">
-                            <div className="w-12 h-12 bg-[#1a3c04] rounded-full flex items-center justify-center text-[#f4e04d] shadow-lg flex-shrink-0">
-                                <span className="material-symbols-outlined text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>auto_awesome</span>
-                            </div>
-                            <div className="text-left">
-                                <h3 className="text-xl font-black text-[#1a3c04] font-headline leading-none mb-1">4.2M+ Views</h3>
-                                <div className="flex flex-col">
-                                    <span className="text-[#1a3c04] font-black text-[8px] uppercase tracking-[0.2em] opacity-40">Maret 2024</span>
-                                    <span className="text-[#1a3c04]/70 font-bold text-[10px]">Release Date</span>
+                        </ScrollReveal>
+                    </div>
+                    
+                    {/* Statistics Section (Right) */}
+                    <div className="col-span-1 lg:col-span-4 space-y-12 lg:pt-12">
+                        <div className="space-y-10">
+                            {/* Stat 1 */}
+                            <ScrollReveal delay={200}>
+                                <div className="border-l-4 border-[#005911] pl-8">
+                                    <h4 className="font-poppins text-4xl md:text-5xl font-black text-[#005911] mb-2 tracking-tighter">4.2M+</h4>
+                                    <p className="font-poppins text-[10px] md:text-xs uppercase tracking-[0.2em] text-[#005911]/60 font-bold">Views Dokumenter</p>
+                                    <p className="font-poppins text-sm text-[#005911]/80 mt-2 max-w-xs">Ditonton jutaan kali oleh calon pebisnis di berbagai platform digital.</p>
                                 </div>
-                            </div>
+                            </ScrollReveal>
+                            
+                            {/* Stat 2 */}
+                            <ScrollReveal delay={400}>
+                                <div className="border-l-4 border-[#005911]/60 pl-8">
+                                    <h4 className="font-poppins text-4xl md:text-5xl font-black text-[#005911] mb-2 tracking-tighter">Ratusan</h4>
+                                    <p className="font-poppins text-[10px] md:text-xs uppercase tracking-[0.2em] text-[#005911]/60 font-bold">Mitra Tembus Target</p>
+                                    <p className="font-poppins text-sm text-[#005911]/80 mt-2 max-w-xs">Telah mencapai omzet puluhan juta rupiah dalam waktu singkat.</p>
+                                </div>
+                            </ScrollReveal>
+                            
+                            {/* Stat 3 */}
+                            <ScrollReveal delay={600}>
+                                <div className="border-l-4 border-[#005911]/30 pl-8">
+                                    <h4 className="font-poppins text-4xl md:text-5xl font-black text-[#005911] mb-2 tracking-tighter">Seluruh</h4>
+                                    <p className="font-poppins text-[10px] md:text-xs uppercase tracking-[0.2em] text-[#005911]/60 font-bold">Indonesia</p>
+                                    <p className="font-poppins text-sm text-[#005911]/80 mt-2 max-w-xs">Jangkauan distribusi dan mitra aktif di bawah binaan Lamonte.</p>
+                                </div>
+                            </ScrollReveal>
                         </div>
-                    </ScrollReveal>
+                        
+                        {/* CTA */}
+                        <ScrollReveal delay={800}>
+                            <div className="pt-8">
+                                <a href="#paket" className="w-full bg-gradient-to-br from-[#005911] to-[#237227] text-[#fffbeb] py-4 md:py-5 rounded-lg font-poppins font-black text-sm md:text-lg flex items-center justify-center gap-3 transition-all hover:opacity-90 active:scale-[0.98] shadow-xl shadow-[#005911]/20">
+                                    Daftar Sekarang
+                                    <span className="material-symbols-outlined">arrow_forward</span>
+                                </a>
+                                <p className="text-center mt-4 font-poppins text-[10px] uppercase tracking-[0.2em] text-[#005911]/60 font-bold">Akses Penawaran Harga Spesial</p>
+                            </div>
+                        </ScrollReveal>
+                    </div>
                 </div>
             </div>
         </section>

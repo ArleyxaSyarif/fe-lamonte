@@ -29,104 +29,103 @@ export default function KontakSection() {
     };
 
     return (
-        <section id="kontak" className="bg-[#fefae6] w-full">
-            <main className="max-w-7xl mx-auto px-8 py-16 md:py-32">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-                    
-                    {/* Left Column: Content */}
-                    <div className="lg:col-span-5 space-y-12">
-                        <header className="space-y-6">
-                            <ScrollReveal delay={0}>
-                                <span className="text-[#675c00] font-bold tracking-widest uppercase text-xs mb-4 block">Editorial Inquiry</span>
-                            </ScrollReveal>
-                            <ScrollReveal delay={200}>
-                                <h1 className="font-headline text-5xl md:text-7xl font-black tracking-tighter text-[#1a3c04] leading-[0.95] italic">
-                                    Mulai Bisnis <br/> Baju Anak
+        <section id="kontak" className="bg-[#fffbeb] font-poppins relative">
+            <style>{`
+                .grid-texture {
+                    background-image: radial-gradient(rgba(0,89,17,0.1) 0.5px, transparent 0.5px);
+                    background-size: 24px 24px;
+                }
+                .tonal-glass {
+                    background: rgba(255, 251, 235, 0.85);
+                    backdrop-filter: blur(12px);
+                }
+            `}</style>
+
+            <main className="min-h-screen pt-20 pb-20 relative grid-texture">
+                <div className="max-w-[1400px] mx-auto px-6 lg:px-16 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+                    {/* Left Column */}
+                    <section className="space-y-12">
+                        <ScrollReveal delay={0}>
+                            <div className="space-y-6">
+                                <h1 className="font-poppins text-5xl md:text-7xl font-extrabold tracking-tighter text-[#1a1c1a] leading-[1.1]">
+                                    Mulai Bisnis <span className="text-[#005911]">Baju Anak</span>
                                 </h1>
-                            </ScrollReveal>
-                            <ScrollReveal delay={400}>
-                                <p className="text-lg text-[#1a3c04]/70 leading-relaxed max-w-md font-medium">
+                                <p className="text-xl md:text-2xl text-[#1a1c1a]/70 font-light leading-relaxed max-w-lg">
                                     Kami membantu para ibu rumah tangga dan pengusaha muda membangun brand fashion anak yang berkelas dengan sistem siap pakai.
                                 </p>
-                            </ScrollReveal>
-                        </header>
+                            </div>
+                        </ScrollReveal>
 
-                        <div className="space-y-10">
-                            {/* Contact Info Blocks */}
-                            <ScrollReveal delay={500}>
-                                <div className="group">
-                                    <div className="flex items-center gap-4 mb-2">
-                                        <span className="material-symbols-outlined text-[#1a3c04]" style={{ fontVariationSettings: "'FILL' 1" }}>mail</span>
-                                        <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#1a3c04]/50">Email Support</span>
+                        <div className="space-y-8 py-8">
+                            <ScrollReveal delay={200}>
+                                <div className="flex items-center gap-6 group">
+                                    <div className="w-12 h-12 flex items-center justify-center bg-[#005911]/5 rounded-xl text-[#005911] transition-colors group-hover:bg-[#005911] group-hover:text-[#fffbeb]">
+                                        <span className="material-symbols-outlined" data-icon="mail">mail</span>
                                     </div>
-                                    <a className="text-2xl font-headline font-black italic text-[#1a3c04] hover:text-[#675c00] transition-colors" href="mailto:hello@lamonte.id">
-                                        hello@lamonte.id
-                                    </a>
+                                    <div>
+                                        <p className="text-xs font-bold uppercase tracking-widest text-[#1a1c1a]/60">Email Inquiry</p>
+                                        <p className="text-lg font-medium text-[#1a1c1a]">hello@lamonte.id</p>
+                                    </div>
                                 </div>
                             </ScrollReveal>
 
-                            <ScrollReveal delay={600}>
-                                <div className="group">
-                                    <div className="flex items-center gap-4 mb-2">
-                                        <span className="material-symbols-outlined text-[#1a3c04]" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
-                                        <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#1a3c04]/50">Call Center</span>
+                            <ScrollReveal delay={300}>
+                                <div className="flex items-center gap-6 group">
+                                    <div className="w-12 h-12 flex items-center justify-center bg-[#005911]/5 rounded-xl text-[#005911] transition-colors group-hover:bg-[#005911] group-hover:text-[#fffbeb]">
+                                        <span className="material-symbols-outlined" data-icon="call">call</span>
                                     </div>
-                                    <p className="text-2xl font-headline font-black italic text-[#1a3c04]">
-                                        +62 812-3456-7890
-                                    </p>
+                                    <div>
+                                        <p className="text-xs font-bold uppercase tracking-widest text-[#005911]/60">Call Center</p>
+                                        <p className="text-lg font-medium text-[#005911]">+62 812-3456-7890</p>
+                                    </div>
                                 </div>
                             </ScrollReveal>
 
-                            <ScrollReveal delay={700}>
-                                <div className="group">
-                                    <div className="flex items-center gap-4 mb-2">
-                                        <span className="material-symbols-outlined text-[#1a3c04]" style={{ fontVariationSettings: "'FILL' 1" }}>location_on</span>
-                                        <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#1a3c04]/50">Distribution Center</span>
+                            <ScrollReveal delay={400}>
+                                <div className="flex items-center gap-6 group">
+                                    <div className="w-12 h-12 flex items-center justify-center bg-[#005911]/5 rounded-xl text-[#005911] transition-colors group-hover:bg-[#005911] group-hover:text-[#fffbeb]">
+                                        <span className="material-symbols-outlined" data-icon="location_on">location_on</span>
                                     </div>
-                                    <p className="text-lg font-bold text-[#1a3c04]/70 leading-relaxed italic">
-                                        Kawasan Industri Jababeka<br/>Bekasi, Indonesia
-                                    </p>
+                                    <div>
+                                        <p className="text-xs font-bold uppercase tracking-widest text-[#005911]/60">Distribution Center</p>
+                                        <p className="text-lg font-medium text-[#005911] leading-snug">Kawasan Industri Jababeka<br />Bekasi, Indonesia</p>
+                                    </div>
                                 </div>
                             </ScrollReveal>
                         </div>
 
-                        {/* Abstract Decorative Element */}
-                        <div className="hidden lg:block pt-8">
-                            <ScrollReveal delay={800}>
-                                <div className="w-24 h-1 bg-[#1a3c04] rounded-full"></div>
-                                <div className="w-12 h-1 bg-[#f4e04d] rounded-full mt-2"></div>
-                            </ScrollReveal>
-                        </div>
-                    </div>
 
-                    {/* Right Column: Form Card */}
-                    <div className="lg:col-span-7">
-                        <ScrollReveal delay={500}>
-                            <div className="bg-white rounded-3xl p-8 md:p-14 shadow-premium-lg relative overflow-hidden border border-[#1a3c04]/5">
-                                {/* Subtle tonal accent in corner */}
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-[#f4e04d]/10 rounded-bl-full -mr-16 -mt-16 opacity-50"></div>
-                                
-                                <form onSubmit={handleSubmit} className="relative z-10 space-y-10">
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                                        <div className="space-y-3">
-                                            <label className="block text-[10px] font-black text-[#1a3c04]/50 font-label ml-1 tracking-[0.2em]" htmlFor="name">NAMA LENGKAP</label>
-                                            <input 
-                                                className="w-full bg-white border border-[#1a3c04]/5 rounded-2xl px-5 py-4 font-body text-[#1a3c04] placeholder:text-[#1a3c04]/30 focus:ring-4 focus:ring-[#1a3c04]/5 focus:border-[#1a3c04]/20 transition-all outline-none" 
-                                                id="name" 
-                                                type="text" 
+                    </section>
+
+                    {/* Right Column: Form */}
+                    <section className="lg:sticky lg:top-32">
+                        <ScrollReveal delay={400}>
+                            <div className="tonal-glass rounded-[40px] p-8 md:p-12 shadow-[0_20px_50px_-12px_rgba(0,89,17,0.1)] border border-[#005911]/10">
+                                <div className="mb-10">
+                                    <h2 className="font-poppins text-3xl font-bold text-[#1a1c1a]">Kirimkan Proposal <span className="text-[#005911]">Bisnis Anda</span></h2>
+                                    <div className="h-1 w-20 bg-[#005911] mt-4 rounded-full"></div>
+                                </div>
+
+                                <form onSubmit={handleSubmit} className="space-y-8">
+                                    <div className="space-y-6">
+                                        <div className="relative">
+                                            <label className="font-poppins text-xs font-bold uppercase tracking-widest text-[#1a1c1a]/60 mb-2 block">Nama Lengkap</label>
+                                            <input
+                                                className="w-full bg-[#005911]/5 border-b-2 border-t-0 border-x-0 border-[#005911]/20 focus:ring-0 focus:border-[#005911] transition-all py-3 px-4 outline-none font-poppins text-[#1a1c1a] placeholder:text-[#1a1c1a]/40"
                                                 placeholder="Contoh: Sarah Wijaya"
+                                                type="text"
                                                 value={name}
                                                 onChange={(e) => setName(e.target.value)}
                                                 required
                                             />
                                         </div>
-                                        <div className="space-y-3">
-                                            <label className="block text-[10px] font-black text-[#1a3c04]/50 font-label ml-1 tracking-[0.2em]" htmlFor="email">WHATSAPP / EMAIL</label>
-                                            <input 
-                                                className="w-full bg-white border border-[#1a3c04]/5 rounded-2xl px-5 py-4 font-body text-[#1a3c04] placeholder:text-[#1a3c04]/30 focus:ring-4 focus:ring-[#1a3c04]/5 focus:border-[#1a3c04]/20 transition-all outline-none" 
-                                                id="email" 
+                                        <div className="relative">
+                                            <label className="font-poppins text-xs font-bold uppercase tracking-widest text-[#1a1c1a]/60 mb-2 block">WhatsApp / Email</label>
+                                            <input
+                                                className="w-full bg-[#005911]/5 border-b-2 border-t-0 border-x-0 border-[#005911]/20 focus:ring-0 focus:border-[#005911] transition-all py-3 px-4 outline-none font-poppins text-[#1a1c1a] placeholder:text-[#1a1c1a]/40"
+                                                placeholder="0812-xxxx-xxxx"
                                                 type="text"
-                                                placeholder="WhatsApp atau Email Anda"
                                                 value={email}
                                                 onChange={(e) => setEmail(e.target.value)}
                                                 required
@@ -134,69 +133,57 @@ export default function KontakSection() {
                                         </div>
                                     </div>
 
-                                    <div className="space-y-4">
-                                        <label className="block text-[10px] font-black text-[#1a3c04]/50 font-label ml-1 tracking-[0.2em]">PILIH KETERTARIKAN</label>
-                                        <div className="flex flex-wrap gap-3 mt-3">
-                                            {["Paket Grosir", "Paket Distributor", "Sistem Reseller"].map((tag) => (
-                                                <button key={tag} className="px-5 py-2.5 bg-[#1a3c04]/5 text-[#1a3c04] rounded-full text-xs font-black uppercase tracking-widest hover:bg-[#1a3c04] hover:text-[#f4e04d] transition-all" type="button">
-                                                    {tag}
-                                                </button>
-                                            ))}
+                                    <div>
+                                        <label className="font-poppins text-xs font-bold uppercase tracking-widest text-[#1a1c1a]/60 mb-4 block">Pilih Ketertarikan</label>
+                                        <div className="flex flex-wrap gap-3">
+                                            <button className="px-5 py-2.5 rounded-full bg-[#005911] text-[#fffbeb] text-sm font-semibold border border-[#005911] hover:brightness-105 transition-all font-poppins" type="button">Paket Grosir</button>
+                                            <button className="px-5 py-2.5 rounded-full bg-[#005911]/5 text-[#005911] text-sm font-medium border border-[#005911]/10 hover:bg-[#005911]/10 transition-all font-poppins" type="button">Paket Distributor</button>
+                                            <button className="px-5 py-2.5 rounded-full bg-[#005911]/5 text-[#005911] text-sm font-medium border border-[#005911]/10 hover:bg-[#005911]/10 transition-all font-poppins" type="button">Sistem Reseller</button>
                                         </div>
                                     </div>
 
-                                    <div className="space-y-3">
-                                        <label className="block text-[10px] font-black text-[#1a3c04]/50 font-label ml-1 tracking-[0.2em]" htmlFor="message">PESAN ANDA</label>
-                                        <textarea 
-                                            className="w-full bg-white border border-[#1a3c04]/5 rounded-2xl px-5 py-4 font-body text-[#1a3c04] placeholder:text-[#1a3c04]/30 focus:ring-4 focus:ring-[#1a3c04]/5 focus:border-[#1a3c04]/20 transition-all outline-none resize-none" 
-                                            id="message" 
+                                    <div>
+                                        <label className="font-poppins text-xs font-bold uppercase tracking-widest text-[#005911]/60 mb-2 block">Pesan Anda</label>
+                                        <textarea
+                                            className="w-full bg-[#005911]/5 border-b-2 border-t-0 border-x-0 border-[#005911]/20 focus:ring-0 focus:border-[#005911] transition-all py-3 px-4 outline-none font-poppins text-[#005911] resize-none placeholder:text-[#005911]/40"
+                                            placeholder="Ceritakan sedikit tentang rencana bisnis Anda..."
                                             rows={4}
-                                            placeholder="Tuliskan visi bisnis Anda atau pertanyaan..."
                                             value={message}
                                             onChange={(e) => setMessage(e.target.value)}
                                             required
                                         ></textarea>
                                     </div>
 
-                                    <div className="pt-4">
-                                        <button 
-                                            type="submit" 
-                                            disabled={loading}
-                                            className="w-full md:w-auto px-12 py-5 bg-[#1a3c04] text-[#f4e04d] rounded-2xl font-headline font-black text-lg tracking-tight shadow-xl shadow-[#1a3c04]/20 hover:shadow-2xl hover:translate-y-[-2px] active:scale-95 transition-all flex items-center justify-center gap-4 disabled:opacity-70 disabled:pointer-events-none"
-                                        >
-                                            {loading ? (
-                                                <div className="flex items-center gap-3">
-                                                    <div className="w-5 h-5 border-t-2 border-[#f4e04d] border-solid rounded-full animate-spin"></div>
-                                                    <span>MENGIRIM...</span>
-                                                </div>
-                                            ) : (
-                                                <>
-                                                    Kirim Inquiry Bisnis
-                                                    <span className="material-symbols-outlined text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>arrow_forward</span>
-                                                </>
-                                            )}
-                                        </button>
-                                    </div>
+                                    <button
+                                        className="w-full bg-[#005911] hover:opacity-90 text-[#fffbeb] py-5 rounded-xl font-poppins font-bold text-lg flex items-center justify-center gap-3 transition-all transform active:scale-95 shadow-lg shadow-[#005911]/20 disabled:opacity-70"
+                                        type="submit"
+                                        disabled={loading}
+                                    >
+                                        {loading ? "Mengirim..." : "Kirim Inquiry Bisnis"}
+                                        {!loading && <span className="material-symbols-outlined text-[#fffbeb]" data-icon="arrow_forward">arrow_forward</span>}
+                                    </button>
                                 </form>
                             </div>
                         </ScrollReveal>
-
-                        {/* Social & Trust Row */}
-                        <ScrollReveal delay={800}>
-                            <div className="mt-12 flex flex-col md:flex-row justify-between items-center gap-8 px-4 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700">
-                                <div className="flex items-center gap-10">
-                                    <span className="font-headline font-black text-xl italic text-[#1a3c04]">Editorial.</span>
-                                    <span className="font-headline font-black text-xl italic text-[#1a3c04]">Professional.</span>
-                                    <span className="font-headline font-black text-xl italic text-[#1a3c04]">Trust.</span>
-                                </div>
-                                <div className="text-[10px] font-black text-[#1a3c04]/60 flex items-center gap-3 uppercase tracking-[0.2em]">
-                                    <span className="w-2 h-2 rounded-full bg-[#f4e04d] animate-pulse"></span>
-                                    Available for New Partners Q2 2024
-                                </div>
-                            </div>
-                        </ScrollReveal>
-                    </div>
+                    </section>
                 </div>
+
+                <ScrollReveal delay={800}>
+                    <div className="max-w-[1400px] mx-auto px-6 lg:px-16 mt-24 flex flex-wrap justify-center gap-12 text-[#005911]/40">
+                        <div className="flex flex-col items-center gap-2 hover:text-[#005911] transition-colors cursor-default">
+                            <p className="font-poppins font-black text-2xl tracking-tighter uppercase">Editorial.</p>
+                            <div className="h-px w-8 bg-[#005911]/20"></div>
+                        </div>
+                        <div className="flex flex-col items-center gap-2 hover:text-[#005911] transition-colors cursor-default">
+                            <p className="font-poppins font-black text-2xl tracking-tighter uppercase">Professional.</p>
+                            <div className="h-px w-8 bg-[#005911]/20"></div>
+                        </div>
+                        <div className="flex flex-col items-center gap-2 hover:text-[#005911] transition-colors cursor-default">
+                            <p className="font-poppins font-black text-2xl tracking-tighter uppercase">Trust.</p>
+                            <div className="h-px w-8 bg-[#005911]/20"></div>
+                        </div>
+                    </div>
+                </ScrollReveal>
             </main>
         </section>
     );
