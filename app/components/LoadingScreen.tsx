@@ -27,7 +27,7 @@ export default function LoadingScreen({ onComplete }: { onComplete?: () => void 
     if (!isVisible) return null;
 
     return (
-        <div className={`fixed inset-0 z-[9999] h-screen w-full flex flex-col items-center justify-center p-8 bg-[#fffbeb] overflow-hidden font-poppins transition-opacity duration-700 ${isFadingOut ? 'opacity-0' : 'opacity-100'}`}>
+        <div className={`fixed inset-0 z-[9999] h-screen w-full flex flex-col items-center justify-center p-8 bg-white overflow-hidden font-poppins transition-opacity duration-700 ${isFadingOut ? 'opacity-0' : 'opacity-100'}`}>
             <style>{`
                 @keyframes soft-pulse {
                     0%, 100% { opacity: 0.8; transform: scale(1); }
@@ -59,14 +59,14 @@ export default function LoadingScreen({ onComplete }: { onComplete?: () => void 
                 {/* Logo/Icon Section */}
                 <div className="relative mb-12 flex items-center justify-center">
                     {/* Outer Glow */}
-                    <div className="absolute w-40 h-40 bg-[#005911]/10 rounded-full blur-3xl animate-soft-pulse"></div>
+                    <div className="absolute w-40 h-40 bg-[#ffaa00]/10 rounded-full blur-3xl animate-soft-pulse"></div>
                     {/* Stylized Cultural Icon */}
-                    <div className="relative animate-soft-pulse text-[#005911]">
+                    <div className="relative animate-soft-pulse text-[#ffaa00]">
                         <span className="material-symbols-outlined text-8xl md:text-9xl font-light">
                             energy_savings_leaf
                         </span>
                         <div className="absolute inset-0 flex items-center justify-center">
-                            <span className="material-symbols-outlined text-[#005911]/40 text-4xl">
+                            <span className="material-symbols-outlined text-[#ffaa00]/40 text-4xl">
                                 star
                             </span>
                         </div>
@@ -74,32 +74,32 @@ export default function LoadingScreen({ onComplete }: { onComplete?: () => void 
                 </div>
 
                 {/* Brand Typography */}
-                <h1 className="font-poppins font-black text-2xl md:text-3xl text-[#005911] mb-6 tracking-tight">
+                <h1 className="font-poppins font-black text-2xl md:text-3xl text-[#1a1c1a] mb-6 tracking-tight">
                     Lamonte Distributor
                 </h1>
 
                 {/* Poetic Message */}
-                <p className="font-poppins text-[#005911] italic text-lg md:text-xl mb-12 opacity-80">
+                <p className="font-poppins text-[#1a1c1a]/60 italic text-lg md:text-xl mb-12">
                     Menyusun Katalog...
                 </p>
 
                 {/* Elegant Progress Indicator */}
-                <div className="w-48 md:w-64 h-px bg-[#005911]/20 relative overflow-hidden">
-                    <div className="absolute h-full w-2/3 bg-[#005911] animate-progress rounded-full"></div>
+                <div className="w-48 md:w-64 h-px bg-[#ffaa00]/20 relative overflow-hidden">
+                    <div className="absolute h-full w-2/3 bg-[#ffaa00] animate-progress rounded-full"></div>
                 </div>
 
                 {/* Secondary Label */}
-                <span className="font-poppins font-bold text-[10px] uppercase tracking-[0.4em] text-[#005911] mt-6 opacity-60">
+                <span className="font-poppins font-bold text-[10px] uppercase tracking-[0.4em] text-[#ffaa00] mt-6 opacity-60">
                     Bersiap Jualan
                 </span>
             </div>
 
             {/* Background Ambient Element */}
-            <div className="absolute inset-0 pointer-events-none opacity-20 bg-[radial-gradient(circle_at_50%_50%,_rgba(0,89,17,0.1),transparent_70%)]"></div>
+            <div className="absolute inset-0 pointer-events-none opacity-10 bg-[radial-gradient(circle_at_50%_50%,_rgba(255,170,0,0.1),transparent_70%)]"></div>
 
             {/* Footer Identity (Discrete) */}
             <footer className="absolute bottom-8 w-full text-center px-4">
-                <p className="font-poppins text-[11px] text-[#005911]/40 tracking-widest uppercase font-bold">
+                <p className="font-poppins text-[11px] text-[#1a1c1a]/30 tracking-widest uppercase font-bold">
                     © 2024 Lamonte • Bisnis Baju Anak
                 </p>
             </footer>

@@ -56,13 +56,13 @@ export default function AutoHeroSlider({ images }: { images: string[] }) {
                     <div className="flex gap-2 shrink-0">
                         <button 
                             onClick={() => setCurrentIndex((prev) => (prev - 1 + images.length) % images.length)}
-                            className="w-10 h-10 md:w-14 md:h-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-[#005911] transition-all backdrop-blur-md bg-black/10 shadow-lg"
+                            className="w-10 h-10 md:w-14 md:h-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-[#232722] transition-all backdrop-blur-md bg-black/10 shadow-lg"
                         >
                             <span className="material-symbols-outlined text-xl md:text-2xl">chevron_left</span>
                         </button>
                         <button 
                             onClick={() => setCurrentIndex((prev) => (prev + 1) % images.length)}
-                            className="w-10 h-10 md:w-14 md:h-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-[#005911] transition-all backdrop-blur-md bg-black/10 shadow-lg"
+                            className="w-10 h-10 md:w-14 md:h-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-[#232722] transition-all backdrop-blur-md bg-black/10 shadow-lg"
                         >
                             <span className="material-symbols-outlined text-xl md:text-2xl">chevron_right</span>
                         </button>

@@ -9,8 +9,10 @@ html {
 }
 
 :root {
-  --background: #fefae6;
-  --foreground: #1a3c04;
+  --background: #ffffff;
+  --foreground: #1a1c1a;
+  --brand-gold: #ffaa00;
+  --brand-dark: #232722;
 }
 
 @theme inline {
@@ -34,16 +36,9 @@ body {
   overflow-x: hidden;
 }
 
-:root {
-  --background: #fefae6;
-  --foreground: #1a3c04;
-  --brand-yellow: #f4e04d;
-  --brand-green: #1a3c04;
-}
-
 @theme {
-  --color-brand-yellow: var(--brand-yellow);
-  --color-brand-green: var(--brand-green);
+  --color-brand-gold: var(--brand-gold);
+  --color-brand-dark: var(--brand-dark);
   --font-headline: var(--font-poppins), sans-serif;
   --font-body: var(--font-poppins), sans-serif;
   --font-poppins: var(--font-poppins), sans-serif;
@@ -54,7 +49,7 @@ body {
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05), 0 4px 10px -5px rgba(0, 0, 0, 0.02);
 }
 .shadow-premium-lg {
-  box-shadow: 0 20px 50px -12px rgba(26, 60, 4, 0.08);
+  box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.08);
 }
 
 /* ── Glassmorphism ── */
@@ -70,7 +65,7 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  background-image: linear-gradient(135deg, var(--brand-green), #2d6a0a);
+  background-image: linear-gradient(135deg, #ffaa00, #ffd786);
 }
 
 /* ── Floating Animation ── */

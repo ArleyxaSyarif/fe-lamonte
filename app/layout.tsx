@@ -13,12 +13,12 @@ const poppins = Poppins({
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="id">
+    <html lang="id" suppressHydrationWarning>
       <head>
         {/* Import Material Symbols */}
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
       </head>
-      <body className={`${poppins.variable} font-poppins relative min-h-screen bg-[#fefae6]`}>
+      <body className={`${poppins.variable} font-poppins relative min-h-screen bg-white`} suppressHydrationWarning>
         <Navbar />
         {/* <Frame /> */}
         {children}
