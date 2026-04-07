@@ -3,17 +3,20 @@ import ScrollReveal from "../ScrollReveal";
 
 export default function KolaborasiHero() {
     return (
-        <section id="kolaborasi" className="relative font-poppins pt-24 pb-20 min-h-screen bg-white text-[#1a1c1a] overflow-hidden">
-            {/* Transparent Grid Pattern */}
+        <section id="kolaborasi" className="relative font-poppins pt-24 pb-20 min-h-screen bg-white text-[#1a1c1a] overflow-hidden px-8">
+            {/* Subtle Grid Pattern */}
             <div
                 className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none"
                 style={{
-                    backgroundImage: `radial-gradient(circle, #1a1c1a 1px, transparent 1px)`,
-                    backgroundSize: '32px 32px'
+                    backgroundImage: `
+                        linear-gradient(to right, #1a1c1a 1px, transparent 1px),
+                        linear-gradient(to bottom, #1a1c1a 1px, transparent 1px)
+                    `,
+                    backgroundSize: '40px 40px'
                 }}
             ></div>
 
-            <div className="max-w-screen-2xl mx-auto px-6 md:px-8 relative z-10">
+            <div className="max-w-screen-2xl mx-auto relative z-10 px-0">
                 {/* Hero Header Section */}
                 <div className="mb-16 md:mb-20 text-center md:text-left max-w-4xl">
                     <ScrollReveal delay={0}>

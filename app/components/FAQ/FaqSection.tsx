@@ -24,14 +24,16 @@ const FAQS = [
 
 export default function FaqSection() {
     return (
-        <section className="relative bg-white py-24 px-6 md:px-12 lg:px-24 font-poppins overflow-hidden">
-
-            {/* Dots Pattern Background */}
+        <section className="relative bg-white py-24 px-8 font-poppins overflow-hidden">
+            {/* Subtle Grid Pattern Background */}
             <div
-                className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none"
+                className="absolute inset-0 z-0 opacity-[0.06] pointer-events-none"
                 style={{
-                    backgroundImage: `radial-gradient(#1a1c1a 2px, transparent 2px)`,
-                    backgroundSize: '30px 30px'
+                    backgroundImage: `
+                        linear-gradient(to right, #1a1c1a 1px, transparent 1px),
+                        linear-gradient(to bottom, #1a1c1a 1px, transparent 1px)
+                    `,
+                    backgroundSize: '40px 40px'
                 }}
             ></div>
 
@@ -52,7 +54,8 @@ export default function FaqSection() {
                 }
             `}</style>
 
-            <div className="relative z-10 max-w-4xl mx-auto">
+            <div className="relative z-10 max-w-screen-2xl mx-auto w-full px-0">
+                <div className="max-w-4xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-20">
                     <ScrollReveal delay={0}>
@@ -131,6 +134,7 @@ export default function FaqSection() {
                         </button>
                     </div>
                 </ScrollReveal>
+                </div>
             </div>
         </section>
     );

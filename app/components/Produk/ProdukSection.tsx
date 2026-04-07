@@ -8,7 +8,7 @@ export default async function ProdukSection() {
     const sliderImages = posts.slice(0, 5).map((p: any) => p.image);
 
     return (
-        <section id="produk" className="font-poppins selection:bg-[#ffaa00]/20 antialiased bg-white text-[#1a1c1a]">
+        <section id="produk" className="font-poppins selection:bg-[#ffaa00]/20 antialiased bg-white text-[#1a1c1a] px-8">
             <div className="relative min-h-screen pt-24 md:pt-36 pb-24 overflow-hidden">
                 {/* Refined Background Elements */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] pointer-events-none opacity-10 bg-gradient-radial from-[#ffaa00]/20 to-transparent"></div>
@@ -20,7 +20,7 @@ export default async function ProdukSection() {
                 ></div>
 
                 {/* Header Context */}
-                <header className="relative z-10 max-w-4xl mx-auto text-center mb-16 md:mb-20 px-6">
+                <header className="relative z-10 max-w-4xl mx-auto text-center mb-16 md:mb-20 px-0">
                     <ScrollReveal delay={0}>
                         <div className="flex items-center justify-center gap-3 mb-6">
                             <div className="h-px w-8 bg-[#ffaa00]/30"></div>
@@ -41,12 +41,12 @@ export default async function ProdukSection() {
                 </header>
 
                 {/* Hero Slider Section from Template */}
-                <div className="px-6 md:px-12 relative z-10 max-w-screen-2xl mx-auto">
+                <div className="relative z-10 max-w-screen-2xl mx-auto px-0">
                     <AutoHeroSlider images={sliderImages} />
                 </div>
 
                 {/* Product/Category Grid from Template */}
-                <div className="px-6 md:px-12 relative z-10 max-w-screen-2xl mx-auto mt-8">
+                <div className="relative z-10 max-w-screen-2xl mx-auto mt-8 px-0">
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
                         {posts.map((post: any, idx: number) => (
                             <ScrollReveal key={`${post.id}-${idx}`} delay={200 + (idx % 4) * 100}>

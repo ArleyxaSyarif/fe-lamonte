@@ -10,7 +10,7 @@ import { getWords } from "@/lib/api";
 import CTA from "./components/CTA";
 import TestimoniSection from "./components/Testimoni/TestimoniSection";
 import FaqSection from "./components/FAQ/FaqSection";
-import KontakSection from "./components/Kontak/KontakSection";
+import KontakSection from "./kontak/components/KontakSection";
 
 import ScrollReveal from "./components/ScrollReveal";
 
@@ -43,7 +43,6 @@ export default async function Home() {
       <FaqSection />
 
 
-      <KontakSection />
     </div>
   );
 }

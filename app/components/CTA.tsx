@@ -3,7 +3,7 @@ import { sendWhatsApp } from "@/lib/whatsapp";
 
 export default function CTA() {
     return (
-        <section className="font-poppins relative min-h-[700px] lg:min-h-[921px] flex items-center overflow-hidden bg-[#1a1c1a]">
+        <section className="font-poppins relative min-h-[700px] lg:min-h-[921px] flex items-center overflow-hidden bg-[#1a1c1a] px-8">
             <style>{`
                 .botanical-mask {
                     mask-image: linear-gradient(to right, black 40%, transparent 100%);
@@ -27,7 +27,7 @@ export default function CTA() {
                 />
             </div>
 
-            <div className="max-w-screen-2xl mx-auto px-6 md:px-12 relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
+            <div className="max-w-screen-2xl mx-auto relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full px-0">
                 {/* Content Column */}
                 <div className="lg:col-span-7 py-16">
                     <div className="mb-8 inline-flex items-center gap-2 px-4 py-1 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm">

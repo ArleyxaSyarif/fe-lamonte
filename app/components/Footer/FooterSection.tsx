@@ -19,12 +19,12 @@ export default function FooterSection() {
     };
 
     return (
-        <footer className="relative w-full bg-[#f8f8f8] pt-16 md:pt-24 pb-8 overflow-hidden font-body border-t border-[#1a1c1a]/5">
+        <footer className="relative w-full bg-[#f8f8f8] pt-16 md:pt-24 pb-8 overflow-hidden font-body border-t border-[#1a1c1a]/5 px-8">
             {/* Background Ornaments */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-[#ffaa00]/10 rounded-full -mr-48 -mt-48 blur-3xl pointer-events-none opacity-50" />
             <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#1a1c1a]/5 rounded-full -ml-40 -mb-40 blur-3xl pointer-events-none opacity-30" />
 
-            <div className="w-full px-6 md:px-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 max-w-7xl mx-auto relative z-10 text-left">
+            <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 max-w-screen-2xl mx-auto relative z-10 text-left px-0">
                 {/* Brand Column */}
                 <div className="flex flex-col space-y-8">
                     <div className="flex items-center gap-3 cursor-pointer group" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
@@ -117,7 +117,7 @@ export default function FooterSection() {
             </div>
 
             {/* Bottom Copyright Area */}
-            <div className="w-full px-6 md:px-12 mt-16 md:mt-24 pt-10 border-t border-[#1a1c1a]/5 max-w-7xl mx-auto relative z-10">
+            <div className="w-full mt-16 md:mt-24 pt-10 border-t border-[#1a1c1a]/5 max-w-screen-2xl mx-auto relative z-10 px-0">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-8">
                     <p className="text-[#1a1c1a]/30 text-[10px] md:text-xs uppercase tracking-[0.3em] font-black">
                         © 2024 Lamonte Distribution. Premium Kids Fashion.

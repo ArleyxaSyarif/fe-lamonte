@@ -56,8 +56,7 @@ export default async function TestimoniSection() {
             <ScrollReveal delay={600}>
                 <div className="relative z-10 py-10">
                     {/* Gradient Masks */}
-                    <div className="absolute top-0 left-0 h-full w-20 md:w-40 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-                    <div className="absolute top-0 right-0 h-full w-20 md:w-40 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+                    
 
                     <div className="animate-infinite-scroll gap-8 px-4">
                         {/* Render Set Pertama */}

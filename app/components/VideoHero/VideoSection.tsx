@@ -2,8 +2,8 @@ import ScrollReveal from "../ScrollReveal";
 
 export default function VideoSection() {
     return (
-        <section id="video" className="bg-white text-[#1a1c1a] antialiased overflow-x-hidden font-poppins relative">
-            <div className="max-w-screen-2xl mx-auto px-6 md:px-12 pt-16 pb-24">
+        <section id="video" className="bg-white text-[#1a1c1a] antialiased overflow-x-hidden font-poppins relative px-8">
+            <div className="max-w-screen-2xl mx-auto pt-16 pb-24 px-0">
                 {/* Modern Editorial Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                     

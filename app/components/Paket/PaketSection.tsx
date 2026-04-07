@@ -103,7 +103,7 @@ export default function PaketSection() {
     const visiblePackages = showAll ? PACKAGES : PACKAGES.slice(0, 4);
 
     return (
-        <section id='paket' className="relative py-16 md:py-24 px-6 md:px-8 max-w-screen-2xl mx-auto bg-white font-poppins overflow-hidden">
+        <section id='paket' className="relative py-16 md:py-24 px-8 max-w-screen-2xl mx-auto bg-white font-poppins overflow-hidden">
 
             {/* Transparent Grid Pattern */}
             <div

@@ -11,7 +11,7 @@ export default function WhatsApp() {
 
             {/* Box Popup */}
             {isOpen && (
-                <div className="w-[calc(100vw-3rem)] sm:w-[320px] bg-white rounded-2xl shadow-2xl overflow-hidden border border-[#1a1c1a]/10 animate-in fade-in slide-in-from-bottom-4 duration-300 mb-2">
+                <div className="w-[calc(100vw-3rem)] sm:w-[320px] bg-white rounded-2xl shadow-2xl overflow-hidden border border-[#1a1c1a]/10 animate-premium-in mb-2">
                     {/* Header Popup */}
                     <div className="bg-[#232722] p-4 text-white flex items-center gap-3">
                         <div className="relative">

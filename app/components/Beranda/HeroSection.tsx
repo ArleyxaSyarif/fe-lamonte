@@ -4,8 +4,20 @@ import ScrollReveal from "../ScrollReveal";
 
 export default function HeroSection() {
     return (
-        <section className="relative overflow-hidden px-6 lg:px-12 pt-28 md:pt-36 pb-16 flex flex-col items-center bg-white">
-            <div className="max-w-7xl mx-auto w-full">
+        <section className="relative overflow-hidden px-8 pt-28 md:pt-36 pb-16 flex flex-col items-center bg-white">
+            {/* Subtle Grid Pattern */}
+            <div
+                className="absolute inset-0 z-0 opacity-[0.06] pointer-events-none"
+                style={{
+                    backgroundImage: `
+                        linear-gradient(to right, #1a1c1a 1px, transparent 1px),
+                        linear-gradient(to bottom, #1a1c1a 1px, transparent 1px)
+                    `,
+                    backgroundSize: '40px 40px'
+                }}
+            ></div>
+
+            <div className="max-w-screen-2xl mx-auto w-full relative z-10">
                 {/* Top Badge */}
                 <ScrollReveal delay={100}>
                     <span className="inline-block bg-[#ffaa00] text-[#232722] text-[10px] font-poppins font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-8">
@@ -56,68 +68,85 @@ export default function HeroSection() {
                                 </a>
                             </div>
                         </ScrollReveal>
-
-                        {/* Trust Badge */}
-                        <ScrollReveal delay={500}>
-                            <div className="mt-4 flex justify-center lg:justify-start">
-                                <span className="inline-flex items-center gap-2 bg-[#232722] text-white/90 text-xs font-poppins font-medium px-4 py-2 rounded-full border border-white/10 shadow-sm">
-                                    <span className="material-symbols-outlined text-[14px] text-[#ffaa00]" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
-                                    Terpercaya · Modal Ringan · Pola Terbukti · Full Bimbingan
-                                </span>
-                            </div>
-                        </ScrollReveal>
                     </div>
                 </div>
             </div>
 
-            {/* Glassmorphism Image Section Below */}
-            <ScrollReveal delay={600}>
-                <div className="mt-20 md:mt-28 relative w-full max-w-6xl mx-auto">
-                    {/* Ambient glow behind the image */}
-                    <div className="absolute inset-0 bg-[#ffaa00]/5 rounded-full blur-[120px] -z-10 transform -translate-y-1/2"></div>
+            {/* Selling Points Above Image */}
+            <div className="w-full max-w-screen-2xl mx-auto mt-20 relative z-10 px-0">
+                <ScrollReveal delay={550}>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        {[
+                            "Modal ringan, branding mewah",
+                            "Pola jualan terbukti jalan",
+                            "Dibimbing sampai benar-benar bisa",
+                            "Cocok untuk ibu rumah tangga & pebisnis"
+                        ].map((point, index) => (
+                            <div key={index} className="flex items-center gap-3 bg-white/50 backdrop-blur-sm border border-[#1a1c1a]/5 p-4 rounded-xl shadow-sm hover:shadow-md transition-all group">
+                                <div className="w-8 h-8 rounded-full bg-[#ffaa00]/10 flex items-center justify-center shrink-0 group-hover:bg-[#ffaa00] transition-colors">
+                                    <span className="material-symbols-outlined text-[#ffaa00] text-sm group-hover:text-white transition-colors" style={{ fontVariationSettings: "'FILL' 1" }}>
+                                        verified
+                                    </span>
+                                </div>
+                                <p className="font-poppins text-xs md:text-sm font-bold text-[#1a1c1a]/70 leading-snug">
+                                    {point}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </ScrollReveal>
+            </div>
 
-                    <div className="relative aspect-[21/9] rounded-xl overflow-hidden shadow-2xl bg-white p-3 lg:p-6">
-                        <div className="w-full h-full rounded-lg border border-[#1a1c1a]/5 bg-[#f5f5f5] overflow-hidden relative group">
-                            {/* Glassmorphism Overlay */}
-                            <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
-                                <div className="w-[55%] h-[55%] bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl shadow-inner flex flex-col items-center justify-center gap-4">
-                                    <span className="material-symbols-outlined text-[#ffaa00] text-5xl md:text-6xl opacity-60">inventory_2</span>
-                                    <div className="text-center">
-                                        <p className="font-poppins font-black text-white text-lg md:text-2xl drop-shadow-lg">READY STOCK RIBUAN PCS</p>
-                                        <p className="font-poppins font-bold text-white/80 text-xs md:text-sm mt-1 drop-shadow-lg">Model baru drop tiap bulan</p>
+            {/* Glassmorphism Image Section Below */}
+            <div className="w-full max-w-screen-2xl mx-auto mt-8 relative z-10 px-0">
+                <ScrollReveal delay={600}>
+                    <div className="relative w-full">
+                        {/* Ambient glow behind the image */}
+                        <div className="absolute inset-0 bg-[#ffaa00]/5 rounded-full blur-[120px] -z-10 transform -translate-y-1/2"></div>
+
+                        <div className="relative aspect-[21/9] rounded-xl overflow-hidden shadow-2xl bg-white py-3 lg:py-6 px-0">
+                            <div className="w-full h-full rounded-lg border border-[#1a1c1a]/5 bg-[#f5f5f5] overflow-hidden relative group">
+                                {/* Glassmorphism Overlay */}
+                                <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+                                    <div className="w-[55%] h-[55%] bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl shadow-inner flex flex-col items-center justify-center gap-4">
+                                        <span className="material-symbols-outlined text-[#ffaa00] text-5xl md:text-6xl opacity-60">inventory_2</span>
+                                        <div className="text-center">
+                                            <p className="font-poppins font-black text-white text-lg md:text-2xl drop-shadow-lg">READY STOCK RIBUAN PCS</p>
+                                            <p className="font-poppins font-bold text-white/80 text-xs md:text-sm mt-1 drop-shadow-lg">Model baru drop tiap bulan</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            {/* Floating Stats Card */}
-                            <div className="absolute bottom-4 left-4 z-20 bg-white/95 backdrop-blur-md px-4 py-3 md:px-6 md:py-4 rounded-xl shadow-lg border-l-4 border-[#ffaa00] flex items-center gap-3 md:gap-4">
-                                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#ffaa00] flex items-center justify-center">
-                                    <span className="material-symbols-outlined text-white text-lg md:text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>insights</span>
+                                {/* Floating Stats Card */}
+                                <div className="absolute bottom-4 left-4 z-20 bg-white/95 backdrop-blur-md px-4 py-3 md:px-6 md:py-4 rounded-xl shadow-lg border-l-4 border-[#ffaa00] flex items-center gap-3 md:gap-4">
+                                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#ffaa00] flex items-center justify-center">
+                                        <span className="material-symbols-outlined text-white text-lg md:text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>insights</span>
+                                    </div>
+                                    <div>
+                                        <p className="text-[8px] md:text-[10px] font-poppins font-black text-[#ffaa00] uppercase leading-none mb-0.5">OMZET MITRA AKTIF</p>
+                                        <p className="text-lg md:text-2xl font-poppins font-black text-[#1a1c1a] leading-none">Rp 15–80 Juta<span className="text-[10px] md:text-sm font-bold text-[#1a1c1a]/40 ml-1">/bulan</span></p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <p className="text-[8px] md:text-[10px] font-poppins font-black text-[#ffaa00] uppercase leading-none mb-0.5">OMZET MITRA AKTIF</p>
-                                    <p className="text-lg md:text-2xl font-poppins font-black text-[#1a1c1a] leading-none">Rp 15–80 Juta<span className="text-[10px] md:text-sm font-bold text-[#1a1c1a]/40 ml-1">/bulan</span></p>
-                                </div>
-                            </div>
 
-                            {/* Floating Badge Top Right */}
-                            <div className="absolute top-4 right-4 z-20">
-                                <div className="bg-[#ffaa00] text-[#232722] px-3 py-1.5 rounded-lg shadow-md font-poppins font-black text-[10px] md:text-xs uppercase flex items-center gap-1.5">
-                                    <span className="material-symbols-outlined text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>auto_awesome</span>
-                                    Sistem Terbukti
+                                {/* Floating Badge Top Right */}
+                                <div className="absolute top-4 right-4 z-20">
+                                    <div className="bg-[#ffaa00] text-[#232722] px-3 py-1.5 rounded-lg shadow-md font-poppins font-black text-[10px] md:text-xs uppercase flex items-center gap-1.5">
+                                        <span className="material-symbols-outlined text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>auto_awesome</span>
+                                        Sistem Terbukti
+                                    </div>
                                 </div>
-                            </div>
 
-                            {/* Hero Image */}
-                            <img
-                                alt="Gudang Lamonte - Premium Kids Fashion"
-                                className="w-full h-full object-cover grayscale-[30%] opacity-90 transition-transform duration-700 group-hover:scale-105"
-                                src="/gudang/gudang1.png"
-                            />
+                                {/* Hero Image */}
+                                <img
+                                    alt="Gudang Lamonte - Premium Kids Fashion"
+                                    className="w-full h-full object-cover grayscale-[30%] opacity-90 transition-transform duration-700 group-hover:scale-105"
+                                    src="/gudang/gudang1.png"
+                                />
+                            </div>
                         </div>
                     </div>
-                </div>
-            </ScrollReveal>
+                </ScrollReveal>
+            </div>
         </section>
     );
 }
